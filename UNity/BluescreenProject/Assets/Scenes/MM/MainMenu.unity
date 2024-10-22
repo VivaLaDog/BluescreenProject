@@ -209,8 +209,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 428680831}
-        m_TargetAssemblyTypeName: StartButton, Assembly-CSharp
-        m_MethodName: StartGame
+        m_TargetAssemblyTypeName: MainMenuButtons, Assembly-CSharp
+        m_MethodName: StartNewGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -267,7 +267,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 428680826}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f2a81c6935565841961ab10b9a999e9, type: 3}
+  m_Script: {fileID: 11500000, guid: ec9157debc00d044088673b9e88d0341, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &470308277
@@ -872,7 +872,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1062941192}
-        m_TargetAssemblyTypeName: Exit, Assembly-CSharp
+        m_TargetAssemblyTypeName: MainMenuButtons, Assembly-CSharp
         m_MethodName: ExitGame
         m_Mode: 1
         m_Arguments:
@@ -930,7 +930,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1062941187}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6cbfd509d05da2341a05f70de9bee2b8, type: 3}
+  m_Script: {fileID: 11500000, guid: ec9157debc00d044088673b9e88d0341, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1287047874

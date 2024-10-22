@@ -343,9 +343,13 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.VSCode.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
-"Assets/Scenes/MM/Exit.cs"
-"Assets/Scenes/MM/StartButton.cs"
+"Assets/Scenes/MM/MainMenuButtons.cs"
+"Assets/Scripts/AnimationPlay.cs"
 "Assets/Scripts/BLPlayerMovement.cs"
+"Assets/Scripts/ForwardCheck.cs"
+"Assets/Scripts/GameManager.cs"
+"Assets/Scripts/Interactable.cs"
+"Assets/Scripts/RoomManager.cs"
 -langversion:9.0
 
 /deterministic
