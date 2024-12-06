@@ -13,6 +13,7 @@ public class ForwardCheck : MonoBehaviour
     {
         var go = collision.gameObject;
         if (!go.GetComponent<Interactable>()) return;
+        if (go.activeSelf)
         gameObjectsInArea.Add(go);
     }
     private void OnTriggerExit(Collider collision)

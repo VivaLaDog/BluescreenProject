@@ -349,6 +349,9 @@
 "Assets/Scripts/ForwardCheck.cs"
 "Assets/Scripts/GameManager.cs"
 "Assets/Scripts/Interactable.cs"
+"Assets/Scripts/Interactables/Doors.cs"
+"Assets/Scripts/Interactables/Items.cs"
+"Assets/Scripts/Interactables/LoreTexts.cs"
 "Assets/Scripts/RoomManager.cs"
 -langversion:9.0
 

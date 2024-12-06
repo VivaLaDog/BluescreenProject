@@ -9,12 +9,12 @@ using UnityEngine.UIElements;
 public class GameManager : MonoBehaviour
 {
     /*TODO:
-     * model Roof
+     * model Roof --
      * place Cameras and make triggers for them
      * Interacting with items --
      *      -clipboard 
      *      -keys --
-     *      -doors
+     *      -doors -
      * Make the Main Menu screen a little more recognizable
      */
     [SerializeField] GameObject bl;
@@ -22,7 +22,7 @@ public class GameManager : MonoBehaviour
     ForwardCheck fc;
     RoomManager rm;
 
-    public List<GameObject> pickedUpItems;
+    public List<Items> pickedUpItems;
 
 
     // Start is called before the first frame update
@@ -84,11 +84,11 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void Interaction(GameObject item)
+    public void Interaction(Items item)
     {
-        pickedUpItems.Add(item.gameObject);
+        pickedUpItems.Add(item);
     }
-    public List<GameObject> GetPickedItems()
+    public List<Items> GetPickedItems()
     {
         return pickedUpItems;
     }
@@ -97,9 +97,10 @@ public class GameManager : MonoBehaviour
         return fc;
     }
 
-    internal void BLTransition(Interactable door)
+    internal void BLTransition(Doors door, Doors travelTo)
     {
-        rm.BlMoveDoor(door, bl);
+        Debug.Log($"{door},  {travelTo},   {bl}");
+        rm.BlMoveDoor(door, bl, travelTo);
     }
 
     int nomberForDaLore = 80;
