@@ -63,6 +63,7 @@
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\AnimationPlay.cs" />
     <Compile Include="Assets\Scripts\ForwardCheck.cs" />
+    <Compile Include="Assets\Scripts\VivaAnimations.cs" />
     <Compile Include="Assets\Scripts\RoomManager.cs" />
     <Compile Include="Assets\Scripts\Interactables\Items.cs" />
     <Compile Include="Assets\Scripts\Interactables\LoreTexts.cs" />

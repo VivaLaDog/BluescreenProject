@@ -532,6 +532,84 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -8755214050884661100, guid: f03b0476c005dcc47904d17bffa7e359, type: 3}
+--- !u!1001 &287892239
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2000816958}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 2d1cff2098449794abc846f36ec34d5f, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 2d1cff2098449794abc846f36ec34d5f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 2d1cff2098449794abc846f36ec34d5f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 2d1cff2098449794abc846f36ec34d5f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 2d1cff2098449794abc846f36ec34d5f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 2d1cff2098449794abc846f36ec34d5f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 2d1cff2098449794abc846f36ec34d5f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 2d1cff2098449794abc846f36ec34d5f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 2d1cff2098449794abc846f36ec34d5f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 2d1cff2098449794abc846f36ec34d5f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 2d1cff2098449794abc846f36ec34d5f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2d1cff2098449794abc846f36ec34d5f, type: 3}
+      propertyPath: m_Name
+      value: Viva
+      objectReference: {fileID: 0}
+    - target: {fileID: 5301937147971928770, guid: 2d1cff2098449794abc846f36ec34d5f, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 5866666021909216657, guid: 2d1cff2098449794abc846f36ec34d5f, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: d9317b8ae1784e944a5ccd61db52fdf9, type: 2}
+    - target: {fileID: 8587155098656819297, guid: 2d1cff2098449794abc846f36ec34d5f, type: 3}
+      propertyPath: field of view
+      value: 60.000004
+      objectReference: {fileID: 0}
+    - target: {fileID: 8587155098656819297, guid: 2d1cff2098449794abc846f36ec34d5f, type: 3}
+      propertyPath: m_FocalLength
+      value: 20.78461
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2d1cff2098449794abc846f36ec34d5f, type: 3}
+--- !u!4 &287892240 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 2d1cff2098449794abc846f36ec34d5f, type: 3}
+  m_PrefabInstance: {fileID: 287892239}
+  m_PrefabAsset: {fileID: 0}
 --- !u!64 &305912785
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -655,6 +733,11 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 8911168312659561785, guid: f03b0476c005dcc47904d17bffa7e359, type: 3}
+--- !u!4 &473135083 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3083120560931908697, guid: 2d1cff2098449794abc846f36ec34d5f, type: 3}
+  m_PrefabInstance: {fileID: 287892239}
+  m_PrefabAsset: {fileID: 0}
 --- !u!64 &491912216
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2559,6 +2642,23 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 7427505278039514512, guid: f03b0476c005dcc47904d17bffa7e359, type: 3}
+--- !u!1 &1643694037 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 2d1cff2098449794abc846f36ec34d5f, type: 3}
+  m_PrefabInstance: {fileID: 287892239}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1643694039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1643694037}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8615f481f50e287408852c8eb52cd2b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!64 &1644022353
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3269,6 +3369,7 @@ GameObject:
   - component: {fileID: 2000816958}
   - component: {fileID: 2000816959}
   - component: {fileID: 2000816960}
+  - component: {fileID: 2000816961}
   m_Layer: 0
   m_Name: BL
   m_TagString: Untagged
@@ -3289,6 +3390,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1337315838}
+  - {fileID: 287892240}
   m_Father: {fileID: 668575540}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
@@ -3304,7 +3406,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33f82826486c34848a6fd361dea19951, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 3
+  cameraHolder: {fileID: 473135083}
+  sensitivity: 5
 --- !u!54 &2000816960
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3321,6 +3425,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 116
   m_CollisionDetection: 0
+--- !u!136 &2000816961
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2000816957}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!64 &2008394494
 MeshCollider:
   m_ObjectHideFlags: 0

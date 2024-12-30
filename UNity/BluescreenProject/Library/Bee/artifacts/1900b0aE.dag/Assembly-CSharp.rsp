@@ -353,6 +353,7 @@
 "Assets/Scripts/Interactables/Items.cs"
 "Assets/Scripts/Interactables/LoreTexts.cs"
 "Assets/Scripts/RoomManager.cs"
+"Assets/Scripts/VivaAnimations.cs"
 -langversion:9.0
 
 /deterministic
