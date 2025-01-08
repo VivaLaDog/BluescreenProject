@@ -14,14 +14,15 @@ public class BLPlayerMovement : MonoBehaviour
     Vector3 rotation;
     [SerializeField] Transform cameraHolder;
     [SerializeField] float sensitivity;
+    bool mouseState = true;
 
     Rigidbody rb;
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        //Cursor.lockState = CursorLockMode.Locked;
-        //Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
     // Update is called once per frame
@@ -30,6 +31,7 @@ public class BLPlayerMovement : MonoBehaviour
         if (!reading)
         {
             PlayerMove();
+            if(mouseState)
             Rotation();
         }
         else
@@ -59,9 +61,9 @@ public class BLPlayerMovement : MonoBehaviour
         rb.MoveRotation(Quaternion.Euler(rb.rotation.eulerAngles.x, rb.rotation.eulerAngles.y + (xM * (float)1.38), rb.rotation.eulerAngles.z));
     }
 
-    internal void StopMoving(bool yeah)
+    internal void StopMoving(bool yes)
     {
-        reading = yeah;
+        reading = yes;
     }
 
     private void Rotation()
@@ -74,7 +76,7 @@ public class BLPlayerMovement : MonoBehaviour
 
         transform.rotation = Quaternion.Euler(rotation);
 
-        cameraRotation.x = Mathf.Clamp(cameraRotation.x, -85, 80);
+        cameraRotation.x = Mathf.Clamp(cameraRotation.x, -58, 70);
 
         cameraHolder.localRotation = Quaternion.Euler(cameraRotation);
     }

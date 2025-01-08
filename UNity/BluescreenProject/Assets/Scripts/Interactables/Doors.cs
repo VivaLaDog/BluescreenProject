@@ -31,7 +31,7 @@ public class Doors : Interactable
     private void OpenDoor() // is working, add animation nowe
     {
         //transform.position = new Vector3(transform.position.x, 3f, transform.position.z);
-        transform.parent.GetComponent<Animator>().SetTrigger("Open");
+        //transform.parent.GetComponent<Animator>().SetTrigger("Open");
         //Animator.SetTrigger("Open");
         gm.BLTransition(GetComponent<Doors>(), travelTo);
     }
@@ -45,12 +45,6 @@ public class Doors : Interactable
         {
             Debug.Log("FUCK YOU");
         }
-    }
-
-    public void CloseDoor()
-    {
-        transform.parent.GetComponent<Animator>().SetTrigger("Close");
-        //Animator.SetTrigger("Close");
     }
 
 }

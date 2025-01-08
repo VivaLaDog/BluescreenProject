@@ -44,9 +44,14 @@ public class RoomManager : MonoBehaviour
         }
 
         bl.transform.position = new Vector3(newDoorPos.x + x, 0, newDoorPos.z + z);
+        //Vector3 rot = bl.transform.rotation.eulerAngles;
+        //Maybe rotation does not work because of the mouse feature....
+        
+        //bl.transform.Rotate(new Vector3(rot.x, rot.y + rotateBy, rot.z), Space.World);
+        //Honestly im just going to make the doors be behind eachother because this rotation thing would be barely used
+
         //remove blindfold
         //AUTOSAVE
-        newDoor.CloseDoor();
     }
 
     internal void ChangeCamera()
