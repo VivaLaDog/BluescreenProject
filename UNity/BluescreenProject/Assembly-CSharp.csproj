@@ -67,6 +67,7 @@
     <Compile Include="Assets\Scripts\RoomManager.cs" />
     <Compile Include="Assets\Scripts\Interactables\Items.cs" />
     <Compile Include="Assets\Scripts\Interactables\LoreTexts.cs" />
+    <Compile Include="Assets\Models\Disco\DiscoAnimations.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
