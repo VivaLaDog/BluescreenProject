@@ -31,12 +31,13 @@ public class DiscoAnimations : MonoBehaviour
         float b = transform.position.z - target.position.z;
         float c = Mathf.Sqrt(a * a + b * b);
 
+        //make raycast, if it can see the player, RELEASE THE DISCOMAN
         
         if(c < maxViewDistance)
         {
             animator.SetBool("IsHunting", true);
             transform.LookAt(target);
-            transform.position = transform.forward * speed * Time.deltaTime;
+            transform.localPosition = transform.forward * speed * Time.deltaTime;
                 Debug.Log(transform.name + " sees you!");
 
             if (c < attackDistance)
@@ -51,7 +52,7 @@ public class DiscoAnimations : MonoBehaviour
 
     private void Die()
     {
-        throw new NotImplementedException();
+        animator.SetBool("IsDead", true);
     }
 
     private void OnCollisionEnter(Collision collision)
