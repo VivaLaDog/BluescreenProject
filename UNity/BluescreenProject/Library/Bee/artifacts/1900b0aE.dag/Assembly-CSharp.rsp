@@ -347,6 +347,7 @@
 "Assets/Scenes/MM/MainMenuButtons.cs"
 "Assets/Scripts/AnimationPlay.cs"
 "Assets/Scripts/BLPlayerMovement.cs"
+"Assets/Scripts/Enemies/Turret.cs"
 "Assets/Scripts/ForwardCheck.cs"
 "Assets/Scripts/GameManager.cs"
 "Assets/Scripts/Interactable.cs"

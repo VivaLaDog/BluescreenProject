@@ -5,9 +5,7 @@ using UnityEngine;
 
 public class RoomManager : MonoBehaviour
 {
-    //If BL collides with a void, he will play an animation to move forward, screen will fade to black, and switch to the next camera in camera list
-    [SerializeField] List<Camera> cams;
-
+    //screen will have to fade
     internal void BlMoveDoor(Doors door, GameObject bl, Doors newDoor)
     {
         //Animation cutscene thing that would move the player into the void and through the door, and use the camera on the other side
@@ -19,27 +17,33 @@ public class RoomManager : MonoBehaviour
 
         float x = 0;
         float z = 0;
+        Debug.Log(newDoor.transform.rotation.z);
+
         //check the travelling door's rotation and direction from the original door
-        if(newDoor.transform.rotation.z == 90 || newDoor.transform.rotation.z == -90)
+        if(newDoor.transform.rotation.z == -0.5 || newDoor.transform.rotation.z == 0.5)
         {
             if(ogDoorPos.x > newDoorPos.x)
             {
-                x = -1;
+                x = -1.5f;
+                z = 0;
             }
             else
             {
-                x = 1;
+                x = 1.5f;
+                z = 0;
             }
         }
         else
         {
-            if (ogDoorPos.z > newDoorPos.z)
+            if (ogDoorPos.z > newDoorPos.z) //Some doors make BL stuck, but why? Maybe colliders?
             {
-                z = -1;
+                x = 0;
+                z = -1.5f;
             }
             else
             {
-                z = 1;
+                x = 0;  
+                z = 1.5f;
             }
         }
 

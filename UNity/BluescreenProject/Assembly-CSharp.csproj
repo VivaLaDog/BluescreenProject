@@ -59,6 +59,7 @@
     <Compile Include="Assets\Scripts\Interactables\Doors.cs" />
     <Compile Include="Assets\Scenes\MM\MainMenuButtons.cs" />
     <Compile Include="Assets\Scripts\BLPlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\Enemies\Turret.cs" />
     <Compile Include="Assets\Scripts\Interactable.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\AnimationPlay.cs" />
