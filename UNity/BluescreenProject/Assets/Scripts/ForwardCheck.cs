@@ -1,7 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class ForwardCheck : MonoBehaviour
@@ -12,9 +10,9 @@ public class ForwardCheck : MonoBehaviour
     private void OnTriggerEnter(Collider collision)
     {
         var go = collision.gameObject;
-        if (!go.GetComponent<Interactable>()) return;
-        if (go.activeSelf)
-        gameObjectsInArea.Add(go);
+        if(go.GetComponent<Interactable>() || go.GetComponent<DiscoAnimations>() || go.GetComponent<Turret>() || go.GetComponent<Blob>())
+            gameObjectsInArea.Add(go);
+
     }
     private void OnTriggerExit(Collider collision)
     {

@@ -1,18 +1,16 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.U2D;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class DiscoAnimations : MonoBehaviour
+public class DiscoAnimations : Enemy
 {
     [SerializeField] float speed = 1.5f;
     [SerializeField] Transform target;
     [SerializeField] float maxViewDistance = 20;
     [SerializeField] float attackDistance = 2;
-    [SerializeField] public int health = 5;
-
+    int health = 5;
         float x = 0f;
         float y = 0f;
 
@@ -31,16 +29,8 @@ public class DiscoAnimations : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (health <= 0)
-        {
-            Die();
-        }
-        else
-        {
-            DistanceCheck();
-        }
-
-        
+        if(health > 0)
+        DistanceCheck();
     }
 
     private void DistanceCheck()
@@ -87,10 +77,22 @@ public class DiscoAnimations : MonoBehaviour
 
     }
 
-    private void Die()
+    protected override void Die()
     {
         animator.SetFloat("IsDead", 1);
         agent.enabled = false;
         ogPos = transform.position;
+    }
+    public void DamageMe()
+    {
+        Damage();
+    }
+    protected override void Damage()
+    {
+        health--;
+        if (health <= 0)
+        {
+            Die();
+        }
     }
 }

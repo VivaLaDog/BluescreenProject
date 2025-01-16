@@ -9,13 +9,7 @@ using UnityEngine.UIElements;
 public class GameManager : MonoBehaviour
 {
     /*TODO:
-     * model Roof --
-     * place Cameras and make triggers for them
-     * Interacting with items --
-     *      -clipboard 
-     *      -keys --
-     *      -doors -
-     * Make the Main Menu screen a little more recognizable
+     * 
      */
     [SerializeField] GameObject bl;
     [SerializeField] List<GameObject> canvas;
@@ -45,9 +39,31 @@ public class GameManager : MonoBehaviour
         {
             int? closestIndex = FindClosestItem();
             if (closestIndex == null) return;
-            Interactable interactItem = fc.gameObjectsInArea[(int)closestIndex].GetComponent<Interactable>();
-            Debug.Log(interactItem);
-            interactItem.Interact();
+            var g = fc.gameObjectsInArea[(int)closestIndex];
+                    Debug.Log("Hit " + g.name);
+                if(g.GetComponent<DiscoAnimations>() != null)
+                {
+                    var en = g.GetComponent<DiscoAnimations>();
+                    en.DamageMe();
+                }
+                else if (g.GetComponent<Turret>() != null)
+                {
+                    var en = g.GetComponent<Turret>();
+                    en.DamageMe();
+                }
+                else if (g.GetComponent<Blob>() != null)
+                {
+
+                }
+            
+            else if(g.GetComponent<Interactable>() != null)
+            {
+                Interactable interactItem = g.GetComponent<Interactable>();
+                interactItem.Interact();
+            }
+
+            
+            //Debug.Log(interactItem);
         }
         if (Input.GetKeyDown(KeyCode.Q))
         {
@@ -80,6 +96,8 @@ public class GameManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
+            UnityEngine.Cursor.lockState = CursorLockMode.None;
+            UnityEngine.Cursor.visible = true;
             SceneManager.LoadScene(0);
         }
     }
@@ -103,7 +121,7 @@ public class GameManager : MonoBehaviour
         rm.BlMoveDoor(door, bl, travelTo);
     }
 
-    int nomberForDaLore = 80;
+    int nomberForDaLore = 0;
     void HideLore()
     {
         int n = nomberForDaLore;
@@ -111,7 +129,6 @@ public class GameManager : MonoBehaviour
         var ts = canvas[n].GetComponentsInChildren<TextMeshProUGUI>();
         canvas[n].SetActive(false);
         ts[0].text = "";
-        ts[1].text = "";
     }
     internal void ShowLore(string text, string info, int n)
     {

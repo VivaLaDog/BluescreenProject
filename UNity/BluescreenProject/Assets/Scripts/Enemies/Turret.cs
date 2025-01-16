@@ -4,13 +4,34 @@ using System.Collections.Generic;
 using UnityEngine;
 using static UnityEngine.GraphicsBuffer;
 
-public class Turret : MonoBehaviour
+public class Turret : Enemy
 {
     [SerializeField] Transform target;
     [SerializeField] float maxViewDistance = 20;
     [SerializeField] float attackDistance = 8;
 
+    int health = 999;
     float time;
+
+    protected override void Damage()
+    {
+        health--;
+        if(health <= 0)
+        {
+            Die();
+        }
+    }
+
+    protected override void Die()
+    {
+        gameObject.SetActive(false);
+    }
+
+    internal void DamageMe()
+    {
+        Damage();
+    }
+
     // Start is called before the first frame update
     void Start()
     {

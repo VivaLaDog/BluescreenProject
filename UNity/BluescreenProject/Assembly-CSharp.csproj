@@ -57,6 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Interactables\Doors.cs" />
+    <Compile Include="Assets\Scripts\Enemies\Enemy.cs" />
     <Compile Include="Assets\Scenes\MM\MainMenuButtons.cs" />
     <Compile Include="Assets\Scripts\BLPlayerMovement.cs" />
     <Compile Include="Assets\Scripts\Enemies\Turret.cs" />
@@ -66,6 +67,7 @@
     <Compile Include="Assets\Scripts\ForwardCheck.cs" />
     <Compile Include="Assets\Models\Disco\DiscoAnimations.cs" />
     <Compile Include="Assets\Scripts\VivaAnimations.cs" />
+    <Compile Include="Assets\Scripts\Enemies\Blob.cs" />
     <Compile Include="Assets\Scripts\RoomManager.cs" />
     <Compile Include="Assets\Scripts\Interactables\Items.cs" />
     <Compile Include="Assets\Scripts\Interactables\LoreTexts.cs" />
