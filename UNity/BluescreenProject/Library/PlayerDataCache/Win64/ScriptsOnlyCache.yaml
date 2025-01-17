@@ -121,39 +121,39 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1578}
+      Script: {instanceID: 1580}
     - Class: 114
-      Script: {instanceID: 2180}
+      Script: {instanceID: 2182}
     - Class: 114
-      Script: {instanceID: 2564}
+      Script: {instanceID: 2566}
     - Class: 114
-      Script: {instanceID: 2762}
+      Script: {instanceID: 2764}
     - Class: 114
-      Script: {instanceID: 2982}
+      Script: {instanceID: 2984}
     - Class: 114
-      Script: {instanceID: 3152}
+      Script: {instanceID: 3154}
     - Class: 114
-      Script: {instanceID: 3966}
+      Script: {instanceID: 3968}
     - Class: 114
-      Script: {instanceID: 4940}
+      Script: {instanceID: 4942}
     - Class: 114
-      Script: {instanceID: 5140}
+      Script: {instanceID: 5142}
     - Class: 114
-      Script: {instanceID: 5478}
+      Script: {instanceID: 5480}
     - Class: 114
-      Script: {instanceID: 5624}
+      Script: {instanceID: 5626}
     - Class: 114
-      Script: {instanceID: 5682}
+      Script: {instanceID: 5684}
     - Class: 114
-      Script: {instanceID: 5746}
+      Script: {instanceID: 5748}
     - Class: 114
-      Script: {instanceID: 5936}
+      Script: {instanceID: 5938}
     - Class: 114
-      Script: {instanceID: 6776}
+      Script: {instanceID: 6778}
     - Class: 114
-      Script: {instanceID: 7212}
+      Script: {instanceID: 7214}
     - Class: 114
-      Script: {instanceID: 7398}
+      Script: {instanceID: 7400}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -210,29 +210,29 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1578}
+      Script: {instanceID: 1580}
     - Class: 114
-      Script: {instanceID: 2150}
+      Script: {instanceID: 2152}
     - Class: 114
-      Script: {instanceID: 2414}
+      Script: {instanceID: 2416}
     - Class: 114
-      Script: {instanceID: 2564}
+      Script: {instanceID: 2566}
     - Class: 114
-      Script: {instanceID: 2762}
+      Script: {instanceID: 2764}
     - Class: 114
-      Script: {instanceID: 3042}
+      Script: {instanceID: 3044}
     - Class: 114
-      Script: {instanceID: 4014}
+      Script: {instanceID: 4016}
     - Class: 114
-      Script: {instanceID: 4262}
+      Script: {instanceID: 4264}
     - Class: 114
-      Script: {instanceID: 4940}
+      Script: {instanceID: 4942}
     - Class: 114
-      Script: {instanceID: 5478}
+      Script: {instanceID: 5480}
     - Class: 114
-      Script: {instanceID: 5624}
+      Script: {instanceID: 5626}
     - Class: 114
-      Script: {instanceID: 5936}
+      Script: {instanceID: 5938}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1106,4 +1106,4 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/MM/MainMenu.unity
   - Assets/Scenes/LABCONT1/Cont1.unity
-  playerPath: C:/Users/tomas/OneDrive/Plocha/Bspj/BluescreenProject.exe
+  playerPath: C:/Users/tomas/OneDrive/Plocha/Cool things to show/Bspj/BluescreenProject.exe

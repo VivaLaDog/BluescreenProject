@@ -65,7 +65,7 @@
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\AnimationPlay.cs" />
     <Compile Include="Assets\Scripts\ForwardCheck.cs" />
-    <Compile Include="Assets\Models\Disco\DiscoAnimations.cs" />
+    <Compile Include="Assets\Scripts\Enemies\DiscoAnimations.cs" />
     <Compile Include="Assets\Scripts\VivaAnimations.cs" />
     <Compile Include="Assets\Scripts\Enemies\Blob.cs" />
     <Compile Include="Assets\Scripts\RoomManager.cs" />
