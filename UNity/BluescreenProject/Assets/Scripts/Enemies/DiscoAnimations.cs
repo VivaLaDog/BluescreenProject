@@ -10,7 +10,7 @@ public class DiscoAnimations : Enemy
     [SerializeField] Transform target;
     [SerializeField] float maxViewDistance = 20;
     [SerializeField] float attackDistance = 2;
-    int health = 5;
+    int health = 3;
         float x = 0f;
         float y = 0f;
 
@@ -35,17 +35,14 @@ public class DiscoAnimations : Enemy
 
     private void DistanceCheck()
     {
-        float a = transform.position.x - target.position.x;
-        float b = transform.position.z - target.position.z;
-        float c = Mathf.Sqrt(a * a + b * b);
-
+        var c = Vector3.Distance(ogPos, target.position);
         //make raycast, if it can see the player, RELEASE THE DISCOMAN
 
         if (c < maxViewDistance && Physics.Raycast(transform.position, target.position))
         {
             y += Time.deltaTime * speed;
             //transform.localPosition = transform.forward * speed * Time.deltaTime;
-            Debug.Log(transform.name + " sees you!");
+            //Debug.Log(transform.name + " sees you!");
             agent.SetDestination(target.position);
 
             if (c < attackDistance)

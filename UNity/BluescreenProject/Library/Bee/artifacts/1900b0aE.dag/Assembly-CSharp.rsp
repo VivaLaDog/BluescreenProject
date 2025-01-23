@@ -345,6 +345,7 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
 "Assets/Scenes/MM/MainMenuButtons.cs"
 "Assets/Scripts/AnimationPlay.cs"
+"Assets/Scripts/BLHPSys.cs"
 "Assets/Scripts/BLPlayerMovement.cs"
 "Assets/Scripts/Enemies/Blob.cs"
 "Assets/Scripts/Enemies/DiscoAnimations.cs"

@@ -32,25 +32,17 @@ public class Turret : Enemy
         Damage();
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
     // Update is called once per frame
     void Update()
     {
-        float a = transform.position.x - target.position.x;
-        float b = transform.position.z - target.position.z;
-        float c = Mathf.Sqrt(a * a + b * b);
+        var c = Vector3.Distance(transform.position, target.position);
 
         //make raycast, if it can see the player, shoot
 
         if (c < maxViewDistance && Physics.Raycast(transform.position, target.position))
         {
             transform.LookAt(target);
-            Debug.Log(transform.name + " sees you!");
+            //Debug.Log(transform.name + " sees you!");
 
             if (c < attackDistance)
             {
