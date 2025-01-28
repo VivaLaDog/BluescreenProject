@@ -3,20 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\tomas\\BluescreenProject\\BluescreenProject\\UNity\\BluescreenProject\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{64DD004A-066A-46D1-D70C-52CCD1A5696E}|Assembly-CSharp.csproj|c:\\users\\tomas\\bluescreenproject\\bluescreenproject\\unity\\bluescreenproject\\assets\\scripts\\enemies\\blob.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{64DD004A-066A-46D1-D70C-52CCD1A5696E}|Assembly-CSharp.csproj|c:\\users\\tomas\\bluescreenproject\\bluescreenproject\\unity\\bluescreenproject\\assets\\scripts\\blhpsys.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64DD004A-066A-46D1-D70C-52CCD1A5696E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\blhpsys.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64DD004A-066A-46D1-D70C-52CCD1A5696E}|Assembly-CSharp.csproj|C:\\Users\\tomas\\BluescreenProject\\BluescreenProject\\UNity\\BluescreenProject\\assets\\scripts\\enemies\\blob.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{64DD004A-066A-46D1-D70C-52CCD1A5696E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\enemies\\blob.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{64DD004A-066A-46D1-D70C-52CCD1A5696E}|Assembly-CSharp.csproj|C:\\Users\\tomas\\BluescreenProject\\BluescreenProject\\UNity\\BluescreenProject\\assets\\scripts\\enemies\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{64DD004A-066A-46D1-D70C-52CCD1A5696E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\enemies\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{64DD004A-066A-46D1-D70C-52CCD1A5696E}|Assembly-CSharp.csproj|C:\\Users\\tomas\\BluescreenProject\\BluescreenProject\\UNity\\BluescreenProject\\assets\\scripts\\enemies\\discoanimations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64DD004A-066A-46D1-D70C-52CCD1A5696E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\enemies\\discoanimations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{64DD004A-066A-46D1-D70C-52CCD1A5696E}|Assembly-CSharp.csproj|C:\\Users\\tomas\\BluescreenProject\\BluescreenProject\\UNity\\BluescreenProject\\assets\\scripts\\enemies\\turret.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{64DD004A-066A-46D1-D70C-52CCD1A5696E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\enemies\\turret.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{64DD004A-066A-46D1-D70C-52CCD1A5696E}|Assembly-CSharp.csproj|C:\\Users\\tomas\\BluescreenProject\\BluescreenProject\\UNity\\BluescreenProject\\assets\\scripts\\enemies\\discoanimations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{64DD004A-066A-46D1-D70C-52CCD1A5696E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\enemies\\discoanimations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{64DD004A-066A-46D1-D70C-52CCD1A5696E}|Assembly-CSharp.csproj|C:\\Users\\tomas\\BluescreenProject\\BluescreenProject\\UNity\\BluescreenProject\\assets\\scripts\\enemies\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64DD004A-066A-46D1-D70C-52CCD1A5696E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\enemies\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -31,43 +35,57 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "BLHPSys.cs",
+              "DocumentMoniker": "C:\\Users\\tomas\\BluescreenProject\\BluescreenProject\\UNity\\BluescreenProject\\Assets\\Scripts\\BLHPSys.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\BLHPSys.cs",
+              "ToolTip": "C:\\Users\\tomas\\BluescreenProject\\BluescreenProject\\UNity\\BluescreenProject\\Assets\\Scripts\\BLHPSys.cs",
+              "RelativeToolTip": "Assets\\Scripts\\BLHPSys.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFcAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-23T06:52:58.163Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Blob.cs",
               "DocumentMoniker": "C:\\Users\\tomas\\BluescreenProject\\BluescreenProject\\UNity\\BluescreenProject\\Assets\\Scripts\\Enemies\\Blob.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Enemies\\Blob.cs",
               "ToolTip": "C:\\Users\\tomas\\BluescreenProject\\BluescreenProject\\UNity\\BluescreenProject\\Assets\\Scripts\\Enemies\\Blob.cs",
               "RelativeToolTip": "Assets\\Scripts\\Enemies\\Blob.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAYwCMAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAYwDgAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-22T07:40:20.887Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "DiscoAnimations.cs",
               "DocumentMoniker": "C:\\Users\\tomas\\BluescreenProject\\BluescreenProject\\UNity\\BluescreenProject\\Assets\\Scripts\\Enemies\\DiscoAnimations.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Enemies\\DiscoAnimations.cs",
               "ToolTip": "C:\\Users\\tomas\\BluescreenProject\\BluescreenProject\\UNity\\BluescreenProject\\Assets\\Scripts\\Enemies\\DiscoAnimations.cs",
               "RelativeToolTip": "Assets\\Scripts\\Enemies\\DiscoAnimations.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAwAAAASAAAAAAAAAA==",
+              "ViewState": "AgIAACUAAAAAAAAAAAAwwDgAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-17T09:12:44.008Z"
+              "WhenOpened": "2025-01-17T09:12:44.008Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Turret.cs",
               "DocumentMoniker": "C:\\Users\\tomas\\BluescreenProject\\BluescreenProject\\UNity\\BluescreenProject\\Assets\\Scripts\\Enemies\\Turret.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Enemies\\Turret.cs",
               "ToolTip": "C:\\Users\\tomas\\BluescreenProject\\BluescreenProject\\UNity\\BluescreenProject\\Assets\\Scripts\\Enemies\\Turret.cs",
               "RelativeToolTip": "Assets\\Scripts\\Enemies\\Turret.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAAzAAAAAAAAAA==",
+              "ViewState": "AgIAABgAAAAAAAAAAAA1wA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-15T10:50:14.75Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "Enemy.cs",
               "DocumentMoniker": "C:\\Users\\tomas\\BluescreenProject\\BluescreenProject\\UNity\\BluescreenProject\\Assets\\Scripts\\Enemies\\Enemy.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Enemies\\Enemy.cs",

@@ -4843,6 +4843,42 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -4035323191213877252, guid: f03b0476c005dcc47904d17bffa7e359, type: 3}
+--- !u!1 &822380762
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 822380763}
+  m_Layer: 5
+  m_Name: BloodOverlays
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &822380763
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 822380762}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 865715449}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &851558008
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5095,6 +5131,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1737558538}
+  - {fileID: 822380763}
   m_Father: {fileID: 668575540}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6301,7 +6338,7 @@ MonoBehaviour:
   speed: 1
   target: {fileID: 1924315323}
   maxViewDistance: 6
-  attackDistance: 1
+  attackDistance: 2.5
 --- !u!54 &988010035
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -11494,7 +11531,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1842951092}
-  maxViewDistance: 20
+  maxViewDistance: 10
   attackDistance: 8
 --- !u!4 &1820919914 stripped
 Transform:
@@ -12994,6 +13031,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2000816958}
   - component: {fileID: 2000816959}
+  - component: {fileID: 2000816962}
   - component: {fileID: 2000816960}
   - component: {fileID: 2000816961}
   m_Layer: 0
@@ -13065,6 +13103,25 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!114 &2000816962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2000816957}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1aa16856f3adff4cbeefb15ec21188d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bloodPrefabs:
+  - {fileID: 21300000, guid: f44e8a0b73654b244a96e870d3ae285c, type: 3}
+  - {fileID: 21300000, guid: 604e8e2d4d2df4b4eb4f5460e235fff1, type: 3}
+  - {fileID: 21300000, guid: 8b581ad644bf0c2449713b2ac9b9d17b, type: 3}
+  - {fileID: 21300000, guid: 59e50ded500c0a4418ce582fa897815d, type: 3}
+  bloodOverlay: {fileID: 822380763}
+  mainCamera: {fileID: 810765595}
 --- !u!64 &2008394494
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -18514,6 +18571,10 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 1842951092}
+    - target: {fileID: 1715072408, guid: 09de13d5714a37e49a4e788d9d6973e5, type: 3}
+      propertyPath: attackDistance
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2632229695135987646, guid: 09de13d5714a37e49a4e788d9d6973e5, type: 3}
       propertyPath: m_Name
       value: Disco

@@ -7,8 +7,8 @@ using static UnityEngine.GraphicsBuffer;
 public class Turret : Enemy
 {
     [SerializeField] Transform target;
-    [SerializeField] float maxViewDistance = 20;
-    [SerializeField] float attackDistance = 8;
+    [SerializeField] float maxViewDistance;
+    [SerializeField] float attackDistance;
 
     int health = 999;
     float time;

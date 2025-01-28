@@ -6,14 +6,16 @@ using UnityEngine.AI;
 
 public class DiscoAnimations : Enemy
 {
-    [SerializeField] float speed = 1.5f;
+    [SerializeField] float speed;
     [SerializeField] Transform target;
-    [SerializeField] float maxViewDistance = 20;
-    [SerializeField] float attackDistance = 2;
+    [SerializeField] float maxViewDistance;
+    [SerializeField] float attackDistance;
     int health = 3;
         float x = 0f;
         float y = 0f;
 
+    int damage = 3;
+    BLHPSys blhp;
     Vector3 ogPos;
 
     Animator animator;
@@ -24,6 +26,7 @@ public class DiscoAnimations : Enemy
         animator = GetComponent<Animator>();
         agent = GetComponent<NavMeshAgent>();
         ogPos = transform.position;
+        blhp = target.GetComponent<BLHPSys>();
     }
 
     // Update is called once per frame
@@ -35,14 +38,12 @@ public class DiscoAnimations : Enemy
 
     private void DistanceCheck()
     {
-        var c = Vector3.Distance(ogPos, target.position);
+        var c = Vector3.Distance(transform.position, target.position);
         //make raycast, if it can see the player, RELEASE THE DISCOMAN
 
         if (c < maxViewDistance && Physics.Raycast(transform.position, target.position))
         {
             y += Time.deltaTime * speed;
-            //transform.localPosition = transform.forward * speed * Time.deltaTime;
-            //Debug.Log(transform.name + " sees you!");
             agent.SetDestination(target.position);
 
             if (c < attackDistance)
@@ -50,7 +51,11 @@ public class DiscoAnimations : Enemy
                 transform.LookAt(target);
                 agent.isStopped = true;
                 x += Time.deltaTime * speed;
+                y = 0;
                 //BEGIN the ATTACK!
+
+                blhp.Damage(damage);
+                
             }
             else
             {
@@ -70,7 +75,6 @@ public class DiscoAnimations : Enemy
 
         animator.SetFloat("IsAttacking", x);
         animator.SetFloat("IsHunting", y);
-
 
     }
 

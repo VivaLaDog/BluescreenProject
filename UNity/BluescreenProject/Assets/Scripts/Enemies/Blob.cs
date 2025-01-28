@@ -1,15 +1,12 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
 public class Blob : Enemy
 {
-    [SerializeField] float speed = 1.5f;
+    [SerializeField] float speed;
     [SerializeField] Transform target;
-    [SerializeField] float maxViewDistance = 6;
-    [SerializeField] float attackDistance = 2f;
+    [SerializeField] float maxViewDistance;
+    [SerializeField] float attackDistance;
     int health = 10;
     float x = 0f;
 
@@ -28,31 +25,41 @@ public class Blob : Enemy
     // Update is called once per frame
     void Update()
     {
+        transform.LookAt(target);
         if (health > 0)
             DistanceCheck();
     }
-
+    float timer = 1f;
     private void DistanceCheck()
     {
         //checks distance between og position and player, because i want this fella to only guard an area
-        var c = Vector3.Distance(ogPos, target.position);
+        var a = Vector3.Distance(ogPos, target.position);
+        var b = Vector3.Distance(transform.position, target.position);
         
         //checks distance between player and blob, if within viewdistance and not obscured
         //if the player is within attack distance, it will attack
-        if (c < maxViewDistance && Physics.Raycast(transform.position, target.position))
+        
+        if (a < maxViewDistance && Physics.Raycast(transform.position, target.position))
         {
             agent.SetDestination(target.position);
 
-            if (c < attackDistance)
+            if (b < attackDistance)
             {
-                transform.LookAt(target);
-                agent.isStopped = true;
-                x += Time.deltaTime * 2 * speed;
-                //BEGIN the ATTACK!
+                Debug.Log("Blob in range");
+                timer -= Time.deltaTime;
+                Debug.Log(timer);
+                if(timer <= 0)
+                {
+                    agent.isStopped = true;
+                    x += Time.deltaTime * speed;
+                    //BEGIN the ATTACK!
+                    target.GetComponentInParent<BLHPSys>().Damage(2);
+                    timer = 1f;
+                }
             }
             else
             {
-                x -= Time.deltaTime * 2 * speed;
+                x -= Time.deltaTime * speed;
                 agent.isStopped = false;
             }
         }
