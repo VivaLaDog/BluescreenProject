@@ -1,14 +1,13 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class BLHPSys : MonoBehaviour
 {
-    [SerializeField] List<Sprite> bloodPrefabs;
+    [SerializeField] List<Sprite> bloodPrefabs; //Instantiating bloodprefabs does not want to instantiate, check out later what the fuck is going on
     [SerializeField] Transform bloodOverlay;
-    [SerializeField] Camera mainCamera;
+    [SerializeField] RectTransform canvas;
     
     List<Sprite> bloodOverlays;
     private int health;
@@ -26,27 +25,43 @@ public class BLHPSys : MonoBehaviour
     {
         if(bleeding) // look into asyncs, to allow a while
         {
-          await Bleeding();
+            await Task.Run(Bleeding);
         }
         HealCheck();
+        if(bloodOverlays.Count > 0 && bloodOverlays != null)
+        {
+            await Task.Run(OverlayRemover);
+        }
     }
 
-    async Task Bleeding()
+    Task OverlayRemover()
     {
-        var timePassed = bleedTime / bleedAmount;
-        while(bleedTime > 0)
-        {
-            bleedTime -= Time.deltaTime;
-            timePassed -= Time.deltaTime;
-            if (timePassed <= 0)
-            {
-                Damage(1);
-                timePassed = bleedTime / bleedAmount;
-            }
-        }
-        bleeding = false;
+        Task.Delay(10000);
+        bloodOverlays.RemoveAt(0);
+        
+        return Task.CompletedTask;
+    }
 
-        return;
+    Task Bleeding()
+    {
+        /* While bleeding, take 1 point of damage for every amount/time ticks
+         * 
+         */
+
+        int g = (int)bleedTime / bleedAmount;
+
+        Damage(1);
+        bleedAmount--;
+        
+        while (bleedAmount > 0)
+        {
+            Task.Delay(g);
+            Damage(1);
+            bleedAmount--;
+        }
+
+        bleeding = false;
+        return Task.CompletedTask;
     }
 
     private void HealCheck() //basically healing
@@ -57,7 +72,7 @@ public class BLHPSys : MonoBehaviour
             if (healTime <= 0) //heal 1hp every 10 seconds
             {
                 health++;
-                healTime = 10000;
+                healTime = 10f;
             }
         }
 
@@ -87,13 +102,21 @@ public class BLHPSys : MonoBehaviour
              * the longer the splatter is alive, the more transparent it is
              */
             //creates a random blood prefab
-            var x = Random.Range(0, mainCamera.pixelWidth);
-            var y = Random.Range(0, mainCamera.pixelHeight);
+
+            int a = Random.Range(0, bloodPrefabs.Count);
+
+
+            var x1 = canvas.GetComponent<Canvas>().scaleFactor * canvas.rect.width;
+            var y1 = canvas.GetComponent<Canvas>().scaleFactor * canvas.rect.height;
+
+            var x = Random.Range(-(x1/2), x1/2);
+            var y = Random.Range(-(y1/2), y1/2);
             var Rz = Random.Range(0, 360);
-            var c = Instantiate(bloodPrefabs[Random.Range(0, bloodOverlays.Count + 1)], 
+            
+            /*var c = Instantiate(img, 
                     new Vector3(x, y, 0),
                     Quaternion.Euler(0, 0, Rz), bloodOverlay);
-            bloodOverlays.Add(c);
+            bloodOverlays.Add(c);*/
             
         }
         health -= amount;
@@ -101,10 +124,17 @@ public class BLHPSys : MonoBehaviour
     float bleedTime;
     int bleedAmount;
     bool bleeding = false;
-    public void Bleed(int totalAmount, float timeMS)
+    public void Bleed(int totalAmount, float totalTimeMS)
     {
-        bleedAmount = totalAmount;
-        bleedTime = timeMS;
-        bleeding = true;
+        if (totalAmount <= 1)
+        {
+            Damage(1);
+        }
+        else
+        {
+            bleedAmount = totalAmount;
+            bleedTime = totalTimeMS;
+            bleeding = true;
+        }
     }
 }

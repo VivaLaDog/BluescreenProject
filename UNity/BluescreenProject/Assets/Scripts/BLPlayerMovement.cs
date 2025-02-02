@@ -47,7 +47,7 @@ public class BLPlayerMovement : MonoBehaviour
     {
         float xM = Input.GetAxis("Horizontal");
         float zM = Input.GetAxis("Vertical");
-        float yM = rb.velocity.y;
+        float yM = rb.linearVelocity.y;
 
         var dir = new Vector3(xM, 0, zM);
         var transformedDir = Quaternion.Euler(0, transform.rotation.eulerAngles.y, 0) * dir;
@@ -57,7 +57,7 @@ public class BLPlayerMovement : MonoBehaviour
         else if (Input.GetKeyUp("left shift"))
             speed = speed / 2;
 
-        rb.velocity = new Vector3(transformedDir.x * speed, yM, transformedDir.z * speed);  
+        rb.linearVelocity = new Vector3(transformedDir.x * speed, yM, transformedDir.z * speed);  
         rb.MoveRotation(Quaternion.Euler(rb.rotation.eulerAngles.x, rb.rotation.eulerAngles.y + (xM * (float)1.38), rb.rotation.eulerAngles.z));
     }
 

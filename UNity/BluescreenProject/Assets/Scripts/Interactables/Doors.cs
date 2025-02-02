@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Doors : Interactable
@@ -35,11 +36,16 @@ public class Doors : Interactable
         //Animator.SetTrigger("Open");
         gm.BLTransition(GetComponent<Doors>(), travelTo);
     }
+    public void UnlockDoor()
+    {
+        locked = false;
+        //maybe change door colour?
+    }
     private void TryOpenDoorLocked(Items key) //check if player has required keycard
     {
         if (doorKey == key)
         {
-            OpenDoor();
+            UnlockDoor();
         }
         else
         {

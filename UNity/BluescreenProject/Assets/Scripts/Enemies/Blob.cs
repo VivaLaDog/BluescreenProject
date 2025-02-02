@@ -1,3 +1,4 @@
+using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -29,7 +30,7 @@ public class Blob : Enemy
         if (health > 0)
             DistanceCheck();
     }
-    float timer = 1f;
+    float timer = 0f;
     private void DistanceCheck()
     {
         //checks distance between og position and player, because i want this fella to only guard an area
@@ -46,16 +47,16 @@ public class Blob : Enemy
             if (b < attackDistance)
             {
                 Debug.Log("Blob in range");
-                timer -= Time.deltaTime;
-                Debug.Log(timer);
                 if(timer <= 0)
                 {
                     agent.isStopped = true;
                     x += Time.deltaTime * speed;
                     //BEGIN the ATTACK!
-                    target.GetComponentInParent<BLHPSys>().Damage(2);
+                    //target.GetComponentInParent<BLHPSys>().Damage(2);
                     timer = 1f;
                 }
+                timer -= Time.deltaTime;
+                Debug.Log(timer);
             }
             else
             {
