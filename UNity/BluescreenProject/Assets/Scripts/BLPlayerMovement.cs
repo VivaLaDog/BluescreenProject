@@ -1,9 +1,4 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Drawing;
 using UnityEngine;
-using UnityEngine.Rendering;
 
 public class BLPlayerMovement : MonoBehaviour
 {
@@ -15,6 +10,11 @@ public class BLPlayerMovement : MonoBehaviour
     [SerializeField] Transform cameraHolder;
     [SerializeField] float sensitivity;
     bool mouseState = true;
+
+    public bool IsMoving()
+    {
+        return reading;
+    }
 
     Rigidbody rb;
     // Start is called before the first frame update
@@ -64,6 +64,7 @@ public class BLPlayerMovement : MonoBehaviour
     internal void StopMoving(bool yes)
     {
         reading = yes;
+        mouseState = !yes;
     }
 
     private void Rotation()

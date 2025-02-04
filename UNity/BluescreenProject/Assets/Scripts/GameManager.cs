@@ -1,28 +1,38 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UIElements;
 
 public class GameManager : MonoBehaviour
 {
     /*TODO:
      * 
      */
-    [SerializeField] GameObject bl;
+    [SerializeField] BLPlayerMovement bl;
     [SerializeField] List<GameObject> canvas;
     ForwardCheck fc;
     RoomManager rm;
 
     public List<Items> pickedUpItems;
 
+    public void ChangeBLMovement()
+    {
+        if (bl.IsMoving())
+        {
+            bl.StopMoving(false);
+        }
+        else
+        {
+            bl.StopMoving(true);
+        }
+    }
+
 
     // Start is called before the first frame update
     void Start()
     {
-        fc = bl.GetComponentInChildren<ForwardCheck>();
+        fc = bl.gameObject.GetComponentInChildren<ForwardCheck>();
         rm = GetComponent<RoomManager>();
     }
 
@@ -71,7 +81,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private int? FindClosestItem()
+    private int? FindClosestItem() //use vectors to measure distance
     {
         List<GameObject> list = fc.gameObjectsInArea;
         int? r = null;
@@ -96,8 +106,8 @@ public class GameManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            UnityEngine.Cursor.lockState = CursorLockMode.None;
-            UnityEngine.Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
             SceneManager.LoadScene(0);
         }
     }
@@ -118,14 +128,20 @@ public class GameManager : MonoBehaviour
     internal void BLTransition(Doors door, Doors travelTo)
     {
         Debug.Log($"{door},  {travelTo},   {bl}");
-        rm.BlMoveDoor(door, bl, travelTo);
+        rm.BlMoveDoor(door, bl.gameObject, travelTo);
     }
 
     int nomberForDaLore = 0;
+
+    public Vector3 BLPos()
+    {
+        return bl.transform.position;
+    }
+
     void HideLore()
     {
         int n = nomberForDaLore;
-        bl.GetComponent<BLPlayerMovement>().StopMoving(false);
+        bl.StopMoving(false);
         var ts = canvas[n].GetComponentsInChildren<TextMeshProUGUI>();
         canvas[n].SetActive(false);
         ts[0].text = "";
@@ -137,6 +153,6 @@ public class GameManager : MonoBehaviour
         canvas[n].SetActive(true);
         ts[0].text = text;
         ts[1].text = info;
-        bl.GetComponent<BLPlayerMovement>().StopMoving(true);
+        bl.StopMoving(true);
     }
 }

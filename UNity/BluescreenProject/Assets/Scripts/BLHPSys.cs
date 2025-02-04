@@ -28,10 +28,10 @@ public class BLHPSys : MonoBehaviour
             await Task.Run(Bleeding);
         }
         HealCheck();
-        if(bloodOverlays.Count > 0 && bloodOverlays != null)
+        /*if(bloodOverlays.Count > 0 && bloodOverlays != null)
         {
             await Task.Run(OverlayRemover);
-        }
+        }*/
     }
 
     Task OverlayRemover()

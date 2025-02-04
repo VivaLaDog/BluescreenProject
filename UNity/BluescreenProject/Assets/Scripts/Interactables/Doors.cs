@@ -8,6 +8,7 @@ public class Doors : Interactable
     [SerializeField] bool locked;
     [SerializeField] Items doorKey;
     [SerializeField] Doors travelTo;
+    [SerializeField] Material unlockedMaterial;
 
     public override void Interact()
     {
@@ -39,6 +40,10 @@ public class Doors : Interactable
     public void UnlockDoor()
     {
         locked = false;
+        MeshRenderer mr = GetComponent<MeshRenderer>();
+        var materials = mr.materials;
+        materials[4] = unlockedMaterial;
+        mr.materials = materials;
         //maybe change door colour?
     }
     private void TryOpenDoorLocked(Items key) //check if player has required keycard
