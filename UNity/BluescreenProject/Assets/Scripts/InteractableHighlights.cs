@@ -10,6 +10,7 @@ public class InteractableHighlights : MonoBehaviour
     void Start()
     {
         Interactable[] gwah = GetComponentsInChildren<Interactable>();//two lists, one for interactables and one for doors, doors get larger light area
+        
         for(int i = 0;  i < gwah.Length; i++)
         {
             Debug.Log(gwah[i].gameObject.name);
@@ -18,27 +19,27 @@ public class InteractableHighlights : MonoBehaviour
 
         foreach(Interactable interactable in interactables)
         {
-            if(interactable.GetComponent<Doors>() != null)//gives no light, which... fair because its a door, you'll know you can access it by the bottom light
+            if (interactable.GetComponent<Doors>() != null)
             {
-                //this code doesnt exist
                 Doors door = interactable.GetComponent<Doors>();
-                door.AddComponent<Light>();
-                Light intLight = door.GetComponent<Light>();
-                intLight.intensity = .8f;
-                intLight.shadows = LightShadows.Soft;
-                intLight.shadowRadius = 1f;
-                intLight.range = 5f;
+                AddLightComp(door, .8f, LightShadows.Soft, 5f);
             }
             else
             {
-                interactable.AddComponent<Light>();
-                Light intLight = interactable.GetComponent<Light>();
-                intLight.intensity = 3f;
-                intLight.shadows = LightShadows.Soft;
-                intLight.shadowRadius = 0.4f;
-                intLight.range = 0.5f;
+                AddLightComp(interactable, 3f, LightShadows.Soft, 0.5f);
             }
+            
+            interactable.AddComponent<HighLightChanger>();
         }
 
+    }
+
+    private static void AddLightComp(Interactable interactable, float intensity, LightShadows shadow, float range)
+    {
+        interactable.AddComponent<Light>();
+        Light intLight = interactable.GetComponent<Light>();
+        intLight.intensity = intensity;
+        intLight.shadows = shadow;
+        intLight.range = range;
     }
 }

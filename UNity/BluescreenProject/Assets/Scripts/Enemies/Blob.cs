@@ -52,7 +52,7 @@ public class Blob : Enemy
                     agent.isStopped = true;
                     x += Time.deltaTime * speed;
                     //BEGIN the ATTACK!
-                    //target.GetComponentInParent<BLHPSys>().Damage(2);
+                    target.GetComponentInParent<BLHPSys>().Damage(2);
                     timer = 1f;
                 }
                 timer -= Time.deltaTime;

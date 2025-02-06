@@ -11,8 +11,14 @@ public class LeverPull : Interactable
 
     Animator animator;
     bool cameraSwapped = false;
+    bool pulled = false;
     public override void Interact()
-    {
+    {//make the interaction not happen if it has already been pulled.
+        if (pulled)
+            return;
+
+        pulled = true;
+            
         animator = GetComponent<Animator>();
         animator.SetBool("Pulled", true);
         opens.SetBool(parameter, true);
@@ -28,6 +34,7 @@ public class LeverPull : Interactable
         {
             doorToOpen.UnlockDoor();
         }
+        
     }
     float timer = 5;
     private void Update()

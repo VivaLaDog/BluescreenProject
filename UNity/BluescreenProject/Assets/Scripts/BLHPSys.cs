@@ -21,11 +21,11 @@ public class BLHPSys : MonoBehaviour
     }
 
     // Update is called once per frame
-    async void Update()
+    void Update()
     {
         if(bleeding) // look into asyncs, to allow a while
         {
-            await Task.Run(Bleeding);
+            Bleeding();
         }
         HealCheck();
         /*if(bloodOverlays.Count > 0 && bloodOverlays != null)
@@ -34,15 +34,7 @@ public class BLHPSys : MonoBehaviour
         }*/
     }
 
-    Task OverlayRemover()
-    {
-        Task.Delay(10000);
-        bloodOverlays.RemoveAt(0);
-        
-        return Task.CompletedTask;
-    }
-
-    Task Bleeding()
+    void Bleeding()
     {
         /* While bleeding, take 1 point of damage for every amount/time ticks
          * 
@@ -61,7 +53,6 @@ public class BLHPSys : MonoBehaviour
         }
 
         bleeding = false;
-        return Task.CompletedTask;
     }
 
     private void HealCheck() //basically healing
@@ -88,6 +79,8 @@ public class BLHPSys : MonoBehaviour
             /* a ramp up of:
              * Camera shake, chromatic abberation gets stronger (maybe with making lights stronger)
              * effects get super strong and then loads the current scene again
+             * 
+             * requires the animation to play
              */
             
             //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);

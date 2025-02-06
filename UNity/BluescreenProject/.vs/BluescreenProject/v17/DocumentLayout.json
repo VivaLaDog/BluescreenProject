@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\tomas\\BluescreenProject\\BluescreenProject\\UNity\\BluescreenProject\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{64DD004A-066A-46D1-D70C-52CCD1A5696E}|Assembly-CSharp.csproj|c:\\users\\tomas\\bluescreenproject\\bluescreenproject\\unity\\bluescreenproject\\assets\\scripts\\enemies\\discoanimations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{64DD004A-066A-46D1-D70C-52CCD1A5696E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\enemies\\discoanimations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{64DD004A-066A-46D1-D70C-52CCD1A5696E}|Assembly-CSharp.csproj|c:\\users\\tomas\\bluescreenproject\\bluescreenproject\\unity\\bluescreenproject\\assets\\scripts\\roommanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64DD004A-066A-46D1-D70C-52CCD1A5696E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\roommanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,14 +19,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "DiscoAnimations.cs",
-              "DocumentMoniker": "C:\\Users\\tomas\\BluescreenProject\\BluescreenProject\\UNity\\BluescreenProject\\Assets\\Scripts\\Enemies\\DiscoAnimations.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Enemies\\DiscoAnimations.cs",
-              "ToolTip": "C:\\Users\\tomas\\BluescreenProject\\BluescreenProject\\UNity\\BluescreenProject\\Assets\\Scripts\\Enemies\\DiscoAnimations.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Enemies\\DiscoAnimations.cs",
-              "ViewState": "AgIAAE0AAAAAAAAAAAAgwDgAAAAkAAAAAAAAAA==",
+              "Title": "RoomManager.cs",
+              "DocumentMoniker": "C:\\Users\\tomas\\BluescreenProject\\BluescreenProject\\UNity\\BluescreenProject\\Assets\\Scripts\\RoomManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\RoomManager.cs",
+              "ToolTip": "C:\\Users\\tomas\\BluescreenProject\\BluescreenProject\\UNity\\BluescreenProject\\Assets\\Scripts\\RoomManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\RoomManager.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAQwGcAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-04T17:40:51.567Z",
+              "WhenOpened": "2025-02-06T10:31:20.433Z",
               "EditorCaption": ""
             }
           ]

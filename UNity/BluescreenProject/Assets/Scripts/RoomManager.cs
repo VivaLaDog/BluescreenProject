@@ -1,28 +1,34 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class RoomManager : MonoBehaviour
 {
-    //screen will have to fade
+    [SerializeField] Image blackscreen;
+    Doors travelFrom;
+    GameObject blue;
+    Doors travelTo;
+
     internal void BlMoveDoor(Doors door, GameObject bl, Doors newDoor)
     {
-        //Animation cutscene thing that would move the player into the void and through the door, and use the camera on the other side
-        
+        travelFrom = door;
+        blue = bl;
+        travelTo = newDoor;
+        darkenScreen = true;
+        changeScreenState = true;
+    }
+
+    private void ChangeBLPosition(Doors door, GameObject bl, Doors newDoor)
+    {
         var newDoorPos = newDoor.transform.position;
         var ogDoorPos = door.transform.position;
 
-        //cut to black
-
         float x = 0;
         float z = 0;
-        Debug.Log(newDoor.transform.rotation.z);
 
-        //check the travelling door's rotation and direction from the original door
-        if(newDoor.transform.rotation.z == -0.5 || newDoor.transform.rotation.z == 0.5)
+        if (newDoor.transform.rotation.z == -0.5 || newDoor.transform.rotation.z == 0.5)
         {
-            if(ogDoorPos.x > newDoorPos.x)
+            if (ogDoorPos.x > newDoorPos.x)
             {
                 x = -1.5f;
                 z = 0;
@@ -35,31 +41,68 @@ public class RoomManager : MonoBehaviour
         }
         else
         {
-            if (ogDoorPos.z > newDoorPos.z) //Some doors make BL stuck, but why? Maybe colliders?
+            if (ogDoorPos.z > newDoorPos.z)
             {
                 x = 0;
                 z = -1.5f;
             }
             else
             {
-                x = 0;  
+                x = 0;
                 z = 1.5f;
             }
         }
 
         bl.transform.position = new Vector3(newDoorPos.x + x, 0, newDoorPos.z + z);
-        //Vector3 rot = bl.transform.rotation.eulerAngles;
-        //Maybe rotation does not work because of the mouse feature....
-        
-        //bl.transform.Rotate(new Vector3(rot.x, rot.y + rotateBy, rot.z), Space.World);
-        //Honestly im just going to make the doors be behind eachother because this rotation thing would be barely used
-
-        //remove blindfold
-        //AUTOSAVE
+        changeScreenState = true;
+        darkenScreen = false;
     }
 
-    internal void ChangeCamera()
+    float alpha = 0;
+    Color newColor = Color.black;
+    private bool changeScreenState = false;
+    private bool? darkenScreen = false;
+
+    private void Update()
     {
-        
+        //bool to check if blacksreen should start
+
+        //bool to see if it should darken, stay, or clear up
+
+        if (changeScreenState)
+        {
+            if (darkenScreen == true) //darken
+            {
+                alpha += Time.deltaTime * 3;
+
+                if (alpha > 3)
+                {
+                    darkenScreen = null;
+                    alpha = 3;
+                }
+
+                newColor.a = alpha;
+            }
+            else if (darkenScreen == false) //brighten
+            {
+                alpha -= Time.deltaTime * 3;
+
+                if (alpha < 0)
+                {
+                    changeScreenState = false;
+                    alpha = 0;
+                }
+
+                newColor.a = alpha;
+            }
+            else
+            {
+                changeScreenState = false;
+                ChangeBLPosition(travelFrom, blue, travelTo);
+                
+            }
+            blackscreen.color = newColor;
+            Debug.Log(alpha);
+        }
     }
 }
