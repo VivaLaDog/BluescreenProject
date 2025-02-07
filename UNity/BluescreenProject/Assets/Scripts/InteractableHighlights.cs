@@ -13,7 +13,7 @@ public class InteractableHighlights : MonoBehaviour
         
         for(int i = 0;  i < gwah.Length; i++)
         {
-            Debug.Log(gwah[i].gameObject.name);
+            //Debug.Log(gwah[i].gameObject.name);
             interactables.Add(gwah[i]);
         }
 
