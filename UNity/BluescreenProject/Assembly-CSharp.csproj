@@ -63,18 +63,19 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Interactables\LoreTexts.cs" />
     <Compile Include="Assets\Scripts\AnimationPlay.cs" />
+    <Compile Include="Assets\Scripts\Enemies\BLHPSys.cs" />
+    <Compile Include="Assets\Scripts\Interactables\InteractableHighlights.cs" />
     <Compile Include="Assets\Scripts\Enemies\Turret.cs" />
     <Compile Include="Assets\Scripts\Interactables\Poster.cs" />
     <Compile Include="Assets\Scripts\Enemies\Blob.cs" />
     <Compile Include="Assets\Scripts\Enemies\Enemy.cs" />
     <Compile Include="Assets\Scripts\ForwardCheck.cs" />
     <Compile Include="Assets\Scripts\Interactables\PuzzleShit\LeverPull.cs" />
-    <Compile Include="Assets\Scripts\InteractableHighlights.cs" />
-    <Compile Include="Assets\Scripts\Interactable.cs" />
+    <Compile Include="Assets\Scripts\Interactables\Interactable.cs" />
     <Compile Include="Assets\Scripts\BigDoorTrigger.cs" />
     <Compile Include="Assets\Scripts\Interactables\Items.cs" />
+    <Compile Include="Assets\Scripts\Interactables\IntImageScale.cs" />
     <Compile Include="Assets\Scripts\BLPlayerMovement.cs" />
-    <Compile Include="Assets\Scripts\BLHPSys.cs" />
     <Compile Include="Assets\Scripts\RoomManager.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\Interactables\PuzzleShit\NumericCode.cs" />

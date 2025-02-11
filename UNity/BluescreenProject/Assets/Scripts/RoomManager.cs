@@ -59,6 +59,7 @@ public class RoomManager : MonoBehaviour
     }
 
     float alpha = 0;
+    float time = 2;
     Color newColor = Color.black;
     private bool changeScreenState = false;
     private bool? darkenScreen = false;
@@ -75,10 +76,10 @@ public class RoomManager : MonoBehaviour
             {
                 alpha += Time.deltaTime * 3;
 
-                if (alpha > 3)
+                if (alpha > time)
                 {
                     darkenScreen = null;
-                    alpha = 3;
+                    alpha = time;
                 }
 
                 newColor.a = alpha;
@@ -102,7 +103,6 @@ public class RoomManager : MonoBehaviour
                 
             }
             blackscreen.color = newColor;
-            Debug.Log(alpha);
         }
     }
 }

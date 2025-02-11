@@ -46,21 +46,19 @@ public class Blob : Enemy
 
             if (b < attackDistance)
             {
-                Debug.Log("Blob in range");
                 if(timer <= 0)
                 {
                     agent.isStopped = true;
-                    x += Time.deltaTime * speed;
+                    x += Time.deltaTime * speed * 2;
                     //BEGIN the ATTACK!
                     target.GetComponentInParent<BLHPSys>().Damage(2);
                     timer = 1f;
                 }
                 timer -= Time.deltaTime;
-                Debug.Log(timer);
             }
             else
             {
-                x -= Time.deltaTime * speed;
+                x -= Time.deltaTime * speed * 5;
                 agent.isStopped = false;
             }
         }

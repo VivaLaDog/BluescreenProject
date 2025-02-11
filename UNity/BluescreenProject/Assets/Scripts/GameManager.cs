@@ -41,6 +41,16 @@ public class GameManager : MonoBehaviour
     {
         EscapeKey();
         InteractKey();
+        int? pok = FindClosestItem();
+        if(pok != null)
+        {
+            if (fc.gameObjectsInArea[(int)pok].GetComponentInChildren<IntImageScale>())
+            {
+
+                fc.gameObjectsInArea.ForEach(i => { i.GetComponentInChildren<IntImageScale>().HlBool(false); });
+                fc.gameObjectsInArea[(int)pok].GetComponentInChildren<IntImageScale>().HlBool(true);
+            }
+        }
     }
 
     private void InteractKey()
@@ -50,7 +60,7 @@ public class GameManager : MonoBehaviour
             int? closestIndex = FindClosestItem();
             if (closestIndex == null) return;
             var g = fc.gameObjectsInArea[(int)closestIndex];
-                    Debug.Log("Hit " + g.name);
+                    //Debug.Log("Hit " + g.name);
                 if(g.GetComponent<DiscoAnimations>() != null)
                 {
                     var en = g.GetComponent<DiscoAnimations>();
@@ -63,7 +73,8 @@ public class GameManager : MonoBehaviour
                 }
                 else if (g.GetComponent<Blob>() != null)
                 {
-
+                    var en = g.GetComponent<Blob>();
+                    en.DamageMe();
                 }
             
             else if(g.GetComponent<Interactable>() != null)
@@ -99,6 +110,7 @@ public class GameManager : MonoBehaviour
                 distance = Math.Sqrt(x*x + z*z);
             }
         }
+
         return r;
     }
 
@@ -127,7 +139,6 @@ public class GameManager : MonoBehaviour
 
     internal void BLTransition(Doors door, Doors travelTo)
     {
-        Debug.Log($"{door},  {travelTo},   {bl}");
         rm.BlMoveDoor(door, bl.gameObject, travelTo);
     }
 
@@ -151,8 +162,11 @@ public class GameManager : MonoBehaviour
         nomberForDaLore = n;
         var ts = canvas[n].GetComponentsInChildren<TextMeshProUGUI>();
         canvas[n].SetActive(true);
+        if(text != null)
         ts[0].text = text;
+        if(info != "")
         ts[1].text = info;
+
         bl.StopMoving(true);
     }
 }

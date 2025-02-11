@@ -11,7 +11,13 @@ public class ForwardCheck : MonoBehaviour
     {
         var go = collision.gameObject;
         if(go.GetComponent<Interactable>() || go.GetComponent<DiscoAnimations>() || go.GetComponent<Turret>() || go.GetComponent<Blob>())
+        {
             gameObjectsInArea.Add(go);
+        }
+        /*if (go.GetComponentInChildren<IntImageScale>())
+        {
+            go.GetComponentInChildren<IntImageScale>().ScaleHighlight.Invoke();
+        }*/
 
     }
     private void OnTriggerExit(Collider collision)
@@ -22,6 +28,10 @@ public class ForwardCheck : MonoBehaviour
         {
             gameObjectsInArea.Remove(go);
             //Debug.Log("leave the fuck NOOOOW " + go);
+        }
+        if (go.GetComponentInChildren<IntImageScale>())
+        {
+            go.GetComponentInChildren<IntImageScale>().HlBool(false);
         }
     }
 

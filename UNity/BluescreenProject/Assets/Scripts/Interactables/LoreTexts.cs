@@ -14,6 +14,9 @@ public class LoreTexts : Interactable
     private void DumpLore() //throw up a splashscreen of text
     {
         //maybe make it read from a file?
-        gm.ShowLore(text[0], text[1], loreDumpType);
+        if (loreDumpType == 0)
+        {
+            gm.ShowLore(text[0], text[1], loreDumpType);
+        }
     }
 }
