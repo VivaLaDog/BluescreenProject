@@ -13976,7 +13976,7 @@ GameObject:
   - component: {fileID: 810765594}
   m_Layer: 0
   m_Name: Camera
-  m_TagString: Untagged
+  m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -37988,13 +37988,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1aa16856f3adff4cbeefb15ec21188d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bloodPrefabs:
-  - {fileID: 21300000, guid: 604e8e2d4d2df4b4eb4f5460e235fff1, type: 3}
-  - {fileID: 21300000, guid: 8b581ad644bf0c2449713b2ac9b9d17b, type: 3}
-  - {fileID: 21300000, guid: 59e50ded500c0a4418ce582fa897815d, type: 3}
-  - {fileID: 21300000, guid: f44e8a0b73654b244a96e870d3ae285c, type: 3}
-  bloodOverlay: {fileID: 2145329354}
-  canvas: {fileID: 865715449}
+  img: {fileID: 0}
+  blCam: {fileID: 0}
 --- !u!1 &2006321767
 GameObject:
   m_ObjectHideFlags: 0

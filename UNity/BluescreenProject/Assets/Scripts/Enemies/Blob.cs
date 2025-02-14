@@ -9,7 +9,7 @@ public class Blob : Enemy
     [SerializeField] float maxViewDistance;
     [SerializeField] float attackDistance;
     int health = 10;
-    float x = 0f;
+    bool x = false;
 
     Vector3 ogPos;
 
@@ -49,7 +49,7 @@ public class Blob : Enemy
                 if(timer <= 0)
                 {
                     agent.isStopped = true;
-                    x += Time.deltaTime * speed * 2;
+                    x = true;
                     //BEGIN the ATTACK!
                     target.GetComponentInParent<BLHPSys>().Damage(2);
                     timer = 1f;
@@ -58,20 +58,16 @@ public class Blob : Enemy
             }
             else
             {
-                x -= Time.deltaTime * speed * 5;
+                x = false;
                 agent.isStopped = false;
             }
         }
         else
         {
+            x = false;
             agent.SetDestination(ogPos);
         }
-        if (x < 0f) x = 0;
-        if (x > 1f) x = 1f;
-
-        animator.SetFloat("IsAttacking", x);
-
-
+        animator.SetBool("IsAttacking", x);
     }
 
     protected override void Die()
