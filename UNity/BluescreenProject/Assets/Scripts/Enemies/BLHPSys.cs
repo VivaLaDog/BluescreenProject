@@ -3,11 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-using Random = UnityEngine.Random;
 
 public class BLHPSys : MonoBehaviour
 {
-    [SerializeField] Image img;
+    [SerializeField] List<Image> bloodImages;
     [SerializeField] Camera blCam;
             /* Idea:
              * the longer the splatter is alive, the more transparent it is
@@ -16,14 +15,15 @@ public class BLHPSys : MonoBehaviour
     private int health;
     private int maxHealth = 10;
     bool blIsKill = false;
-    float healTime = 10f;
     // Start is called before the first frame update
     void Start()
     {
         health = maxHealth;
+        Animator cameraAnimator = blCam.GetComponent<Animator>();
+        cameraAnimator.SetBool("New", true);
     }
     bool chicanery = true;
-    float timeToDeath = 5f;
+    float timeToDeath = 2f;
     // Update is called once per frame
     void Update()
     {
@@ -33,6 +33,7 @@ public class BLHPSys : MonoBehaviour
             {
                 Animator cameraAnimator = blCam.GetComponent<Animator>();
                 cameraAnimator.SetBool("Dead", true);
+                
                 //play camera animation
                 chicanery = false;
             }
@@ -45,60 +46,61 @@ public class BLHPSys : MonoBehaviour
                 }
             }
         }
-        HealCheck();
+        else
+        {
+            HealCheck();
+            if(removeBlood)
+            OverlayRemover();
+        }
+    }
+    bool removeBlood = false;
+    private void OverlayRemover()
+    {//slowly hides the overlays
+        for (int i = 0; i < bloodImages.Count; i++)
+        {
+                Color newColour = bloodImages[i].color;
+                newColour.a -= Time.deltaTime / 4;
+                if (newColour.a <= 0)
+                {
+                    newColour.a = 0;
+                }
+                bloodImages[i].color = newColour;
+            
+        }
     }
 
-
+    float healTime = 2f;
     private void HealCheck() //basically healing
     {
         if (health > 0 && health < maxHealth)//if i'm not dead, am hurt
         {
+            removeBlood = true;
             healTime -= Time.deltaTime;
-            if (healTime <= 0) //heal 1hp every 10 seconds
+            if (healTime <= 0) //heal 1hp every 2 seconds
             {
                 health++;
-                healTime = 10f;
+                healTime = 2f;
+                Debug.Log(health);
             }
         }
 
     }
     
     public void Damage(int amount)
-    {
-        Debug.Log("Viva is hit"); // on hit make a camera shake
-        healTime = 10f;
-
+    { // on hit make a camera shake
+        healTime = 2f;
         if (health - amount <= 0)
         {
-            Debug.Log("Viva is kill");
             blIsKill = true;
-
-
-            /* a ramp up of:
-             * Camera shake, chromatic abberation gets stronger (maybe with making lights stronger)
-             * effects get super strong and then loads the current scene again
-             * 
-             * requires the animation to play
-             */
         }
         else //show a damage overlay
         {
-            //the lower the health, the more chromatic abberation + desaturation
-
-            AddNewBloodSprite();
+            //the lower the health, the more chromatic abberation + desaturation?
+            int a = (health-amount)/2 - 1;
+            Color change = bloodImages[a].color;
+                change.a = 1;
+            bloodImages[a].color = change;
         }
         health -= amount;
-    }
-
-    private void AddNewBloodSprite()
-    {
-
-        AddOverlay?.Invoke();
-    }
-
-    private Action AddOverlay => OnAddOverlay;
-    private void OnAddOverlay()
-    {
-
     }
 }

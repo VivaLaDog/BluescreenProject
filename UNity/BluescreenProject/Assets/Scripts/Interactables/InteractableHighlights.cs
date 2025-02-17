@@ -10,11 +10,10 @@ public class InteractableHighlights : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        Interactable[] gwah = GetComponentsInChildren<Interactable>();//two lists, one for interactables and one for doors, doors get larger light area
+        Interactable[] gwah = GetComponentsInChildren<Interactable>();
         
         for(int i = 0;  i < gwah.Length; i++)
         {
-            //Debug.Log(gwah[i].gameObject.name);
             interactables.Add(gwah[i]);
         }
 
@@ -27,8 +26,8 @@ public class InteractableHighlights : MonoBehaviour
             }
             else
             {
-                AddLightComp(interactable, 3f, LightShadows.Soft, 0.5f);
-            AddInteractHighlight(interactable);
+                AddLightComp(interactable, 2f, LightShadows.Soft, 0.5f);
+                AddInteractHighlight(interactable);
             }
             
             interactable.AddComponent<HighLightChanger>();

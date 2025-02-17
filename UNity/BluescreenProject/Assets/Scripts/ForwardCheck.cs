@@ -5,6 +5,7 @@ using UnityEngine;
 public class ForwardCheck : MonoBehaviour
 {
     public List<GameObject> gameObjectsInArea;
+    public List<IntImageScale> highlightersInArea;
 
 
     private void OnTriggerEnter(Collider collision)
@@ -14,10 +15,10 @@ public class ForwardCheck : MonoBehaviour
         {
             gameObjectsInArea.Add(go);
         }
-        /*if (go.GetComponentInChildren<IntImageScale>())
+        if (go.GetComponentInChildren<IntImageScale>())
         {
-            go.GetComponentInChildren<IntImageScale>().ScaleHighlight.Invoke();
-        }*/
+            highlightersInArea.Add(go.GetComponentInChildren<IntImageScale>());
+        }
 
     }
     private void OnTriggerExit(Collider collision)

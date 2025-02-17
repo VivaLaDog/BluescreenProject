@@ -41,15 +41,11 @@ public class GameManager : MonoBehaviour
     {
         EscapeKey();
         InteractKey();
-        int? pok = FindClosestItem();
+        int? pok = FindClosestImageScaler();
         if(pok != null)
         {
-            if (fc.gameObjectsInArea[(int)pok].GetComponentInChildren<IntImageScale>())
-            {
-
-                fc.gameObjectsInArea.ForEach(i => { i.GetComponentInChildren<IntImageScale>().HlBool(false); });
-                fc.gameObjectsInArea[(int)pok].GetComponentInChildren<IntImageScale>().HlBool(true);
-            }
+            fc.highlightersInArea.ForEach(i => { i.HlBool(false); });
+            fc.highlightersInArea[(int)pok].HlBool(true);
         }
     }
 
@@ -114,6 +110,23 @@ public class GameManager : MonoBehaviour
         return r;
     }
 
+    private int? FindClosestImageScaler()
+    {
+        List<IntImageScale> list = fc.highlightersInArea;
+        int? r = null;
+        float far = 9999;
+        for (int i = 0; i < list.Count; i++)
+        {
+            var distance = Vector3.Distance(list[i].transform.position, bl.transform.position);
+
+            if(distance < far)
+            {
+                far = distance;
+                r = i;
+            }
+        }
+        return r;
+    }
     private static void EscapeKey()
     {
         if (Input.GetKeyDown(KeyCode.Escape))

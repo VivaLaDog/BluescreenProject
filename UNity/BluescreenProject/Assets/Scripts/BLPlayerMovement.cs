@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.VFX;
 
 public class BLPlayerMovement : MonoBehaviour
 {
@@ -24,21 +25,33 @@ public class BLPlayerMovement : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
-
+    bool spawn = true;
+    float spawnTimer = .98f;
     // Update is called once per frame
     void Update()
     {
-        if (!reading)
+        if (spawn)
         {
-            PlayerMove();
-            if(mouseState)
-            Rotation();
+            spawnTimer -= Time.deltaTime;
+            if(spawnTimer < 0)
+            {
+                spawn = false;
+            }
         }
         else
         {
-            if (Input.GetKeyDown(KeyCode.Q))
+            if (!reading)
             {
-                StopMoving(false);
+                PlayerMove();
+                if (mouseState)
+                    Rotation();
+            }
+            else
+            {
+                if (Input.GetKeyDown(KeyCode.Q))
+                {
+                    StopMoving(false);
+                }
             }
         }
     }

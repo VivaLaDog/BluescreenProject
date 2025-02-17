@@ -1,6 +1,4 @@
-using System;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 public class IntImageScale : MonoBehaviour
 {
@@ -23,8 +21,12 @@ public class IntImageScale : MonoBehaviour
     void Update()
     {
         //scale the canvas in accordance of BLs position, look at the player's camera
-        
-        var pos = bl.GetComponentInChildren<Camera>().transform.position;
+        var pos = Vector3.zero;
+        if (bl.GetComponentInChildren<Camera>())
+        {
+            pos = bl.GetComponentInChildren<Camera>().transform.position;
+        }
+
         transform.LookAt(transform.position - (pos - transform.position));
 
 
@@ -34,10 +36,10 @@ public class IntImageScale : MonoBehaviour
 
             float a = ogScale.x / distance;
             float b = ogScale.y / distance;
-            if (a > 0.15)
+            /*if (a > 0.15)
                 a = .15f;
-            if (b > 0.1)
-                b = .1f;
+            if (b > 0.15)
+                b = .15f;*/
 
             Vector3 newScale = new Vector3(a, b, 0);
 
