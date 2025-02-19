@@ -1,8 +1,4 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using static UnityEngine.GraphicsBuffer;
 
 public class Turret : Enemy
 {
@@ -11,7 +7,7 @@ public class Turret : Enemy
     [SerializeField] float attackDistance;
 
     int health = 999;
-    float time;
+    float time = 3f;
 
     protected override void Damage()
     {
@@ -25,19 +21,18 @@ public class Turret : Enemy
     protected override void Die()
     {
         gameObject.SetActive(false);
+        GetComponent<Animator>().SetBool("Off", true);
     }
 
     internal void DamageMe()
     {
         Damage();
     }
-
+    bool firstTimeForSound = true;
     // Update is called once per frame
     void Update()
     {
         var c = Vector3.Distance(transform.position, target.position);
-
-        //make raycast, if it can see the player, shoot
 
         if (c < maxViewDistance && Physics.Raycast(transform.position, target.position))
         {
@@ -46,10 +41,21 @@ public class Turret : Enemy
 
             if (c < attackDistance)
             {
+                if (firstTimeForSound)
+                {
+                    firstTimeForSound = false;
+                    //play sound of locking on
+                }
                 //BEGIN the ATTACK!
                 //count to 3, shoot (take health from player) repeat
-                if(time == 3000)
+                time -= Time.deltaTime;
+                Debug.Log(time);
+                if(time <= 0)
                 {
+                    //sound of shooting
+                    time = 3f;
+                    firstTimeForSound = true;
+                    target.GetComponentInParent<BLHPSys>().Damage(4);
                     Debug.Log("SHOOT");
                 }
             }

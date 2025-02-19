@@ -3,8 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\tomas\\BluescreenProject\\BluescreenProject\\UNity\\BluescreenProject\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{64DD004A-066A-46D1-D70C-52CCD1A5696E}|Assembly-CSharp.csproj|c:\\users\\tomas\\bluescreenproject\\bluescreenproject\\unity\\bluescreenproject\\assets\\scripts\\enemies\\blhpsys.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{64DD004A-066A-46D1-D70C-52CCD1A5696E}|Assembly-CSharp.csproj|c:\\users\\tomas\\bluescreenproject\\bluescreenproject\\unity\\bluescreenproject\\assets\\scripts\\interactables\\visibleinteraction.shader||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{64DD004A-066A-46D1-D70C-52CCD1A5696E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\interactables\\visibleinteraction.shader||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64DD004A-066A-46D1-D70C-52CCD1A5696E}|Assembly-CSharp.csproj|c:\\users\\tomas\\bluescreenproject\\bluescreenproject\\unity\\bluescreenproject\\assets\\scripts\\roommanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64DD004A-066A-46D1-D70C-52CCD1A5696E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\roommanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64DD004A-066A-46D1-D70C-52CCD1A5696E}|Assembly-CSharp.csproj|C:\\Users\\tomas\\BluescreenProject\\BluescreenProject\\UNity\\BluescreenProject\\assets\\scripts\\enemies\\blhpsys.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{64DD004A-066A-46D1-D70C-52CCD1A5696E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\enemies\\blhpsys.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64DD004A-066A-46D1-D70C-52CCD1A5696E}|Assembly-CSharp.csproj|C:\\Users\\tomas\\BluescreenProject\\BluescreenProject\\UNity\\BluescreenProject\\assets\\scripts\\interactables\\intimagescale.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64DD004A-066A-46D1-D70C-52CCD1A5696E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\interactables\\intimagescale.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,15 +31,52 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "VisibleInteraction.shader",
+              "DocumentMoniker": "C:\\Users\\tomas\\BluescreenProject\\BluescreenProject\\UNity\\BluescreenProject\\Assets\\Scripts\\Interactables\\VisibleInteraction.shader",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Interactables\\VisibleInteraction.shader",
+              "ToolTip": "C:\\Users\\tomas\\BluescreenProject\\BluescreenProject\\UNity\\BluescreenProject\\Assets\\Scripts\\Interactables\\VisibleInteraction.shader",
+              "RelativeToolTip": "Assets\\Scripts\\Interactables\\VisibleInteraction.shader",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAABOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002777|",
+              "WhenOpened": "2025-02-19T11:32:00.302Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "BLHPSys.cs",
               "DocumentMoniker": "C:\\Users\\tomas\\BluescreenProject\\BluescreenProject\\UNity\\BluescreenProject\\Assets\\Scripts\\Enemies\\BLHPSys.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Enemies\\BLHPSys.cs",
               "ToolTip": "C:\\Users\\tomas\\BluescreenProject\\BluescreenProject\\UNity\\BluescreenProject\\Assets\\Scripts\\Enemies\\BLHPSys.cs",
               "RelativeToolTip": "Assets\\Scripts\\Enemies\\BLHPSys.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAAYwEEAAAARAAAAAAAAAA==",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-11T23:21:57.878Z",
+              "WhenOpened": "2025-02-19T08:58:33.632Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "RoomManager.cs",
+              "DocumentMoniker": "C:\\Users\\tomas\\BluescreenProject\\BluescreenProject\\UNity\\BluescreenProject\\Assets\\Scripts\\RoomManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\RoomManager.cs",
+              "ToolTip": "C:\\Users\\tomas\\BluescreenProject\\BluescreenProject\\UNity\\BluescreenProject\\Assets\\Scripts\\RoomManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\RoomManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-19T08:11:50.653Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IntImageScale.cs",
+              "DocumentMoniker": "C:\\Users\\tomas\\BluescreenProject\\BluescreenProject\\UNity\\BluescreenProject\\Assets\\Scripts\\Interactables\\IntImageScale.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Interactables\\IntImageScale.cs",
+              "ToolTip": "C:\\Users\\tomas\\BluescreenProject\\BluescreenProject\\UNity\\BluescreenProject\\Assets\\Scripts\\Interactables\\IntImageScale.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Interactables\\IntImageScale.cs",
+              "ViewState": "AgIAACwAAAAAAAAAAAAgwD8AAABbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-17T10:52:55.041Z"
             }
           ]
         }

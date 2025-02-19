@@ -6,8 +6,6 @@ public class ForwardCheck : MonoBehaviour
 {
     public List<GameObject> gameObjectsInArea;
     public List<IntImageScale> highlightersInArea;
-
-
     private void OnTriggerEnter(Collider collision)
     {
         var go = collision.gameObject;
@@ -32,6 +30,7 @@ public class ForwardCheck : MonoBehaviour
         }
         if (go.GetComponentInChildren<IntImageScale>())
         {
+            highlightersInArea.Remove(go.GetComponentInChildren<IntImageScale>());
             go.GetComponentInChildren<IntImageScale>().HlBool(false);
         }
     }

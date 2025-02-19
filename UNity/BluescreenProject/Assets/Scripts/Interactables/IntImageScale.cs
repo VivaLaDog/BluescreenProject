@@ -5,6 +5,7 @@ public class IntImageScale : MonoBehaviour
     Vector3 ogScale;
     BLPlayerMovement bl;
     bool scale = false;
+    Interactable inter;
 
     internal void HlBool(bool v)
     {
@@ -16,6 +17,18 @@ public class IntImageScale : MonoBehaviour
     {
         bl = transform.root.GetComponentInChildren<BLPlayerMovement>();
         ogScale = transform.localScale;
+
+        if (GetComponentInParent<Items>() != null)
+            inter = GetComponentInParent<Items>();
+
+        if (GetComponentInParent<LoreTexts>() != null)
+            inter = GetComponentInParent<LoreTexts>();
+
+        if (GetComponentInParent<LeverPull>() != null)
+            inter = GetComponentInParent<LeverPull>();
+
+        if (GetComponentInParent<PuzzleButton>() != null)
+            inter = GetComponentInParent<PuzzleButton>();
     }
 
     void Update()
@@ -31,19 +44,50 @@ public class IntImageScale : MonoBehaviour
 
 
         if (scale)
-        {
+        {//different items have different scale, which makes some small and some big??
             var distance = Vector3.Distance(pos, transform.position);
+            var parentscale = transform.parent.localScale;
 
             float a = ogScale.x / distance;
             float b = ogScale.y / distance;
-            /*if (a > 0.15)
-                a = .15f;
-            if (b > 0.15)
-                b = .15f;*/
+
+            float divider = 5;
+
+            if (inter.GetComponent<Items>())//yay
+                divider = 50000;
+
+            if (inter.GetComponent<LoreTexts>())//yay
+            {
+                //Get rotation, if placed on ground it divides by one, if on wall divide by the other
+                var absRotation = Mathf.Abs(inter.transform.localRotation.y);
+
+                Debug.Log($"rotation {absRotation} is greater than 0.5 and lesser than 0.8f");
+
+                if (absRotation > 0.5f && absRotation < 0.8f)
+                    divider = 60000;
+                else
+                    divider = 15;
+            }
+
+            if (inter.GetComponent<LeverPull>())//yay
+                divider = 15;
+
+            float psx = parentscale.x / divider;
+            float psy = parentscale.y / divider;
+
+            if (a > psx)
+                a = psx;
+            if (b > psy)
+                b = psy;
+
+            if (a < b)
+                a = b;
+            else
+                b = a;
 
             Vector3 newScale = new Vector3(a, b, 0);
-
-            transform.localScale = newScale;
+            if (distance < 4)
+                transform.localScale = newScale;
         }
         else
         {
