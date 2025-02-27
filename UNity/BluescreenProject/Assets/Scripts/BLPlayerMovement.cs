@@ -46,13 +46,6 @@ public class BLPlayerMovement : MonoBehaviour
                 if (mouseState)
                     Rotation();
             }
-            else
-            {
-                if (Input.GetKeyDown(KeyCode.Q))
-                {
-                    StopMoving(false);
-                }
-            }
         }
     }
 

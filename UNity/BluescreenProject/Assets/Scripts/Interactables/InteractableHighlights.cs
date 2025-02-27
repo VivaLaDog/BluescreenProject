@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -28,10 +27,11 @@ public class InteractableHighlights : MonoBehaviour
             }
             else
             {
+                if(interactable.GetComponent<Light>() == null)
                 AddLightComp(interactable, 2f, LightShadows.Soft, 0.5f);
-                AddInteractHighlight(interactable);
             }
             
+            AddInteractHighlight(interactable);
             interactable.AddComponent<HighLightChanger>();
         }
 

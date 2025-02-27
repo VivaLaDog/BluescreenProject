@@ -29,6 +29,15 @@ public class IntImageScale : MonoBehaviour
 
         if (GetComponentInParent<PuzzleButton>() != null)
             inter = GetComponentInParent<PuzzleButton>();
+
+        if(GetComponentInParent<Poster>() != null)
+            inter = GetComponentInParent<Poster >();
+
+        if(GetComponentInParent<Doors>() != null)
+            inter = GetComponentInParent<Doors >();
+
+        if(GetComponentInParent<NumericCode>() != null)
+            inter = GetComponentInParent<NumericCode>();
     }
 
     void Update()
@@ -51,7 +60,10 @@ public class IntImageScale : MonoBehaviour
             float a = ogScale.x / distance;
             float b = ogScale.y / distance;
 
-            float divider = 5;
+            float divider = 50;
+
+            if (inter == null)
+                divider = 0;
 
             if (inter.GetComponent<Items>())//yay
                 divider = 50000;
@@ -61,8 +73,6 @@ public class IntImageScale : MonoBehaviour
                 //Get rotation, if placed on ground it divides by one, if on wall divide by the other
                 var absRotation = Mathf.Abs(inter.transform.localRotation.y);
 
-                Debug.Log($"rotation {absRotation} is greater than 0.5 and lesser than 0.8f");
-
                 if (absRotation > 0.5f && absRotation < 0.8f)
                     divider = 60000;
                 else
@@ -70,7 +80,23 @@ public class IntImageScale : MonoBehaviour
             }
 
             if (inter.GetComponent<LeverPull>())//yay
+            {
                 divider = 15;
+            
+            }
+
+            if (inter.GetComponent<PuzzleButton>())
+            {
+                divider = 1000000; //i don't understand.
+            }
+
+            if (inter.GetComponent<Poster>())
+            {
+                divider = 2;
+            }
+
+            if (inter.GetComponent<Doors>())
+                divider = 3500000;
 
             float psx = parentscale.x / divider;
             float psy = parentscale.y / divider;

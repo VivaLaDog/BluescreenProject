@@ -33,7 +33,7 @@ public class BLHPSys : MonoBehaviour
             {
                 Animator cameraAnimator = blCam.GetComponent<Animator>();
                 cameraAnimator.SetBool("Dead", true);
-                
+
                 //play camera animation
                 chicanery = false;
             }
@@ -80,7 +80,6 @@ public class BLHPSys : MonoBehaviour
             {
                 health++;
                 healTime = 2f;
-                Debug.Log(health);
             }
         }
 

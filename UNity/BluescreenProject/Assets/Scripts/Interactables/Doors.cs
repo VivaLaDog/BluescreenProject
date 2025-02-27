@@ -51,11 +51,19 @@ public class Doors : Interactable
         if (doorKey == key)
         {
             UnlockDoor();
+            gm.AddToInteractedList(this.GetComponent<Interactable>());
         }
         else
         {
-            Debug.Log("FUCK YOU");
+            Debug.Log("Requires a different key: " + key);
         }
     }
 
+    public override void ForceInteract()
+    {
+        if (locked)
+        {
+            UnlockDoor();
+        }
+    }
 }

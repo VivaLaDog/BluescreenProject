@@ -49,14 +49,12 @@ public class Turret : Enemy
                 //BEGIN the ATTACK!
                 //count to 3, shoot (take health from player) repeat
                 time -= Time.deltaTime;
-                Debug.Log(time);
                 if(time <= 0)
                 {
                     //sound of shooting
                     time = 3f;
                     firstTimeForSound = true;
                     target.GetComponentInParent<BLHPSys>().Damage(4);
-                    Debug.Log("SHOOT");
                 }
             }
         }

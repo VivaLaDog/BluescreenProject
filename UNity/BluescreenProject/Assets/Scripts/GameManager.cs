@@ -1,20 +1,29 @@
 using System;
 using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GameManager : MonoBehaviour
+public class GameManager : MonoBehaviour, IDataPersistence
 {
-    /*TODO:
-     * 
-     */
     [SerializeField] BLPlayerMovement bl;
-    [SerializeField] List<GameObject> canvas;
     ForwardCheck fc;
     RoomManager rm;
 
     public List<Items> pickedUpItems;
+    public List<Interactable> interacted;
+    public void LoadData(GameData data)
+    {
+        this.bl.transform.position = data.playerPos;
+        this.pickedUpItems = data.pickedUpItems;
+        this.interacted = data.interacted;
+    }
+
+    public void SaveData(ref GameData data)
+    {
+        data.playerPos = this.bl.transform.position;
+        data.pickedUpItems = this.pickedUpItems;
+        data.interacted = this.interacted;
+    }
 
     public void ChangeBLMovement()
     {
@@ -34,18 +43,39 @@ public class GameManager : MonoBehaviour
     {
         fc = bl.gameObject.GetComponentInChildren<ForwardCheck>();
         rm = GetComponent<RoomManager>();
+        foreach (Items item in pickedUpItems)
+        {
+            item.gameObject.SetActive(false);
+        }
     }
-
+    public void AddToInteractedList(Interactable inter)
+    {
+        interacted.Add(inter);
+    }
+    bool firstLoad = true;
     // Update is called once per frame
     void Update()
     {
+        FirstLoad();
         EscapeKey();
         InteractKey();
         int? pok = FindClosestImageScaler();
-        if(pok != null)
+        if (pok != null)
         {
             fc.highlightersInArea.ForEach(i => { i.HlBool(false); });
             fc.highlightersInArea[(int)pok].HlBool(true);
+        }
+    }
+
+    private void FirstLoad()
+    {
+        if (firstLoad)
+        {
+            firstLoad = false;
+            foreach (Interactable interactable in interacted)
+            {
+                interactable.ForceInteract();
+            }
         }
     }
 
@@ -56,7 +86,7 @@ public class GameManager : MonoBehaviour
             int? closestIndex = FindClosestItem();
             if (closestIndex == null) return;
             var g = fc.gameObjectsInArea[(int)closestIndex];
-                    //Debug.Log("Hit " + g.name);
+
                 if(g.GetComponent<DiscoAnimations>() != null)
                 {
                     var en = g.GetComponent<DiscoAnimations>();
@@ -82,12 +112,7 @@ public class GameManager : MonoBehaviour
             
             //Debug.Log(interactItem);
         }
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            HideLore();
-        }
     }
-
     private int? FindClosestItem() //use vectors to measure distance
     {
         List<GameObject> list = fc.gameObjectsInArea;
@@ -109,7 +134,6 @@ public class GameManager : MonoBehaviour
 
         return r;
     }
-
     private int? FindClosestImageScaler()
     {
         List<IntImageScale> list = fc.highlightersInArea;
@@ -136,7 +160,6 @@ public class GameManager : MonoBehaviour
             SceneManager.LoadScene(0);
         }
     }
-
     public void Interaction(Items item)
     {
         pickedUpItems.Add(item);
@@ -149,37 +172,12 @@ public class GameManager : MonoBehaviour
     {
         return fc;
     }
-
     internal void BLTransition(Doors door, Doors travelTo)
     {
         rm.BlMoveDoor(door, bl.gameObject, travelTo);
     }
-
-    int nomberForDaLore = 0;
-
     public Vector3 BLPos()
     {
         return bl.transform.position;
-    }
-
-    void HideLore()
-    {
-        int n = nomberForDaLore;
-        bl.StopMoving(false);
-        var ts = canvas[n].GetComponentsInChildren<TextMeshProUGUI>();
-        canvas[n].SetActive(false);
-        ts[0].text = "";
-    }
-    internal void ShowLore(string text, string info, int n)
-    {
-        nomberForDaLore = n;
-        var ts = canvas[n].GetComponentsInChildren<TextMeshProUGUI>();
-        canvas[n].SetActive(true);
-        if(text != null)
-        ts[0].text = text;
-        if(info != "")
-        ts[1].text = info;
-
-        bl.StopMoving(true);
     }
 }

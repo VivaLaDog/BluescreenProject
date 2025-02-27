@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Items : Interactable
@@ -9,6 +10,8 @@ public class Items : Interactable
             return;
         }
         PickUpItem();
+        gm.AddToInteractedList(this);
+        DeactivateCanvas();
     }
     
     private void PickUpItem()

@@ -1678,6 +1678,72 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -1320017560442930594, guid: 637fbf45f9482ec478477e2df3451508, type: 3}
+--- !u!1 &127941303
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 127941304}
+  - component: {fileID: 127941305}
+  - component: {fileID: 127941306}
+  m_Layer: 0
+  m_Name: SaveTrigger
+  m_TagString: Untagged
+  m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &127941304
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 127941303}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -9, y: 0, z: 4}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1089608755}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &127941305
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 127941303}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.5, y: 3, z: 1}
+  m_Center: {x: 0, y: 1.5, z: 0}
+--- !u!114 &127941306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 127941303}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b5f2b6331ba53e45a0338831812d89f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!64 &130036061
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -4902,6 +4968,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 2700c80a1fbbaea4d97801fca4605819, type: 3}
       insertIndex: -1
       addedObject: {fileID: 940956020}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 2700c80a1fbbaea4d97801fca4605819, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 940956026}
   m_SourcePrefab: {fileID: 100100000, guid: 2700c80a1fbbaea4d97801fca4605819, type: 3}
 --- !u!1 &322014384
 GameObject:
@@ -10464,7 +10533,7 @@ GameObject:
   - component: {fileID: 668575541}
   m_Layer: 0
   m_Name: GameManager
-  m_TagString: Untagged
+  m_TagString: GameController
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10482,9 +10551,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bl: {fileID: 2000816959}
-  canvas:
-  - {fileID: 1737558537}
   pickedUpItems: []
+  interacted: []
 --- !u!4 &668575540
 Transform:
   m_ObjectHideFlags: 0
@@ -10494,7 +10562,7 @@ Transform:
   m_GameObject: {fileID: 668575538}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -17.304197, y: 7.7439218, z: 9.362955}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -17229,6 +17297,19 @@ MonoBehaviour:
   camera1: {fileID: 810765595}
   parameter: Off
   doorToOpen: {fileID: 0}
+--- !u!114 &940956026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 940956015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4daee350ccef93e4682775c970fd8293, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  disableThis: {fileID: 0}
 --- !u!1 &947173739
 GameObject:
   m_ObjectHideFlags: 0
@@ -17428,7 +17509,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1bb0194e05c8f744eafc19bbc2f3f0a9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -44.90787
+      value: -39.443
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1bb0194e05c8f744eafc19bbc2f3f0a9, type: 3}
       propertyPath: m_LocalPosition.y
@@ -17436,11 +17517,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1bb0194e05c8f744eafc19bbc2f3f0a9, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 10.103512
+      value: 7.549
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1bb0194e05c8f744eafc19bbc2f3f0a9, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.5877042
+      value: 0.93618804
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1bb0194e05c8f744eafc19bbc2f3f0a9, type: 3}
       propertyPath: m_LocalRotation.x
@@ -17448,7 +17529,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1bb0194e05c8f744eafc19bbc2f3f0a9, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.80907595
+      value: -0.35149956
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1bb0194e05c8f744eafc19bbc2f3f0a9, type: 3}
       propertyPath: m_LocalRotation.z
@@ -17460,7 +17541,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1bb0194e05c8f744eafc19bbc2f3f0a9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 108.011
+      value: -41.158
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1bb0194e05c8f744eafc19bbc2f3f0a9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -17498,12 +17579,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 434c495d388d83d4886f159553866872, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loreDumpType: 0
-  text:
-  - Fuck this
-  - I hate this job. All we do is write down useless information and "Look for patterns."
-    There are no patterns in this thing! Nobody understands how it got here! I swear,
-    at this rate I will resignate.
+  Header: Why?
+  Body: Screw this job, we are supposed to inspect anomalous materials, but all we've
+    been expecting these past few weeks has been some posters and that weird girl.
+  canvas: {fileID: 1737558537}
 --- !u!65 &951418521
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19992,6 +20071,52 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1077740436}
   m_CullTransparentMesh: 1
+--- !u!1 &1089608753
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1089608755}
+  - component: {fileID: 1089608754}
+  m_Layer: 0
+  m_Name: DataPersistenceManager
+  m_TagString: DataManager
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1089608754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1089608753}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5084317cd0b36984686afa0d5f3a6b29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fileName: GameManager.doof
+--- !u!4 &1089608755
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1089608753}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 127941304}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1093703824
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27504,7 +27629,7 @@ GameObject:
   - component: {fileID: 1449799025}
   - component: {fileID: 1449799029}
   m_Layer: 0
-  m_Name: sex (1)
+  m_Name: Poster (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28819,7 +28944,7 @@ GameObject:
   - component: {fileID: 1511244925}
   - component: {fileID: 1511244929}
   m_Layer: 0
-  m_Name: sex
+  m_Name: Poster
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -33419,7 +33544,7 @@ GameObject:
   - component: {fileID: 1737558539}
   m_Layer: 2
   m_Name: LoreClipboards
-  m_TagString: Untagged
+  m_TagString: LoreCanvas
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -33672,13 +33797,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 434c495d388d83d4886f159553866872, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loreDumpType: 0
-  text:
-  - Locked door
-  - Management has yet to replace the wiring to this door's sensors, so I took some
-    liberty and hooked up the lever from the opposite room to open this door. The
-    main door will now only open halfway and will require power from the second lever
-    at the end of the hall.
+  Header: Door
+  Body: 'This door is not getting enough power, so I moved some power from the lever
+    on the otherside. It barely opens the main door now so you actually do need to
+    pull both levers. '
+  canvas: {fileID: 1737558537}
 --- !u!4 &1751195430 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 1bb0194e05c8f744eafc19bbc2f3f0a9, type: 3}
@@ -35047,15 +35170,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ad26627d46fab654da0736b18e4560ab, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -22.6458
+      value: -40
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ad26627d46fab654da0736b18e4560ab, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -7.658555
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ad26627d46fab654da0736b18e4560ab, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -9.489042
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ad26627d46fab654da0736b18e4560ab, type: 3}
       propertyPath: m_LocalRotation.w
@@ -37424,7 +37547,7 @@ Transform:
   m_GameObject: {fileID: 1931278965}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.7071068, z: 8.659561e-17, w: -0.7071068}
-  m_LocalPosition: {x: -22.645803, y: -7.658555, z: -9.489042}
+  m_LocalPosition: {x: -40, y: 0, z: 0}
   m_LocalScale: {x: 1.3599495, y: 1.3599496, z: 1.3599495}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -38539,7 +38662,7 @@ GameObject:
   - component: {fileID: 2000816961}
   m_Layer: 0
   m_Name: BL
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -38553,7 +38676,7 @@ Transform:
   m_GameObject: {fileID: 2000816957}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.000025928017, z: -0, w: -1}
-  m_LocalPosition: {x: 30.7, y: -7.75, z: 23.7}
+  m_LocalPosition: {x: 13, y: 0, z: 33.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -40288,7 +40411,7 @@ Transform:
   m_GameObject: {fileID: 2099294310}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 17.304197, y: -7.7439218, z: -8.112955}
+  m_LocalPosition: {x: 0, y: 0, z: 1.25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -47603,15 +47726,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 447238718955848328, guid: 52c4f6c7c05821740b1529c23a45ef91, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.1
+      value: -25
       objectReference: {fileID: 0}
     - target: {fileID: 447238718955848328, guid: 52c4f6c7c05821740b1529c23a45ef91, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -7.3039274
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 447238718955848328, guid: 52c4f6c7c05821740b1529c23a45ef91, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -9.34
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 447238718955848328, guid: 52c4f6c7c05821740b1529c23a45ef91, type: 3}
       propertyPath: m_LocalRotation.w
@@ -57042,11 +57165,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 434c495d388d83d4886f159553866872, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loreDumpType: 0
-  text:
-  - Subject #8445
-  - 8445 has been acting rather numb lately, consider bringing her more enrichment
-    items. Thanks.
+  Header: Subject #413
+  Body: Subject #413 is showing signs of weariness and anxiety. Bring her some enrichment
+    items, please. Thanks.
+  canvas: {fileID: 1737558537}
 --- !u!1 &8632868096268920965
 GameObject:
   m_ObjectHideFlags: 0
@@ -58038,6 +58160,7 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 668575540}
+  - {fileID: 1089608755}
   - {fileID: 1273042467}
   - {fileID: 149571975}
   - {fileID: 2143669256}

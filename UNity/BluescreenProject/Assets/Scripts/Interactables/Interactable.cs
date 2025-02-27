@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 public abstract class Interactable : MonoBehaviour
@@ -13,4 +12,19 @@ public abstract class Interactable : MonoBehaviour
     }
 
     public abstract void Interact();
+
+    public virtual void ForceInteract()
+    {
+
+    }
+
+    public void Deactivate()
+    {
+        gameObject.SetActive(false);
+    }
+
+    public void DeactivateCanvas()
+    {
+        GetComponentInChildren<Canvas>().gameObject.SetActive(false);
+    }
 }

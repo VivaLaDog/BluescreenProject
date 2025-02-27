@@ -16,6 +16,7 @@ public class LeverPull : Interactable
     {//make the interaction not happen if it has already been pulled.
         if (pulled)
             return;
+        
 
         pulled = true;
             
@@ -34,7 +35,9 @@ public class LeverPull : Interactable
         {
             doorToOpen.UnlockDoor();
         }
-        
+
+        gm.AddToInteractedList(this.GetComponent<Interactable>());
+        DeactivateCanvas();
     }
     float timer = 5;
     private void Update()
@@ -49,5 +52,21 @@ public class LeverPull : Interactable
                 cameraSwapped = false;
             }
         }
+    }
+
+    public override void ForceInteract()
+    {
+        pulled = true;
+
+        animator = GetComponent<Animator>();
+        animator.SetBool("Pulled", true);
+        opens.SetBool(parameter, true);
+        if (opens2 != null)
+            opens2.SetBool(parameter, true);
+        if (doorToOpen != null)
+        {
+            doorToOpen.UnlockDoor();
+        }
+        DeactivateCanvas();
     }
 }
