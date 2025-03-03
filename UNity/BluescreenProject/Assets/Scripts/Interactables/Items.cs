@@ -1,4 +1,3 @@
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class Items : Interactable
@@ -13,9 +12,13 @@ public class Items : Interactable
         gm.AddToInteractedList(this);
         DeactivateCanvas();
     }
-    
-    private void PickUpItem()
+    public override void ForceInteract()
     {
+        base.ForceInteract();
+        PickUpItem();
+    }
+    private void PickUpItem()
+    {   
         gm.Interaction(GetComponent<Items>());
         gameObject.transform.position = new Vector3(0, 10, 0);
         gameObject.SetActive(false);

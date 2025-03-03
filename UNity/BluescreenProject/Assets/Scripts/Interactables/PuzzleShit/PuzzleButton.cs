@@ -23,6 +23,7 @@ public class PuzzleButton : Interactable
     }
     public override void ForceInteract()
     {
+        base.ForceInteract();
         pressed = true;
         disableThis.SetActive(false);
         DeactivateCanvas();

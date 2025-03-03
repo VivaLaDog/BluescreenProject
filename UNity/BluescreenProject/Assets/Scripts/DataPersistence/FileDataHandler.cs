@@ -12,7 +12,6 @@ public class FileDataHandler
         this.dataDirPath = dataDirPath;
         this.dataFileName = dataFileName;
     }
-
     public GameData Load()
     {
         string fullPath = Path.Combine(dataDirPath, dataFileName);
@@ -58,7 +57,7 @@ public class FileDataHandler
         }
         catch(Exception e)
         {
-            UnityEngine.Debug.LogError($"Error occured while saving game data at {fullPath}. Exception: {e}");
+            Debug.LogError($"Error occured while saving game data at {fullPath}. Exception: {e}");
         }
     }
 }

@@ -1,7 +1,5 @@
-using System;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class BLHPSys : MonoBehaviour
@@ -42,7 +40,7 @@ public class BLHPSys : MonoBehaviour
                 timeToDeath -= Time.deltaTime;
                 if(timeToDeath <= 0)
                 {
-                    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+                    DataPersistenceManager.Instance.LoadGame();
                 }
             }
         }

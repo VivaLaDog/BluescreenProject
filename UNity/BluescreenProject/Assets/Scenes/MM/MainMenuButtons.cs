@@ -1,21 +1,41 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MainMenuButtons : MonoBehaviour
 {
+    [SerializeField] Button butt1;
+    [SerializeField] Button butt2;
+    [SerializeField] Button butt3;
     public void StartNewGame() 
     {
-        SceneManager.LoadScene(1);
-        /*Modify it later to support save files -> 
-        * start game opens saves menu with a "Start new game button"
-        * clicking on a save file will well, do what it should. Load a save file.
-        * new game will do this code
-        */
+        DisableButtons();
+        DataPersistenceManager.Instance.NewGame();
+        SceneManager.LoadSceneAsync(1);
+    }
+    private void Start()
+    {
+        if (!DataPersistenceManager.Instance.HasGameData())
+        {
+            butt1.GetComponent<Image>().gameObject.SetActive(false);
+        }
+    }
+    public void ContinueGame()
+    {
+        DisableButtons();
+        DataPersistenceManager.Instance.ContinueGame();
+
     }
     public void ExitGame()
     {
+        DisableButtons();
         Application.Quit();
+    }
+
+    private void DisableButtons()
+    {
+        butt1.interactable = false;
+        butt2.interactable = false;
+        butt3.interactable = false;
     }
 }

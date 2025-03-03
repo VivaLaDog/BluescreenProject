@@ -5,9 +5,19 @@ public abstract class Interactable : MonoBehaviour
     internal GameManager gm;
     internal Animator Animator;
 
+    public bool interactedWith = false;
+
+    [SerializeField] public string id;
+
+    [ContextMenu("Generate GUID for id")]
+    private void GenerateGuid()
+    {
+        id = System.Guid.NewGuid().ToString();
+    }
+
     internal void Start()
     {
-        gm = transform.root.gameObject.GetComponent<GameManager>();
+        gm = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>();
         Animator = GetComponent<Animator>();
     }
 
@@ -15,7 +25,8 @@ public abstract class Interactable : MonoBehaviour
 
     public virtual void ForceInteract()
     {
-
+        interactedWith = true;
+        Start();
     }
 
     public void Deactivate()
@@ -25,6 +36,7 @@ public abstract class Interactable : MonoBehaviour
 
     public void DeactivateCanvas()
     {
+        Debug.Log(GetComponentInParent<InteractableHighlights>());
         GetComponentInChildren<Canvas>().gameObject.SetActive(false);
     }
 }

@@ -35,7 +35,6 @@ public class LeverPull : Interactable
         {
             doorToOpen.UnlockDoor();
         }
-
         gm.AddToInteractedList(this.GetComponent<Interactable>());
         DeactivateCanvas();
     }
@@ -56,6 +55,7 @@ public class LeverPull : Interactable
 
     public override void ForceInteract()
     {
+        base.ForceInteract();
         pulled = true;
 
         animator = GetComponent<Animator>();

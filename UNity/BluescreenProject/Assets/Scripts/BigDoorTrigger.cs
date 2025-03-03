@@ -7,7 +7,8 @@ public class BigDoorTrigger : MonoBehaviour
     {
         if (other.gameObject.GetComponent<BLPlayerMovement>() != null)
         {
-            SceneManager.LoadScene(2);
+            DataPersistenceManager.Instance.NewGame();
+            SceneManager.LoadSceneAsync(2);
         }
     }
 }

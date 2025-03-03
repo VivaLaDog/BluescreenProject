@@ -21,6 +21,7 @@ public class NumericCode : Interactable
     }
     public override void ForceInteract()
     {
+        base.ForceInteract();
         PassDoor();
         doneInteract = true;
         DeactivateCanvas();

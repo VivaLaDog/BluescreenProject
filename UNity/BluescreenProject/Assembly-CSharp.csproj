@@ -66,6 +66,7 @@
     <Compile Include="Assets\Scripts\Enemies\BLHPSys.cs" />
     <Compile Include="Assets\Scripts\Interactables\InteractableHighlights.cs" />
     <Compile Include="Assets\Scripts\Enemies\Turret.cs" />
+    <Compile Include="Assets\Scripts\DataPersistence\GameData\SerializableDictionary.cs" />
     <Compile Include="Assets\Scripts\Interactables\Poster.cs" />
     <Compile Include="Assets\Scripts\Enemies\Blob.cs" />
     <Compile Include="Assets\Scripts\DataPersistence\FileDataHandler.cs" />
@@ -78,6 +79,7 @@
     <Compile Include="Assets\Scripts\BigDoorTrigger.cs" />
     <Compile Include="Assets\Scripts\Interactables\Items.cs" />
     <Compile Include="Assets\Scripts\Interactables\IntImageScale.cs" />
+    <Compile Include="Assets\Scenes\MM\MouseParallax.cs" />
     <Compile Include="Assets\Scripts\DataPersistence\SaveTrigger.cs" />
     <Compile Include="Assets\Scripts\BLPlayerMovement.cs" />
     <Compile Include="Assets\Scripts\RoomManager.cs" />

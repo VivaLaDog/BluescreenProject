@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour, IDataPersistence
 {
     [SerializeField] BLPlayerMovement bl;
+    [SerializeField] GameObject escape;
     ForwardCheck fc;
     RoomManager rm;
 
@@ -14,15 +15,48 @@ public class GameManager : MonoBehaviour, IDataPersistence
     public void LoadData(GameData data)
     {
         this.bl.transform.position = data.playerPos;
-        this.pickedUpItems = data.pickedUpItems;
-        this.interacted = data.interacted;
+        //this.interacted = data.interacted;
+
+        List<string> listOfGuids = new List<string>();
+        List<Interactable> intsToAdd = new List<Interactable>();
+        foreach(KeyValuePair<string, bool> pair in data.interactedWith)
+        {
+            if (pair.Value)
+            {
+                listOfGuids.Add(pair.Key);
+            }
+        }
+        foreach (var item in GetComponentsInChildren<Interactable>())
+        {
+            for(int i = 0; i < listOfGuids.Count; i++)
+            {
+                if(item.id == listOfGuids[i])
+                {
+                    listOfGuids.RemoveAt(i);
+                    intsToAdd.Add(item);
+                    break;
+                }
+            }
+        }
+        this.interacted = intsToAdd;
     }
 
     public void SaveData(ref GameData data)
     {
-        data.playerPos = this.bl.transform.position;
-        data.pickedUpItems = this.pickedUpItems;
-        data.interacted = this.interacted;
+        if(bl != null)
+        {
+            data.playerPos = this.bl.transform.position;
+            data.sceneIndex = SceneManager.GetActiveScene().buildIndex;
+            //data.interacted = this.interacted;
+            foreach(Interactable item in this.interacted)
+            {
+                if (data.interactedWith.ContainsKey(item.id))
+                {
+                    data.interactedWith.Remove(item.id);
+                }
+                data.interactedWith.Add(item.id, item.interactedWith);
+            }
+        }
     }
 
     public void ChangeBLMovement()
@@ -50,13 +84,18 @@ public class GameManager : MonoBehaviour, IDataPersistence
     }
     public void AddToInteractedList(Interactable inter)
     {
+        inter.interactedWith = true;
         interacted.Add(inter);
     }
     bool firstLoad = true;
-    // Update is called once per frame
     void Update()
     {
-        FirstLoad();
+        if (firstLoad)
+        {
+            FirstLoad();
+            firstLoad = false;
+        }
+
         EscapeKey();
         InteractKey();
         int? pok = FindClosestImageScaler();
@@ -69,14 +108,11 @@ public class GameManager : MonoBehaviour, IDataPersistence
 
     private void FirstLoad()
     {
-        if (firstLoad)
+        foreach (Interactable interactable in interacted)
         {
-            firstLoad = false;
-            foreach (Interactable interactable in interacted)
-            {
-                interactable.ForceInteract();
-            }
+            interactable.ForceInteract();
         }
+        
     }
 
     private void InteractKey()
@@ -108,9 +144,6 @@ public class GameManager : MonoBehaviour, IDataPersistence
                 Interactable interactItem = g.GetComponent<Interactable>();
                 interactItem.Interact();
             }
-
-            
-            //Debug.Log(interactItem);
         }
     }
     private int? FindClosestItem() //use vectors to measure distance
@@ -151,13 +184,24 @@ public class GameManager : MonoBehaviour, IDataPersistence
         }
         return r;
     }
-    private static void EscapeKey()
+    private void EscapeKey()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = true;
-            SceneManager.LoadScene(0);
+            if(!escape.activeSelf)
+            {
+                Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = true;
+                escape.SetActive(true);
+                ChangeBLMovement();
+            }
+            else
+            {
+                Cursor.lockState = CursorLockMode.Locked;
+                Cursor.visible = false;
+                escape.SetActive(false);
+                ChangeBLMovement();
+            }
         }
     }
     public void Interaction(Items item)
@@ -179,5 +223,9 @@ public class GameManager : MonoBehaviour, IDataPersistence
     public Vector3 BLPos()
     {
         return bl.transform.position;
+    }
+    public void ExitGame()
+    {
+        SceneManager.LoadSceneAsync(0);
     }
 }
