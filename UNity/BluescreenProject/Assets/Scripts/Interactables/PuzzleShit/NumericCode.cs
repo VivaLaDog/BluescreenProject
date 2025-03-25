@@ -4,31 +4,28 @@ public class NumericCode : Interactable
     [SerializeField] Doors unlocksDoor;
     [SerializeField] int code;
     [SerializeField] NumButtPress numpad;
-    bool doneInteract = false;
     public override void Interact()
     {
-        if (doneInteract)
-        {
+        if (interactedWith)
             return;
-        }
 
-        doneInteract = true;
         gm.ChangeBLMovement();
         numpad.OpenPad();
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
         gm.AddToInteractedList(this.GetComponent<Interactable>());
+        interactedWith = false;
     }
     public override void ForceInteract()
     {
         base.ForceInteract();
         PassDoor();
-        doneInteract = true;
-        DeactivateCanvas();
     }
     internal void PassDoor()
     {
+        interactedWith = true;
         unlocksDoor.UnlockDoor();
+        DeactivateCanvas();
     }
 
     internal bool CheckCode(int checkCode)

@@ -1,0 +1,23 @@
+<linker>
+	<assembly fullname="Assembly-CSharp" ignoreIfMissing="1">
+		<type fullname="GameManager">
+			<method name="ExitGame"/>
+		</type>
+		<type fullname="MainMenuButtons">
+			<method name="ContinueGame"/>
+			<method name="ExitGame"/>
+			<method name="StartNewGame"/>
+		</type>
+		<type fullname="NumButtPress">
+			<method name="Pressed"/>
+			<method name="Pressed"/>
+			<method name="Pressed"/>
+			<method name="Pressed"/>
+			<method name="Pressed"/>
+			<method name="Pressed"/>
+			<method name="Pressed"/>
+			<method name="Pressed"/>
+			<method name="Pressed"/>
+		</type>
+	</assembly>
+</linker>

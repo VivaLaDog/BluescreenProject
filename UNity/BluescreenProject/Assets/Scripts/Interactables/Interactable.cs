@@ -36,7 +36,6 @@ public abstract class Interactable : MonoBehaviour
 
     public void DeactivateCanvas()
     {
-        Debug.Log(GetComponentInParent<InteractableHighlights>());
         GetComponentInChildren<Canvas>().gameObject.SetActive(false);
     }
 }
