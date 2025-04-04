@@ -38,6 +38,9 @@ public class IntImageScale : MonoBehaviour
 
         if(GetComponentInParent<NumericCode>() != null)
             inter = GetComponentInParent<NumericCode>();
+
+        if(GetComponentInParent<Padlock>() != null)
+            inter = GetComponentInParent<Padlock>();
     }
 
     void Update()
@@ -67,6 +70,9 @@ public class IntImageScale : MonoBehaviour
 
             if (inter.GetComponent<Items>())//yay
                 divider = 50000;
+
+            if (inter.GetComponent<Padlock>())
+                divider = 5000000;
 
             if (inter.GetComponent<LoreTexts>())//yay
             {

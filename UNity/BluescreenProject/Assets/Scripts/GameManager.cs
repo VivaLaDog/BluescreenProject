@@ -141,8 +141,7 @@ public class GameManager : MonoBehaviour, IDataPersistence
             
             else if(g.GetComponent<Interactable>() != null)
             {
-                Interactable interactItem = g.GetComponent<Interactable>();
-                interactItem.Interact();
+                g.GetComponent<Interactable>().Interact();
             }
         }
     }

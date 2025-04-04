@@ -97,6 +97,7 @@
     <Compile Include="Assets\Scripts\VivaAnimations.cs" />
     <Compile Include="Assets\Scripts\Interactables\HighLightChanger.cs" />
     <Compile Include="Assets\Scenes\MM\MainMenuButtons.cs" />
+    <Compile Include="Assets\Scripts\Interactables\PuzzleShit\PadlockedDoor.cs" />
     <Compile Include="Assets\Scripts\Interactables\Doors.cs" />
   </ItemGroup>
   <ItemGroup>

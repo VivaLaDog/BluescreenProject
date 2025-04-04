@@ -17,7 +17,6 @@ public class Portal : MonoBehaviour
     RenderTexture viewTexture;
     Camera portalCam;
     Camera playerCam;
-    Material firstRecursionMat;
     List<PortalTraveller> trackedTravellers;
     MeshFilter screenMeshFilter;
 

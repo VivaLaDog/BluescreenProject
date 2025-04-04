@@ -431,6 +431,7 @@
 "Assets/Scripts/Interactables/PuzzleShit/NumButtPress.cs"
 "Assets/Scripts/Interactables/PuzzleShit/NumericCode.cs"
 "Assets/Scripts/Interactables/PuzzleShit/Padlock.cs"
+"Assets/Scripts/Interactables/PuzzleShit/PadlockedDoor.cs"
 "Assets/Scripts/Interactables/PuzzleShit/PuzzleButton.cs"
 "Assets/Scripts/Portal/CameraUtility.cs"
 "Assets/Scripts/Portal/MainCamera.cs"
