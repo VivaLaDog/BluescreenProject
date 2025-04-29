@@ -27,7 +27,7 @@ public class Doors : Interactable
         }
     }
 
-    private void OpenDoor() // is working, add animation nowe
+    internal void OpenDoor() // is working, add animation nowe
     {
         //transform.position = new Vector3(transform.position.x, 3f, transform.position.z);
         //transform.parent.GetComponent<Animator>().SetTrigger("Open");

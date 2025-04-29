@@ -67,6 +67,7 @@
     <Compile Include="Assets\Scripts\Portal\CameraUtility.cs" />
     <Compile Include="Assets\Scripts\Portal\MainCamera.cs" />
     <Compile Include="Assets\Scripts\Interactables\InteractableHighlights.cs" />
+    <Compile Include="Assets\Scripts\Interactables\WeakerDoor.cs" />
     <Compile Include="Assets\Scripts\Enemies\Turret.cs" />
     <Compile Include="Assets\Scripts\DataPersistence\GameData\SerializableDictionary.cs" />
     <Compile Include="Assets\Scripts\Interactables\Poster.cs" />
