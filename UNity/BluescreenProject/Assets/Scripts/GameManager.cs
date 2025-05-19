@@ -110,6 +110,7 @@ public class GameManager : MonoBehaviour, IDataPersistence
     {
         foreach (Interactable interactable in interacted)
         {
+            Debug.Log(interactable);
             interactable.ForceInteract();
         }
         

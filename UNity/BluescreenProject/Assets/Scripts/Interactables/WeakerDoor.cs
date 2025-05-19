@@ -1,15 +1,22 @@
 using UnityEngine;
 
-public class WeakerDoor : Doors
+public class WeakerDoor : Interactable
 {
-    public override void Interact()
+new private void Start()
     {
-        
+        base.Start();
+        DeactivateCanvas();
     }
+    public override void Interact() { }
     
-    new void OpenDoor()
+    public void OpenDoor()
     {
-        Animator animator = GetComponent<Animator>();
-        animator.SetBool("OpenDoor", true);
+        Animator = GetComponent<Animator>();
+        Animator.SetBool("OpenDoor", true);
+    }
+    public override void ForceInteract()
+    {
+        base.ForceInteract();
+        OpenDoor();
     }
 }

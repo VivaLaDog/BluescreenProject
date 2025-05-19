@@ -61,6 +61,7 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.0.35f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Interactables\PuzzleShit\FacButton.cs" />
     <Compile Include="Assets\Scripts\Interactables\LoreTexts.cs" />
     <Compile Include="Assets\Scripts\AnimationPlay.cs" />
     <Compile Include="Assets\Scripts\Enemies\BLHPSys.cs" />
@@ -78,16 +79,21 @@
     <Compile Include="Assets\Scripts\Enemies\Enemy.cs" />
     <Compile Include="Assets\Scripts\DataPersistence\GameData\GameData.cs" />
     <Compile Include="Assets\Scripts\ForwardCheck.cs" />
+    <Compile Include="Assets\Scripts\Interactables\Photo.cs" />
+    <Compile Include="Assets\Scripts\Interactables\PuzzleShit\NumericCode2.cs" />
     <Compile Include="Assets\Scripts\Portal\Portal.cs" />
     <Compile Include="Assets\Scripts\Interactables\PuzzleShit\LeverPull.cs" />
     <Compile Include="Assets\Scripts\Interactables\Interactable.cs" />
     <Compile Include="Assets\Scripts\BigDoorTrigger.cs" />
     <Compile Include="Assets\Scripts\Interactables\Items.cs" />
     <Compile Include="Assets\Scripts\Portal\PortalTraveller.cs" />
+    <Compile Include="Assets\Scenes\Cha3\Spotlight.cs" />
+    <Compile Include="Assets\Scripts\Interactables\PhotoChecker.cs" />
     <Compile Include="Assets\Scripts\Interactables\IntImageScale.cs" />
     <Compile Include="Assets\Scenes\MM\MouseParallax.cs" />
     <Compile Include="Assets\Scripts\DataPersistence\SaveTrigger.cs" />
     <Compile Include="Assets\Scripts\BLPlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\Interactables\PuzzleShit\NumButtPress 2.cs" />
     <Compile Include="Assets\Scripts\RoomManager.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\DataPersistence\DataPersistenceManager.cs" />
@@ -97,6 +103,8 @@
     <Compile Include="Assets\Scripts\Enemies\DiscoAnimations.cs" />
     <Compile Include="Assets\Scripts\VivaAnimations.cs" />
     <Compile Include="Assets\Scripts\Interactables\HighLightChanger.cs" />
+    <Compile Include="Assets\Scripts\GuideHand.cs" />
+    <Compile Include="Assets\Scripts\TheatreLookAts.cs" />
     <Compile Include="Assets\Scenes\MM\MainMenuButtons.cs" />
     <Compile Include="Assets\Scripts\Interactables\PuzzleShit\PadlockedDoor.cs" />
     <Compile Include="Assets\Scripts\Interactables\Doors.cs" />

@@ -9,10 +9,13 @@ EditorBuildSettings:
     path: Assets/Scenes/MM/MainMenu.unity
     guid: 8ec146884831de546a11ebf9fe7fc626
   - enabled: 1
-    path: Assets/Scenes/LABCONT1/Cont1.unity
+    path: Assets/Scenes/Cha1/Cont1.unity
     guid: a9c34523fd26b304b85a6ad08c85b8bc
   - enabled: 1
     path: Assets/Scenes/Cha2/Chapter2.unity
     guid: 1a9778a9a17b3ad4e8ba4de4b66e84e9
+  - enabled: 1
+    path: Assets/Scenes/Cha3/Chapter3.unity
+    guid: e3795240855471541934028605d76d20
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

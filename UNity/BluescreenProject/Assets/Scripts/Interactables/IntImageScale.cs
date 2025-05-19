@@ -41,6 +41,18 @@ public class IntImageScale : MonoBehaviour
 
         if(GetComponentInParent<Padlock>() != null)
             inter = GetComponentInParent<Padlock>();
+
+        if(GetComponentInParent<NumericCode2>() != null)
+            inter = GetComponentInParent<NumericCode2>();
+
+        if(GetComponentInParent<WeakerDoor>() != null)
+            inter = GetComponentInParent<WeakerDoor>();
+
+        if(GetComponentInParent<FacButton>() != null)
+            inter = GetComponentInParent<FacButton>();
+
+        if(GetComponentInParent<Photo>() != null)
+            inter = GetComponentInParent<Photo>();
     }
 
     void Update()
@@ -63,46 +75,9 @@ public class IntImageScale : MonoBehaviour
             float a = ogScale.x / distance;
             float b = ogScale.y / distance;
 
-            float divider = 50;
-
-            if (inter == null)
-                divider = 0;
-
-            if (inter.GetComponent<Items>())//yay
-                divider = 50000;
-
-            if (inter.GetComponent<Padlock>())
-                divider = 5000000;
-
-            if (inter.GetComponent<LoreTexts>())//yay
-            {
-                //Get rotation, if placed on ground it divides by one, if on wall divide by the other
-                var absRotation = Mathf.Abs(inter.transform.localRotation.y);
-
-                if (absRotation > 0.5f && absRotation < 0.8f)
-                    divider = 60000;
-                else
-                    divider = 15;
-            }
-
-            if (inter.GetComponent<LeverPull>())//yay
-            {
-                divider = 15;
-            
-            }
-
-            if (inter.GetComponent<PuzzleButton>())
-            {
-                divider = 1000000; //i don't understand.
-            }
-
-            if (inter.GetComponent<Poster>())
-            {
-                divider = 2;
-            }
-
-            if (inter.GetComponent<Doors>())
-                divider = 3500000;
+            float divider = inter.imageScalerDivider;
+            if (divider == 0)
+                divider = 1;
 
             float psx = parentscale.x / divider;
             float psy = parentscale.y / divider;

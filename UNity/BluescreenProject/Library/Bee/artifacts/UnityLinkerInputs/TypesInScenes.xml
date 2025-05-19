@@ -6,22 +6,36 @@
 		<type fullname="BLPlayerMovement" preserve="nothing"/>
 		<type fullname="DataPersistenceManager" preserve="nothing"/>
 		<type fullname="Doors" preserve="nothing"/>
+		<type fullname="FacButton" preserve="nothing"/>
 		<type fullname="ForwardCheck" preserve="nothing"/>
 		<type fullname="GameManager" preserve="nothing"/>
+		<type fullname="GuideHand" preserve="nothing"/>
 		<type fullname="InteractableHighlights" preserve="nothing"/>
 		<type fullname="Items" preserve="nothing"/>
 		<type fullname="LeverPull" preserve="nothing"/>
 		<type fullname="LoreTexts" preserve="nothing"/>
+		<type fullname="MainCamera" preserve="nothing"/>
 		<type fullname="MainMenuButtons" preserve="nothing"/>
 		<type fullname="MouseParallax" preserve="nothing"/>
 		<type fullname="NumButtPress" preserve="nothing"/>
+		<type fullname="NumButtPress2" preserve="nothing"/>
 		<type fullname="NumericCode" preserve="nothing"/>
+		<type fullname="NumericCode2" preserve="nothing"/>
+		<type fullname="Padlock" preserve="nothing"/>
+		<type fullname="PadlockedDoor" preserve="nothing"/>
+		<type fullname="Photo" preserve="nothing"/>
+		<type fullname="PhotoChecker" preserve="nothing"/>
+		<type fullname="Portal" preserve="nothing"/>
+		<type fullname="PortalTraveller" preserve="nothing"/>
 		<type fullname="Poster" preserve="nothing"/>
 		<type fullname="PuzzleButton" preserve="nothing"/>
 		<type fullname="RoomManager" preserve="nothing"/>
 		<type fullname="SaveTrigger" preserve="nothing"/>
+		<type fullname="Spotlight" preserve="nothing"/>
+		<type fullname="TheatreLookAts" preserve="nothing"/>
 		<type fullname="Turret" preserve="nothing"/>
 		<type fullname="VivaAnimations" preserve="nothing"/>
+		<type fullname="WeakerDoor" preserve="nothing"/>
 	</assembly>
 	<assembly fullname="Unity.AI.Navigation">
 		<type fullname="Unity.AI.Navigation.NavMeshSurface" preserve="nothing"/>
@@ -65,6 +79,7 @@
 		<type fullname="UnityEngine.Light" preserve="nothing"/>
 		<type fullname="UnityEngine.LightingSettings" preserve="nothing"/>
 		<type fullname="UnityEngine.LightmapSettings" preserve="nothing"/>
+		<type fullname="UnityEngine.LightProbes" preserve="nothing"/>
 		<type fullname="UnityEngine.Material" preserve="nothing"/>
 		<type fullname="UnityEngine.Mesh" preserve="nothing"/>
 		<type fullname="UnityEngine.MeshCollider" preserve="nothing"/>

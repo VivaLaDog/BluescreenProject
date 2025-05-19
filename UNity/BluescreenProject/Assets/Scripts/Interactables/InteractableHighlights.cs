@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -11,7 +10,7 @@ public class InteractableHighlights : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        Interactable[] gwah = GetComponentsInChildren<Interactable>();
+        Interactable[] gwah = GetComponentsInChildren<Interactable>(true);
         
         for(int i = 0;  i < gwah.Length; i++)
         {

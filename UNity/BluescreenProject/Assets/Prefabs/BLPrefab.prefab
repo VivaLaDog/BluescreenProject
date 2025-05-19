@@ -67,8 +67,6 @@ MonoBehaviour:
   bloodImages:
   - {fileID: 0}
   - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   blCam: {fileID: 0}
 --- !u!54 &6131280821163760807
 Rigidbody:

@@ -11,7 +11,7 @@ public class BLHPSys : MonoBehaviour
              */
 
     private int health;
-    private int maxHealth = 10;
+    private int maxHealth = 5;
     bool blIsKill = false;
     // Start is called before the first frame update
     void Start()

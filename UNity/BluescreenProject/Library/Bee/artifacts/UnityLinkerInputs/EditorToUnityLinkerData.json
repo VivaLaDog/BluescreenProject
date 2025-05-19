@@ -63,10 +63,18 @@
             "fullManagedTypeName": "",
             "moduleName": "Core",
             "usedInScenes": [
+                "Assets/Scenes/Cha1/Cont1.unity",
                 "Assets/Scenes/Cha2/Chapter2.unity",
-                "Assets/Scenes/LABCONT1/Cont1.unity",
+                "Assets/Scenes/Cha3/Chapter3.unity",
                 "Assets/Scenes/MM/MainMenu.unity"
             ]
+        },
+        {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "FacButton",
+            "moduleName": "",
+            "usedInScenes": []
         },
         {
             "managedAssemblyName": "Assembly-CSharp.dll",
@@ -81,8 +89,9 @@
             "fullManagedTypeName": "",
             "moduleName": "Core",
             "usedInScenes": [
+                "Assets/Scenes/Cha1/Cont1.unity",
                 "Assets/Scenes/Cha2/Chapter2.unity",
-                "Assets/Scenes/LABCONT1/Cont1.unity",
+                "Assets/Scenes/Cha3/Chapter3.unity",
                 "Assets/Scenes/MM/MainMenu.unity"
             ]
         },
@@ -98,6 +107,13 @@
             "nativeClass": "GlobalGameManager",
             "fullManagedTypeName": "",
             "moduleName": "Core",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "GuideHand",
+            "moduleName": "",
             "usedInScenes": []
         },
         {
@@ -120,8 +136,9 @@
             "fullManagedTypeName": "",
             "moduleName": "Core",
             "usedInScenes": [
+                "Assets/Scenes/Cha1/Cont1.unity",
                 "Assets/Scenes/Cha2/Chapter2.unity",
-                "Assets/Scenes/LABCONT1/Cont1.unity",
+                "Assets/Scenes/Cha3/Chapter3.unity",
                 "Assets/Scenes/MM/MainMenu.unity"
             ]
         },
@@ -136,6 +153,13 @@
             "managedAssemblyName": "Assembly-CSharp.dll",
             "nativeClass": "",
             "fullManagedTypeName": "LoreTexts",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "MainCamera",
             "moduleName": "",
             "usedInScenes": []
         },
@@ -166,8 +190,9 @@
             "fullManagedTypeName": "",
             "moduleName": "Core",
             "usedInScenes": [
+                "Assets/Scenes/Cha1/Cont1.unity",
                 "Assets/Scenes/Cha2/Chapter2.unity",
-                "Assets/Scenes/LABCONT1/Cont1.unity",
+                "Assets/Scenes/Cha3/Chapter3.unity",
                 "Assets/Scenes/MM/MainMenu.unity"
             ]
         },
@@ -184,8 +209,9 @@
             "fullManagedTypeName": "",
             "moduleName": "AI",
             "usedInScenes": [
+                "Assets/Scenes/Cha1/Cont1.unity",
                 "Assets/Scenes/Cha2/Chapter2.unity",
-                "Assets/Scenes/LABCONT1/Cont1.unity",
+                "Assets/Scenes/Cha3/Chapter3.unity",
                 "Assets/Scenes/MM/MainMenu.unity"
             ]
         },
@@ -199,7 +225,49 @@
         {
             "managedAssemblyName": "Assembly-CSharp.dll",
             "nativeClass": "",
+            "fullManagedTypeName": "NumButtPress2",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
             "fullManagedTypeName": "NumericCode",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "NumericCode2",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "Padlock",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "PadlockedDoor",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "Photo",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "PhotoChecker",
             "moduleName": "",
             "usedInScenes": []
         },
@@ -208,6 +276,20 @@
             "nativeClass": "PhysicsManager",
             "fullManagedTypeName": "",
             "moduleName": "Physics",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "Portal",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "PortalTraveller",
+            "moduleName": "",
             "usedInScenes": []
         },
         {
@@ -260,10 +342,24 @@
             "usedInScenes": []
         },
         {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "Spotlight",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
             "managedAssemblyName": "",
             "nativeClass": "StreamingManager",
             "fullManagedTypeName": "",
             "moduleName": "Streaming",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "TheatreLookAts",
+            "moduleName": "",
             "usedInScenes": []
         },
         {
@@ -321,7 +417,9 @@
             "fullManagedTypeName": "UnityEditor.Animations.AnimatorController",
             "moduleName": "Animation",
             "usedInScenes": [
-                "Assets/Scenes/LABCONT1/Cont1.unity"
+                "Assets/Scenes/Cha1/Cont1.unity",
+                "Assets/Scenes/Cha2/Chapter2.unity",
+                "Assets/Scenes/Cha3/Chapter3.unity"
             ]
         },
         {
@@ -351,7 +449,9 @@
             "fullManagedTypeName": "UnityEditor.MonoScript",
             "moduleName": "Core",
             "usedInScenes": [
-                "Assets/Scenes/LABCONT1/Cont1.unity",
+                "Assets/Scenes/Cha1/Cont1.unity",
+                "Assets/Scenes/Cha2/Chapter2.unity",
+                "Assets/Scenes/Cha3/Chapter3.unity",
                 "Assets/Scenes/MM/MainMenu.unity"
             ]
         },
@@ -396,7 +496,7 @@
             "fullManagedTypeName": "UnityEngine.AI.NavMeshAgent",
             "moduleName": "AI",
             "usedInScenes": [
-                "Assets/Scenes/LABCONT1/Cont1.unity"
+                "Assets/Scenes/Cha1/Cont1.unity"
             ]
         },
         {
@@ -405,7 +505,7 @@
             "fullManagedTypeName": "UnityEngine.AI.NavMeshData",
             "moduleName": "AI",
             "usedInScenes": [
-                "Assets/Scenes/LABCONT1/Cont1.unity"
+                "Assets/Scenes/Cha1/Cont1.unity"
             ]
         },
         {
@@ -414,7 +514,9 @@
             "fullManagedTypeName": "UnityEngine.AnimationClip",
             "moduleName": "Animation",
             "usedInScenes": [
-                "Assets/Scenes/LABCONT1/Cont1.unity"
+                "Assets/Scenes/Cha1/Cont1.unity",
+                "Assets/Scenes/Cha2/Chapter2.unity",
+                "Assets/Scenes/Cha3/Chapter3.unity"
             ]
         },
         {
@@ -423,7 +525,9 @@
             "fullManagedTypeName": "UnityEngine.Animator",
             "moduleName": "Animation",
             "usedInScenes": [
-                "Assets/Scenes/LABCONT1/Cont1.unity"
+                "Assets/Scenes/Cha1/Cont1.unity",
+                "Assets/Scenes/Cha2/Chapter2.unity",
+                "Assets/Scenes/Cha3/Chapter3.unity"
             ]
         },
         {
@@ -432,8 +536,9 @@
             "fullManagedTypeName": "UnityEngine.AudioBehaviour",
             "moduleName": "Audio",
             "usedInScenes": [
+                "Assets/Scenes/Cha1/Cont1.unity",
                 "Assets/Scenes/Cha2/Chapter2.unity",
-                "Assets/Scenes/LABCONT1/Cont1.unity"
+                "Assets/Scenes/Cha3/Chapter3.unity"
             ]
         },
         {
@@ -442,8 +547,9 @@
             "fullManagedTypeName": "UnityEngine.AudioListener",
             "moduleName": "Audio",
             "usedInScenes": [
+                "Assets/Scenes/Cha1/Cont1.unity",
                 "Assets/Scenes/Cha2/Chapter2.unity",
-                "Assets/Scenes/LABCONT1/Cont1.unity"
+                "Assets/Scenes/Cha3/Chapter3.unity"
             ]
         },
         {
@@ -452,7 +558,9 @@
             "fullManagedTypeName": "UnityEngine.Avatar",
             "moduleName": "Animation",
             "usedInScenes": [
-                "Assets/Scenes/LABCONT1/Cont1.unity"
+                "Assets/Scenes/Cha1/Cont1.unity",
+                "Assets/Scenes/Cha2/Chapter2.unity",
+                "Assets/Scenes/Cha3/Chapter3.unity"
             ]
         },
         {
@@ -461,8 +569,9 @@
             "fullManagedTypeName": "UnityEngine.Behaviour",
             "moduleName": "Core",
             "usedInScenes": [
+                "Assets/Scenes/Cha1/Cont1.unity",
                 "Assets/Scenes/Cha2/Chapter2.unity",
-                "Assets/Scenes/LABCONT1/Cont1.unity",
+                "Assets/Scenes/Cha3/Chapter3.unity",
                 "Assets/Scenes/MM/MainMenu.unity"
             ]
         },
@@ -472,7 +581,9 @@
             "fullManagedTypeName": "UnityEngine.BoxCollider",
             "moduleName": "Physics",
             "usedInScenes": [
-                "Assets/Scenes/LABCONT1/Cont1.unity"
+                "Assets/Scenes/Cha1/Cont1.unity",
+                "Assets/Scenes/Cha2/Chapter2.unity",
+                "Assets/Scenes/Cha3/Chapter3.unity"
             ]
         },
         {
@@ -481,8 +592,9 @@
             "fullManagedTypeName": "UnityEngine.Camera",
             "moduleName": "Core",
             "usedInScenes": [
+                "Assets/Scenes/Cha1/Cont1.unity",
                 "Assets/Scenes/Cha2/Chapter2.unity",
-                "Assets/Scenes/LABCONT1/Cont1.unity",
+                "Assets/Scenes/Cha3/Chapter3.unity",
                 "Assets/Scenes/MM/MainMenu.unity"
             ]
         },
@@ -492,7 +604,9 @@
             "fullManagedTypeName": "UnityEngine.Canvas",
             "moduleName": "UI",
             "usedInScenes": [
-                "Assets/Scenes/LABCONT1/Cont1.unity",
+                "Assets/Scenes/Cha1/Cont1.unity",
+                "Assets/Scenes/Cha2/Chapter2.unity",
+                "Assets/Scenes/Cha3/Chapter3.unity",
                 "Assets/Scenes/MM/MainMenu.unity"
             ]
         },
@@ -502,7 +616,9 @@
             "fullManagedTypeName": "UnityEngine.CanvasRenderer",
             "moduleName": "UI",
             "usedInScenes": [
-                "Assets/Scenes/LABCONT1/Cont1.unity",
+                "Assets/Scenes/Cha1/Cont1.unity",
+                "Assets/Scenes/Cha2/Chapter2.unity",
+                "Assets/Scenes/Cha3/Chapter3.unity",
                 "Assets/Scenes/MM/MainMenu.unity"
             ]
         },
@@ -512,7 +628,9 @@
             "fullManagedTypeName": "UnityEngine.CapsuleCollider",
             "moduleName": "Physics",
             "usedInScenes": [
-                "Assets/Scenes/LABCONT1/Cont1.unity"
+                "Assets/Scenes/Cha1/Cont1.unity",
+                "Assets/Scenes/Cha2/Chapter2.unity",
+                "Assets/Scenes/Cha3/Chapter3.unity"
             ]
         },
         {
@@ -521,7 +639,9 @@
             "fullManagedTypeName": "UnityEngine.Collider",
             "moduleName": "Physics",
             "usedInScenes": [
-                "Assets/Scenes/LABCONT1/Cont1.unity"
+                "Assets/Scenes/Cha1/Cont1.unity",
+                "Assets/Scenes/Cha2/Chapter2.unity",
+                "Assets/Scenes/Cha3/Chapter3.unity"
             ]
         },
         {
@@ -530,8 +650,9 @@
             "fullManagedTypeName": "UnityEngine.Component",
             "moduleName": "Core",
             "usedInScenes": [
+                "Assets/Scenes/Cha1/Cont1.unity",
                 "Assets/Scenes/Cha2/Chapter2.unity",
-                "Assets/Scenes/LABCONT1/Cont1.unity",
+                "Assets/Scenes/Cha3/Chapter3.unity",
                 "Assets/Scenes/MM/MainMenu.unity"
             ]
         },
@@ -541,7 +662,8 @@
             "fullManagedTypeName": "UnityEngine.Cubemap",
             "moduleName": "Core",
             "usedInScenes": [
-                "Assets/Scenes/Cha2/Chapter2.unity"
+                "Assets/Scenes/Cha2/Chapter2.unity",
+                "Assets/Scenes/Cha3/Chapter3.unity"
             ]
         },
         {
@@ -564,7 +686,9 @@
             "fullManagedTypeName": "UnityEngine.Font",
             "moduleName": "TextRendering",
             "usedInScenes": [
-                "Assets/Scenes/LABCONT1/Cont1.unity",
+                "Assets/Scenes/Cha1/Cont1.unity",
+                "Assets/Scenes/Cha2/Chapter2.unity",
+                "Assets/Scenes/Cha3/Chapter3.unity",
                 "Assets/Scenes/MM/MainMenu.unity"
             ]
         },
@@ -574,8 +698,9 @@
             "fullManagedTypeName": "UnityEngine.GameObject",
             "moduleName": "Core",
             "usedInScenes": [
+                "Assets/Scenes/Cha1/Cont1.unity",
                 "Assets/Scenes/Cha2/Chapter2.unity",
-                "Assets/Scenes/LABCONT1/Cont1.unity",
+                "Assets/Scenes/Cha3/Chapter3.unity",
                 "Assets/Scenes/MM/MainMenu.unity"
             ]
         },
@@ -585,8 +710,9 @@
             "fullManagedTypeName": "UnityEngine.Light",
             "moduleName": "Core",
             "usedInScenes": [
+                "Assets/Scenes/Cha1/Cont1.unity",
                 "Assets/Scenes/Cha2/Chapter2.unity",
-                "Assets/Scenes/LABCONT1/Cont1.unity",
+                "Assets/Scenes/Cha3/Chapter3.unity",
                 "Assets/Scenes/MM/MainMenu.unity"
             ]
         },
@@ -596,7 +722,8 @@
             "fullManagedTypeName": "UnityEngine.LightingSettings",
             "moduleName": "Core",
             "usedInScenes": [
-                "Assets/Scenes/LABCONT1/Cont1.unity"
+                "Assets/Scenes/Cha1/Cont1.unity",
+                "Assets/Scenes/Cha3/Chapter3.unity"
             ]
         },
         {
@@ -605,9 +732,19 @@
             "fullManagedTypeName": "UnityEngine.LightmapSettings",
             "moduleName": "Core",
             "usedInScenes": [
+                "Assets/Scenes/Cha1/Cont1.unity",
                 "Assets/Scenes/Cha2/Chapter2.unity",
-                "Assets/Scenes/LABCONT1/Cont1.unity",
+                "Assets/Scenes/Cha3/Chapter3.unity",
                 "Assets/Scenes/MM/MainMenu.unity"
+            ]
+        },
+        {
+            "managedAssemblyName": "UnityEngine.dll",
+            "nativeClass": "LightProbes",
+            "fullManagedTypeName": "UnityEngine.LightProbes",
+            "moduleName": "Core",
+            "usedInScenes": [
+                "Assets/Scenes/Cha3/Chapter3.unity"
             ]
         },
         {
@@ -616,8 +753,9 @@
             "fullManagedTypeName": "UnityEngine.Material",
             "moduleName": "Core",
             "usedInScenes": [
+                "Assets/Scenes/Cha1/Cont1.unity",
                 "Assets/Scenes/Cha2/Chapter2.unity",
-                "Assets/Scenes/LABCONT1/Cont1.unity",
+                "Assets/Scenes/Cha3/Chapter3.unity",
                 "Assets/Scenes/MM/MainMenu.unity"
             ]
         },
@@ -627,7 +765,9 @@
             "fullManagedTypeName": "UnityEngine.Mesh",
             "moduleName": "Core",
             "usedInScenes": [
-                "Assets/Scenes/LABCONT1/Cont1.unity"
+                "Assets/Scenes/Cha1/Cont1.unity",
+                "Assets/Scenes/Cha2/Chapter2.unity",
+                "Assets/Scenes/Cha3/Chapter3.unity"
             ]
         },
         {
@@ -636,7 +776,9 @@
             "fullManagedTypeName": "UnityEngine.MeshCollider",
             "moduleName": "Physics",
             "usedInScenes": [
-                "Assets/Scenes/LABCONT1/Cont1.unity"
+                "Assets/Scenes/Cha1/Cont1.unity",
+                "Assets/Scenes/Cha2/Chapter2.unity",
+                "Assets/Scenes/Cha3/Chapter3.unity"
             ]
         },
         {
@@ -645,7 +787,9 @@
             "fullManagedTypeName": "UnityEngine.MeshFilter",
             "moduleName": "Core",
             "usedInScenes": [
-                "Assets/Scenes/LABCONT1/Cont1.unity"
+                "Assets/Scenes/Cha1/Cont1.unity",
+                "Assets/Scenes/Cha2/Chapter2.unity",
+                "Assets/Scenes/Cha3/Chapter3.unity"
             ]
         },
         {
@@ -654,7 +798,9 @@
             "fullManagedTypeName": "UnityEngine.MeshRenderer",
             "moduleName": "Core",
             "usedInScenes": [
-                "Assets/Scenes/LABCONT1/Cont1.unity"
+                "Assets/Scenes/Cha1/Cont1.unity",
+                "Assets/Scenes/Cha2/Chapter2.unity",
+                "Assets/Scenes/Cha3/Chapter3.unity"
             ]
         },
         {
@@ -663,7 +809,9 @@
             "fullManagedTypeName": "UnityEngine.MonoBehaviour",
             "moduleName": "Core",
             "usedInScenes": [
-                "Assets/Scenes/LABCONT1/Cont1.unity",
+                "Assets/Scenes/Cha1/Cont1.unity",
+                "Assets/Scenes/Cha2/Chapter2.unity",
+                "Assets/Scenes/Cha3/Chapter3.unity",
                 "Assets/Scenes/MM/MainMenu.unity"
             ]
         },
@@ -673,7 +821,9 @@
             "fullManagedTypeName": "UnityEngine.Motion",
             "moduleName": "Animation",
             "usedInScenes": [
-                "Assets/Scenes/LABCONT1/Cont1.unity"
+                "Assets/Scenes/Cha1/Cont1.unity",
+                "Assets/Scenes/Cha2/Chapter2.unity",
+                "Assets/Scenes/Cha3/Chapter3.unity"
             ]
         },
         {
@@ -682,8 +832,9 @@
             "fullManagedTypeName": "UnityEngine.Object",
             "moduleName": "Core",
             "usedInScenes": [
+                "Assets/Scenes/Cha1/Cont1.unity",
                 "Assets/Scenes/Cha2/Chapter2.unity",
-                "Assets/Scenes/LABCONT1/Cont1.unity",
+                "Assets/Scenes/Cha3/Chapter3.unity",
                 "Assets/Scenes/MM/MainMenu.unity"
             ]
         },
@@ -700,7 +851,9 @@
             "fullManagedTypeName": "UnityEngine.RectTransform",
             "moduleName": "Core",
             "usedInScenes": [
-                "Assets/Scenes/LABCONT1/Cont1.unity",
+                "Assets/Scenes/Cha1/Cont1.unity",
+                "Assets/Scenes/Cha2/Chapter2.unity",
+                "Assets/Scenes/Cha3/Chapter3.unity",
                 "Assets/Scenes/MM/MainMenu.unity"
             ]
         },
@@ -710,7 +863,9 @@
             "fullManagedTypeName": "UnityEngine.Renderer",
             "moduleName": "Core",
             "usedInScenes": [
-                "Assets/Scenes/LABCONT1/Cont1.unity"
+                "Assets/Scenes/Cha1/Cont1.unity",
+                "Assets/Scenes/Cha2/Chapter2.unity",
+                "Assets/Scenes/Cha3/Chapter3.unity"
             ]
         },
         {
@@ -726,8 +881,9 @@
             "fullManagedTypeName": "UnityEngine.RenderSettings",
             "moduleName": "Core",
             "usedInScenes": [
+                "Assets/Scenes/Cha1/Cont1.unity",
                 "Assets/Scenes/Cha2/Chapter2.unity",
-                "Assets/Scenes/LABCONT1/Cont1.unity",
+                "Assets/Scenes/Cha3/Chapter3.unity",
                 "Assets/Scenes/MM/MainMenu.unity"
             ]
         },
@@ -737,7 +893,9 @@
             "fullManagedTypeName": "UnityEngine.Rigidbody",
             "moduleName": "Physics",
             "usedInScenes": [
-                "Assets/Scenes/LABCONT1/Cont1.unity"
+                "Assets/Scenes/Cha1/Cont1.unity",
+                "Assets/Scenes/Cha2/Chapter2.unity",
+                "Assets/Scenes/Cha3/Chapter3.unity"
             ]
         },
         {
@@ -746,7 +904,9 @@
             "fullManagedTypeName": "UnityEngine.RuntimeAnimatorController",
             "moduleName": "Animation",
             "usedInScenes": [
-                "Assets/Scenes/LABCONT1/Cont1.unity"
+                "Assets/Scenes/Cha1/Cont1.unity",
+                "Assets/Scenes/Cha2/Chapter2.unity",
+                "Assets/Scenes/Cha3/Chapter3.unity"
             ]
         },
         {
@@ -755,8 +915,9 @@
             "fullManagedTypeName": "UnityEngine.Shader",
             "moduleName": "Core",
             "usedInScenes": [
+                "Assets/Scenes/Cha1/Cont1.unity",
                 "Assets/Scenes/Cha2/Chapter2.unity",
-                "Assets/Scenes/LABCONT1/Cont1.unity",
+                "Assets/Scenes/Cha3/Chapter3.unity",
                 "Assets/Scenes/MM/MainMenu.unity"
             ]
         },
@@ -766,7 +927,9 @@
             "fullManagedTypeName": "UnityEngine.SkinnedMeshRenderer",
             "moduleName": "Core",
             "usedInScenes": [
-                "Assets/Scenes/LABCONT1/Cont1.unity"
+                "Assets/Scenes/Cha1/Cont1.unity",
+                "Assets/Scenes/Cha2/Chapter2.unity",
+                "Assets/Scenes/Cha3/Chapter3.unity"
             ]
         },
         {
@@ -775,7 +938,9 @@
             "fullManagedTypeName": "UnityEngine.Sprite",
             "moduleName": "Core",
             "usedInScenes": [
-                "Assets/Scenes/LABCONT1/Cont1.unity",
+                "Assets/Scenes/Cha1/Cont1.unity",
+                "Assets/Scenes/Cha2/Chapter2.unity",
+                "Assets/Scenes/Cha3/Chapter3.unity",
                 "Assets/Scenes/MM/MainMenu.unity"
             ]
         },
@@ -785,7 +950,7 @@
             "fullManagedTypeName": "UnityEngine.SpriteRenderer",
             "moduleName": "Core",
             "usedInScenes": [
-                "Assets/Scenes/LABCONT1/Cont1.unity"
+                "Assets/Scenes/Cha1/Cont1.unity"
             ]
         },
         {
@@ -794,7 +959,9 @@
             "fullManagedTypeName": "UnityEngine.TextAsset",
             "moduleName": "Core",
             "usedInScenes": [
-                "Assets/Scenes/LABCONT1/Cont1.unity",
+                "Assets/Scenes/Cha1/Cont1.unity",
+                "Assets/Scenes/Cha2/Chapter2.unity",
+                "Assets/Scenes/Cha3/Chapter3.unity",
                 "Assets/Scenes/MM/MainMenu.unity"
             ]
         },
@@ -804,8 +971,9 @@
             "fullManagedTypeName": "UnityEngine.Texture",
             "moduleName": "Core",
             "usedInScenes": [
+                "Assets/Scenes/Cha1/Cont1.unity",
                 "Assets/Scenes/Cha2/Chapter2.unity",
-                "Assets/Scenes/LABCONT1/Cont1.unity",
+                "Assets/Scenes/Cha3/Chapter3.unity",
                 "Assets/Scenes/MM/MainMenu.unity"
             ]
         },
@@ -815,8 +983,9 @@
             "fullManagedTypeName": "UnityEngine.Texture2D",
             "moduleName": "Core",
             "usedInScenes": [
+                "Assets/Scenes/Cha1/Cont1.unity",
                 "Assets/Scenes/Cha2/Chapter2.unity",
-                "Assets/Scenes/LABCONT1/Cont1.unity",
+                "Assets/Scenes/Cha3/Chapter3.unity",
                 "Assets/Scenes/MM/MainMenu.unity"
             ]
         },
@@ -826,8 +995,9 @@
             "fullManagedTypeName": "UnityEngine.Transform",
             "moduleName": "Core",
             "usedInScenes": [
+                "Assets/Scenes/Cha1/Cont1.unity",
                 "Assets/Scenes/Cha2/Chapter2.unity",
-                "Assets/Scenes/LABCONT1/Cont1.unity",
+                "Assets/Scenes/Cha3/Chapter3.unity",
                 "Assets/Scenes/MM/MainMenu.unity"
             ]
         },
@@ -863,6 +1033,13 @@
             "managedAssemblyName": "Assembly-CSharp.dll",
             "nativeClass": "",
             "fullManagedTypeName": "VivaAnimations",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "WeakerDoor",
             "moduleName": "",
             "usedInScenes": []
         }

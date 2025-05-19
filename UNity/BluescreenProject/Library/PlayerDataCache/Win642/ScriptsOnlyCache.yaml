@@ -7,22 +7,36 @@ ScriptsOnlyBuild:
     - Blob
     - DataPersistenceManager
     - Doors
+    - FacButton
     - ForwardCheck
     - GameManager
+    - GuideHand
     - InteractableHighlights
     - Items
     - LeverPull
     - LoreTexts
+    - MainCamera
     - MainMenuButtons
     - MouseParallax
     - NumButtPress
+    - NumButtPress2
     - NumericCode
+    - NumericCode2
+    - Padlock
+    - PadlockedDoor
+    - Photo
+    - PhotoChecker
+    - Portal
+    - PortalTraveller
     - Poster
     - PuzzleButton
     - RoomManager
     - SaveTrigger
+    - Spotlight
+    - TheatreLookAts
     - Turret
     - VivaAnimations
+    - WeakerDoor
     Unity.AI.Navigation.dll:
     - Unity.AI.Navigation.NavMeshSurface
     Unity.Rider.Editor.dll:
@@ -114,6 +128,12 @@ ScriptsOnlyBuild:
     fullTypeName: NumButtPress
     methodName: Pressed
   - assembly: Assembly-CSharp
+    fullTypeName: GameManager
+    methodName: ExitGame
+  - assembly: Assembly-CSharp
+    fullTypeName: NumButtPress
+    methodName: Pressed
+  - assembly: Assembly-CSharp
     fullTypeName: NumButtPress
     methodName: Pressed
   - assembly: Assembly-CSharp
@@ -126,35 +146,97 @@ ScriptsOnlyBuild:
     fullTypeName: GameManager
     methodName: ExitGame
   - assembly: Assembly-CSharp
+    fullTypeName: NumButtPress2
+    methodName: Pressed
+  - assembly: Assembly-CSharp
+    fullTypeName: NumButtPress2
+    methodName: Pressed
+  - assembly: Assembly-CSharp
+    fullTypeName: NumButtPress2
+    methodName: Pressed
+  - assembly: Assembly-CSharp
+    fullTypeName: NumButtPress2
+    methodName: Pressed
+  - assembly: Assembly-CSharp
+    fullTypeName: NumButtPress2
+    methodName: CallOrDeny
+  - assembly: Assembly-CSharp
+    fullTypeName: NumButtPress2
+    methodName: Pressed
+  - assembly: Assembly-CSharp
+    fullTypeName: NumButtPress2
+    methodName: Pressed
+  - assembly: Assembly-CSharp
+    fullTypeName: NumButtPress2
+    methodName: Pressed
+  - assembly: Assembly-CSharp
+    fullTypeName: NumButtPress2
+    methodName: Pressed
+  - assembly: Assembly-CSharp
+    fullTypeName: NumButtPress2
+    methodName: Pressed
+  - assembly: Assembly-CSharp
+    fullTypeName: NumButtPress2
+    methodName: Pressed
+  - assembly: Assembly-CSharp
+    fullTypeName: NumButtPress2
+    methodName: Pressed
+  - assembly: Assembly-CSharp
+    fullTypeName: NumButtPress2
+    methodName: CallOrDeny
+  - assembly: Assembly-CSharp
+    fullTypeName: NumButtPress2
+    methodName: Pressed
+  - assembly: Assembly-CSharp
+    fullTypeName: NumButtPress2
+    methodName: Pressed
+  - assembly: Assembly-CSharp
+    fullTypeName: NumButtPress2
+    methodName: Pressed
+  - assembly: Assembly-CSharp
+    fullTypeName: NumButtPress2
+    methodName: Pressed
+  - assembly: Assembly-CSharp
+    fullTypeName: NumButtPress2
+    methodName: Pressed
+  - assembly: Assembly-CSharp
+    fullTypeName: NumButtPress2
+    methodName: Pressed
+  - assembly: Assembly-CSharp
+    fullTypeName: NumButtPress2
+    methodName: Pressed
+  - assembly: Assembly-CSharp
+    fullTypeName: NumButtPress2
+    methodName: Pressed
+  - assembly: Assembly-CSharp
+    fullTypeName: NumButtPress
+    methodName: Pressed
+  - assembly: Assembly-CSharp
+    fullTypeName: NumButtPress
+    methodName: Pressed
+  - assembly: Assembly-CSharp
+    fullTypeName: NumButtPress
+    methodName: Pressed
+  - assembly: Assembly-CSharp
+    fullTypeName: NumButtPress
+    methodName: Pressed
+  - assembly: Assembly-CSharp
+    fullTypeName: NumButtPress
+    methodName: Pressed
+  - assembly: Assembly-CSharp
+    fullTypeName: NumButtPress
+    methodName: Pressed
+  - assembly: Assembly-CSharp
+    fullTypeName: NumButtPress
+    methodName: Pressed
+  - assembly: Assembly-CSharp
+    fullTypeName: NumButtPress
+    methodName: Pressed
+  - assembly: Assembly-CSharp
     fullTypeName: NumButtPress
     methodName: Pressed
   sceneClasses:
-    Assets/Scenes/Cha2/Chapter2.unity:
-    - Class: 1
-      Script: {instanceID: 0}
-    - Class: 4
-      Script: {instanceID: 0}
-    - Class: 20
-      Script: {instanceID: 0}
-    - Class: 21
-      Script: {instanceID: 0}
-    - Class: 28
-      Script: {instanceID: 0}
-    - Class: 48
-      Script: {instanceID: 0}
-    - Class: 81
-      Script: {instanceID: 0}
-    - Class: 89
-      Script: {instanceID: 0}
-    - Class: 104
-      Script: {instanceID: 0}
-    - Class: 108
-      Script: {instanceID: 0}
-    - Class: 157
-      Script: {instanceID: 0}
-    - Class: 196
-      Script: {instanceID: 0}
-    Assets/Scenes/LABCONT1/Cont1.unity:
+    Assets/Scenes/Cha1/Cont1.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -194,61 +276,63 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1900}
+      Script: {instanceID: 8764}
     - Class: 114
-      Script: {instanceID: 8730}
+      Script: {instanceID: 9000}
     - Class: 114
-      Script: {instanceID: 8964}
+      Script: {instanceID: 9242}
     - Class: 114
-      Script: {instanceID: 9206}
+      Script: {instanceID: 9542}
     - Class: 114
-      Script: {instanceID: 9506}
+      Script: {instanceID: 10044}
     - Class: 114
-      Script: {instanceID: 10004}
+      Script: {instanceID: 10108}
     - Class: 114
-      Script: {instanceID: 10324}
+      Script: {instanceID: 10364}
     - Class: 114
-      Script: {instanceID: 10530}
+      Script: {instanceID: 10572}
     - Class: 114
-      Script: {instanceID: 10692}
+      Script: {instanceID: 10736}
     - Class: 114
-      Script: {instanceID: 10782}
+      Script: {instanceID: 10828}
     - Class: 114
-      Script: {instanceID: 10986}
+      Script: {instanceID: 11034}
     - Class: 114
-      Script: {instanceID: 11202}
+      Script: {instanceID: 11250}
     - Class: 114
-      Script: {instanceID: 11254}
+      Script: {instanceID: 11302}
     - Class: 114
-      Script: {instanceID: 11480}
+      Script: {instanceID: 11380}
     - Class: 114
-      Script: {instanceID: 11780}
+      Script: {instanceID: 11530}
     - Class: 114
-      Script: {instanceID: 11922}
+      Script: {instanceID: 11830}
     - Class: 114
-      Script: {instanceID: 11926}
+      Script: {instanceID: 11972}
     - Class: 114
-      Script: {instanceID: 12066}
+      Script: {instanceID: 11976}
     - Class: 114
-      Script: {instanceID: 13474}
+      Script: {instanceID: 12116}
     - Class: 114
-      Script: {instanceID: 13496}
+      Script: {instanceID: 13532}
     - Class: 114
-      Script: {instanceID: 13748}
+      Script: {instanceID: 13554}
     - Class: 114
-      Script: {instanceID: 14352}
+      Script: {instanceID: 13806}
     - Class: 114
-      Script: {instanceID: 14508}
+      Script: {instanceID: 14410}
     - Class: 114
-      Script: {instanceID: 14650}
+      Script: {instanceID: 14566}
     - Class: 114
-      Script: {instanceID: 14872}
+      Script: {instanceID: 14710}
     - Class: 114
-      Script: {instanceID: 15090}
+      Script: {instanceID: 14934}
     - Class: 114
-      Script: {instanceID: 15262}
+      Script: {instanceID: 15152}
     - Class: 114
-      Script: {instanceID: 15402}
+      Script: {instanceID: 15326}
+    - Class: 114
+      Script: {instanceID: 15468}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -277,6 +361,230 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 850595691
       Script: {instanceID: 0}
+    Assets/Scenes/Cha2/Chapter2.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 23
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 33
+      Script: {instanceID: 0}
+    - Class: 43
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 54
+      Script: {instanceID: 0}
+    - Class: 64
+      Script: {instanceID: 0}
+    - Class: 65
+      Script: {instanceID: 0}
+    - Class: 74
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 89
+      Script: {instanceID: 0}
+    - Class: 90
+      Script: {instanceID: 0}
+    - Class: 91
+      Script: {instanceID: 0}
+    - Class: 95
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 108
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 8916}
+    - Class: 114
+      Script: {instanceID: 9000}
+    - Class: 114
+      Script: {instanceID: 9242}
+    - Class: 114
+      Script: {instanceID: 9542}
+    - Class: 114
+      Script: {instanceID: 9744}
+    - Class: 114
+      Script: {instanceID: 10044}
+    - Class: 114
+      Script: {instanceID: 10108}
+    - Class: 114
+      Script: {instanceID: 10364}
+    - Class: 114
+      Script: {instanceID: 10572}
+    - Class: 114
+      Script: {instanceID: 10620}
+    - Class: 114
+      Script: {instanceID: 10756}
+    - Class: 114
+      Script: {instanceID: 10828}
+    - Class: 114
+      Script: {instanceID: 10960}
+    - Class: 114
+      Script: {instanceID: 11034}
+    - Class: 114
+      Script: {instanceID: 11250}
+    - Class: 114
+      Script: {instanceID: 11302}
+    - Class: 114
+      Script: {instanceID: 11380}
+    - Class: 114
+      Script: {instanceID: 11530}
+    - Class: 114
+      Script: {instanceID: 11830}
+    - Class: 114
+      Script: {instanceID: 11976}
+    - Class: 114
+      Script: {instanceID: 12230}
+    - Class: 114
+      Script: {instanceID: 12632}
+    - Class: 114
+      Script: {instanceID: 13176}
+    - Class: 114
+      Script: {instanceID: 13554}
+    - Class: 114
+      Script: {instanceID: 13806}
+    - Class: 114
+      Script: {instanceID: 14410}
+    - Class: 114
+      Script: {instanceID: 14628}
+    - Class: 114
+      Script: {instanceID: 14918}
+    - Class: 114
+      Script: {instanceID: 15314}
+    - Class: 114
+      Script: {instanceID: 15326}
+    - Class: 114
+      Script: {instanceID: 15348}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 136
+      Script: {instanceID: 0}
+    - Class: 137
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    Assets/Scenes/Cha3/Chapter3.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 23
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 33
+      Script: {instanceID: 0}
+    - Class: 43
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 54
+      Script: {instanceID: 0}
+    - Class: 64
+      Script: {instanceID: 0}
+    - Class: 65
+      Script: {instanceID: 0}
+    - Class: 74
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 89
+      Script: {instanceID: 0}
+    - Class: 90
+      Script: {instanceID: 0}
+    - Class: 91
+      Script: {instanceID: 0}
+    - Class: 95
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 108
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 8764}
+    - Class: 114
+      Script: {instanceID: 9000}
+    - Class: 114
+      Script: {instanceID: 9242}
+    - Class: 114
+      Script: {instanceID: 9542}
+    - Class: 114
+      Script: {instanceID: 9782}
+    - Class: 114
+      Script: {instanceID: 10044}
+    - Class: 114
+      Script: {instanceID: 10108}
+    - Class: 114
+      Script: {instanceID: 10364}
+    - Class: 114
+      Script: {instanceID: 10524}
+    - Class: 114
+      Script: {instanceID: 11250}
+    - Class: 114
+      Script: {instanceID: 11302}
+    - Class: 114
+      Script: {instanceID: 11380}
+    - Class: 114
+      Script: {instanceID: 11830}
+    - Class: 114
+      Script: {instanceID: 13554}
+    - Class: 114
+      Script: {instanceID: 13806}
+    - Class: 114
+      Script: {instanceID: 14410}
+    - Class: 114
+      Script: {instanceID: 14628}
+    - Class: 114
+      Script: {instanceID: 15348}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 136
+      Script: {instanceID: 0}
+    - Class: 137
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    - Class: 258
+      Script: {instanceID: 0}
+    - Class: 850595691
+      Script: {instanceID: 0}
     Assets/Scenes/MM/MainMenu.unity:
     - Class: 1
       Script: {instanceID: 0}
@@ -297,33 +605,33 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 8760}
+      Script: {instanceID: 8794}
     - Class: 114
-      Script: {instanceID: 8964}
+      Script: {instanceID: 9000}
     - Class: 114
-      Script: {instanceID: 9206}
+      Script: {instanceID: 9242}
     - Class: 114
-      Script: {instanceID: 9678}
+      Script: {instanceID: 9714}
     - Class: 114
-      Script: {instanceID: 10068}
+      Script: {instanceID: 10108}
     - Class: 114
-      Script: {instanceID: 10324}
+      Script: {instanceID: 10364}
     - Class: 114
-      Script: {instanceID: 10782}
+      Script: {instanceID: 10828}
     - Class: 114
-      Script: {instanceID: 10986}
+      Script: {instanceID: 11034}
     - Class: 114
-      Script: {instanceID: 11202}
+      Script: {instanceID: 11250}
     - Class: 114
-      Script: {instanceID: 12430}
+      Script: {instanceID: 12482}
     - Class: 114
-      Script: {instanceID: 13254}
+      Script: {instanceID: 13312}
     - Class: 114
-      Script: {instanceID: 13496}
-    - Class: 114
-      Script: {instanceID: 14294}
+      Script: {instanceID: 13554}
     - Class: 114
       Script: {instanceID: 14352}
+    - Class: 114
+      Script: {instanceID: 14410}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -343,12 +651,6 @@ ScriptsOnlyBuild:
   scriptHashData:
   - hash:
       serializedVersion: 2
-      Hash: 0778fa8eff7467610df52c00a8158a80
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: ForwardCheck
-  - hash:
-      serializedVersion: 2
       Hash: fcd5e51a2207b79c0f530fa09b429edd
     assemblyName: Assembly-CSharp
     namespaceName: 
@@ -365,6 +667,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline
     namespaceName: UnityEngine.Timeline
     className: AnimationTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 049659dedf7682246b8fc9f2026991e2
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: Photo
   - hash:
       serializedVersion: 2
       Hash: cf62aad97f6c2dd5d482e2509c6c9528
@@ -475,6 +783,12 @@ ScriptsOnlyBuild:
     className: TMP_Settings
   - hash:
       serializedVersion: 2
+      Hash: d00cc20b6ab999597fbe304cde29d3f0
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: Padlock
+  - hash:
+      serializedVersion: 2
       Hash: db9b308769d19e1f9e161df0392c23ca
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
@@ -485,6 +799,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnBeginDragMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: 3c871231e742ea7a5b0f7970fe837310
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: Spotlight
   - hash:
       serializedVersion: 2
       Hash: 9dd54ce33440072d6692a67e0c384ad1
@@ -589,6 +909,12 @@ ScriptsOnlyBuild:
     className: ScriptGraphAsset
   - hash:
       serializedVersion: 2
+      Hash: 2dfb5b943187010349f077cee63b3c38
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: TheatreLookAts
+  - hash:
+      serializedVersion: 2
       Hash: 96e7bcfd2d072992dab64ac44058b930
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
@@ -607,13 +933,19 @@ ScriptsOnlyBuild:
     className: HorizontalLayoutGroup
   - hash:
       serializedVersion: 2
+      Hash: d1e145dfffd540f3da2ec4458fb75cea
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: WeakerDoor
+  - hash:
+      serializedVersion: 2
       Hash: a0a9b1b4ff2629b8af8286de0da019cc
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: DiscoAnimations
   - hash:
       serializedVersion: 2
-      Hash: 77da398a1d22fca69893b316aba9a84b
+      Hash: f9e536a58985bd4beb3bf52e2628799a
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: Poster
@@ -623,6 +955,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: IntImageScale
+  - hash:
+      serializedVersion: 2
+      Hash: 3cb627026f2b08245ef39c94fa9b3f0b
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: Portal
   - hash:
       serializedVersion: 2
       Hash: ff76cf6cf52b4db7b95af6ffadca9288
@@ -659,6 +997,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnTriggerStayMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: c41b1d3a5b9b036cb285cb15ed5c45d4
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: NumericCode2
   - hash:
       serializedVersion: 2
       Hash: 33656f83bb0079184b2206a69690ec46
@@ -709,6 +1053,12 @@ ScriptsOnlyBuild:
     className: NavMeshModifierVolume
   - hash:
       serializedVersion: 2
+      Hash: 0778fa8eff7467610df52c00a8158a80
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: ForwardCheck
+  - hash:
+      serializedVersion: 2
       Hash: afb7b65d28d5a7423e69a1b076be0064
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.UI
@@ -727,7 +1077,7 @@ ScriptsOnlyBuild:
     className: ControlTrack
   - hash:
       serializedVersion: 2
-      Hash: 8d450256c41b715118215cc9a5012c15
+      Hash: 9950658f49c3b890d5f6966b323f1385
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: Items
@@ -787,13 +1137,13 @@ ScriptsOnlyBuild:
     className: EventTrigger
   - hash:
       serializedVersion: 2
-      Hash: 9f248e72370f42e755154c1eab7eb532
+      Hash: 2d911f0ba9e5c6ddbfaaa8114f6db2b4
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: LeverPull
   - hash:
       serializedVersion: 2
-      Hash: 3a01f52e0cb34bb005fc7aa36570e805
+      Hash: 2b635a9bedfe23d504b56863a634c45b
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: LoreTexts
@@ -845,6 +1195,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: MacroScriptableObject
+  - hash:
+      serializedVersion: 2
+      Hash: 10f1526fe6a3f48cb74cc6e8c9b1155f
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: GuideHand
   - hash:
       serializedVersion: 2
       Hash: 5874b789cd9832847c61ebfa803213af
@@ -911,6 +1267,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.EventSystems
     className: BaseInput
+  - hash:
+      serializedVersion: 2
+      Hash: fa4d9386f639118c3805867869ddc0ea
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: NumButtPress2
   - hash:
       serializedVersion: 2
       Hash: 423ecf9af9e6134af80e7ae0fbaba203
@@ -1013,6 +1375,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: AnimatorMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: 9621f6d49af313090f332af8df49ae0b
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: FacButton
   - hash:
       serializedVersion: 2
       Hash: 4878e735441f4041539853759559c86f
@@ -1189,7 +1557,13 @@ ScriptsOnlyBuild:
     className: RoomManager
   - hash:
       serializedVersion: 2
-      Hash: 5caa86fb856a55fcd10b5aee9a827612
+      Hash: f40285480d23e35802f642d1717ec9c4
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: MainCamera
+  - hash:
+      serializedVersion: 2
+      Hash: 930d03dc83223b338804946bbef54f8e
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: PuzzleButton
@@ -1213,7 +1587,13 @@ ScriptsOnlyBuild:
     className: Toggle
   - hash:
       serializedVersion: 2
-      Hash: 92f4c0f9c40e195ebe66e3678b0a0967
+      Hash: 345319d733bb42ea98b774afa9764c0d
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: PadlockedDoor
+  - hash:
+      serializedVersion: 2
+      Hash: 7f2dc31c53641f03226df2b8b1223d11
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: NumericCode
@@ -1237,7 +1617,7 @@ ScriptsOnlyBuild:
     className: UnityOnMouseOverMessageListener
   - hash:
       serializedVersion: 2
-      Hash: f88a974570012ab79e424c62eab2a9fd
+      Hash: bc591a1418feab9b30475f2780f1d5c7
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: Doors
@@ -1273,10 +1653,22 @@ ScriptsOnlyBuild:
     className: UnityOnCollisionStay2DMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 9f7e7b77df0accc5f0925b5a82bb0f2d
+      Hash: f794ee87bca656ce0a6891d4bd5ac636
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: PhotoChecker
+  - hash:
+      serializedVersion: 2
+      Hash: 6cbd5239fdd989bc6a8482946bb15756
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: BigDoorTrigger
+  - hash:
+      serializedVersion: 2
+      Hash: 1d3f2bb858abf77a9a54a4a4def269f2
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: PortalTraveller
   - hash:
       serializedVersion: 2
       Hash: d82086405f46de14829f6b4bcbdd8fc9
@@ -1304,6 +1696,7 @@ ScriptsOnlyBuild:
   platform: 19
   scenePathNames:
   - Assets/Scenes/MM/MainMenu.unity
-  - Assets/Scenes/LABCONT1/Cont1.unity
+  - Assets/Scenes/Cha1/Cont1.unity
   - Assets/Scenes/Cha2/Chapter2.unity
+  - Assets/Scenes/Cha3/Chapter3.unity
   playerPath: C:/Users/tomas/OneDrive/Plocha/Cool things to show/Bspj/BluescreenProject.exe

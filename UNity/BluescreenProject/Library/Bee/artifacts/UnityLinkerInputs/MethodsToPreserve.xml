@@ -2,6 +2,7 @@
 	<assembly fullname="Assembly-CSharp" ignoreIfMissing="1">
 		<type fullname="GameManager">
 			<method name="ExitGame"/>
+			<method name="ExitGame"/>
 		</type>
 		<type fullname="MainMenuButtons">
 			<method name="ContinueGame"/>
@@ -9,6 +10,38 @@
 			<method name="StartNewGame"/>
 		</type>
 		<type fullname="NumButtPress">
+			<method name="Pressed"/>
+			<method name="Pressed"/>
+			<method name="Pressed"/>
+			<method name="Pressed"/>
+			<method name="Pressed"/>
+			<method name="Pressed"/>
+			<method name="Pressed"/>
+			<method name="Pressed"/>
+			<method name="Pressed"/>
+			<method name="Pressed"/>
+			<method name="Pressed"/>
+			<method name="Pressed"/>
+			<method name="Pressed"/>
+			<method name="Pressed"/>
+			<method name="Pressed"/>
+			<method name="Pressed"/>
+			<method name="Pressed"/>
+			<method name="Pressed"/>
+		</type>
+		<type fullname="NumButtPress2">
+			<method name="CallOrDeny"/>
+			<method name="CallOrDeny"/>
+			<method name="Pressed"/>
+			<method name="Pressed"/>
+			<method name="Pressed"/>
+			<method name="Pressed"/>
+			<method name="Pressed"/>
+			<method name="Pressed"/>
+			<method name="Pressed"/>
+			<method name="Pressed"/>
+			<method name="Pressed"/>
+			<method name="Pressed"/>
 			<method name="Pressed"/>
 			<method name="Pressed"/>
 			<method name="Pressed"/>

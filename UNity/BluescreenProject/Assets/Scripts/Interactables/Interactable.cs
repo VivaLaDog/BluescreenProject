@@ -4,6 +4,7 @@ public abstract class Interactable : MonoBehaviour
 {    
     internal GameManager gm;
     internal Animator Animator;
+    [SerializeField] public int imageScalerDivider = 50;
 
     public bool interactedWith = false;
 

@@ -10,9 +10,18 @@ public class NumericCode : Interactable
             return;
 
         gm.ChangeBLMovement();
-        numpad.OpenPad();
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
+
+        if (numpad.gameObject.activeSelf)
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+            numpad.gameObject.SetActive(false);
+            return;
+        }
+
+        numpad.OpenPad();
         gm.AddToInteractedList(this.GetComponent<Interactable>());
         interactedWith = false;
     }
@@ -26,6 +35,11 @@ public class NumericCode : Interactable
         interactedWith = true;
         unlocksDoor.UnlockDoor();
         DeactivateCanvas();
+    }
+
+    public int GetCode()
+    {
+        return code;
     }
 
     internal bool CheckCode(int checkCode)

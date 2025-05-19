@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 using UnityEngine.SceneManagement;
+using System;
 public class DataPersistenceManager : MonoBehaviour
 {
     [Header("File Storage")]
@@ -104,5 +105,10 @@ public class DataPersistenceManager : MonoBehaviour
     public bool HasGameData()
     {
         return gameData != null && dataHandler.Load().interactedWith.Count > 0;
+    }
+
+    internal void ClearGameData()
+    {
+        this.gameData = new GameData();
     }
 }

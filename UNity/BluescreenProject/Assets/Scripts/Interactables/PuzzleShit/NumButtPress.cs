@@ -1,6 +1,4 @@
-using NUnit.Framework;
 using System;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -52,6 +50,9 @@ public class NumButtPress : MonoBehaviour
     int numAmount = 0;
     void OnButtonPressed()
     {
+        if (numPad.GetCode().ToString().Length <= numAmount)
+            return;
+
         field.text += $"{val}";
         codeString += $"{val}";
         numAmount++;

@@ -15,7 +15,7 @@ public class BLPlayerMovement : MonoBehaviour
     {
         return reading;
     }
-
+    float ogSpeed;
     Rigidbody rb;
     // Start is called before the first frame update
     void Start()
@@ -23,6 +23,7 @@ public class BLPlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+        ogSpeed = speed;
     }
     bool spawn = true;
     float spawnTimer = .98f;
@@ -57,10 +58,14 @@ public class BLPlayerMovement : MonoBehaviour
         var dir = new Vector3(xM, 0, zM);
         var transformedDir = Quaternion.Euler(0, transform.rotation.eulerAngles.y, 0) * dir;
 
-        if (Input.GetKeyDown("left shift"))
-            speed = speed * 2;
-        else if (Input.GetKeyUp("left shift"))
-            speed = speed / 2;
+            if (Input.GetKeyDown("left shift"))
+                speed = speed * 2;
+            else if (Input.GetKeyUp("left shift"))
+                speed = speed / 2;
+
+        if(speed < ogSpeed)
+            speed = ogSpeed;
+        
 
         rb.linearVelocity = new Vector3(transformedDir.x * speed, yM, transformedDir.z * speed);  
         rb.MoveRotation(Quaternion.Euler(rb.rotation.eulerAngles.x, rb.rotation.eulerAngles.y + (xM * (float)1.38), rb.rotation.eulerAngles.z));
