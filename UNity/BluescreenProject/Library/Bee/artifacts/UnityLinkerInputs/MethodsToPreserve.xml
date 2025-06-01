@@ -3,6 +3,7 @@
 		<type fullname="GameManager">
 			<method name="ExitGame"/>
 			<method name="ExitGame"/>
+			<method name="ExitGame"/>
 		</type>
 		<type fullname="MainMenuButtons">
 			<method name="ContinueGame"/>

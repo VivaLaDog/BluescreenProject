@@ -85,6 +85,7 @@
     <Compile Include="Assets\Scripts\Interactables\PuzzleShit\LeverPull.cs" />
     <Compile Include="Assets\Scripts\Interactables\Interactable.cs" />
     <Compile Include="Assets\Scripts\BigDoorTrigger.cs" />
+    <Compile Include="Assets\Models\Hornet\HAnimScript.cs" />
     <Compile Include="Assets\Scripts\Interactables\Items.cs" />
     <Compile Include="Assets\Scripts\Portal\PortalTraveller.cs" />
     <Compile Include="Assets\Scenes\Cha3\Spotlight.cs" />
@@ -92,7 +93,9 @@
     <Compile Include="Assets\Scripts\Interactables\IntImageScale.cs" />
     <Compile Include="Assets\Scenes\MM\MouseParallax.cs" />
     <Compile Include="Assets\Scripts\DataPersistence\SaveTrigger.cs" />
+    <Compile Include="Assets\Models\Hornet\Ontrigerr.cs" />
     <Compile Include="Assets\Scripts\BLPlayerMovement.cs" />
+    <Compile Include="Assets\Models\Hornet\HAudioAnims.cs" />
     <Compile Include="Assets\Scripts\Interactables\PuzzleShit\NumButtPress 2.cs" />
     <Compile Include="Assets\Scripts\RoomManager.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />

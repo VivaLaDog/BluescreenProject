@@ -110,7 +110,6 @@ public class GameManager : MonoBehaviour, IDataPersistence
     {
         foreach (Interactable interactable in interacted)
         {
-            Debug.Log(interactable);
             interactable.ForceInteract();
         }
         
@@ -226,6 +225,6 @@ public class GameManager : MonoBehaviour, IDataPersistence
     }
     public void ExitGame()
     {
-        SceneManager.LoadSceneAsync(0);
+        SceneManager.LoadScene(0);
     }
 }

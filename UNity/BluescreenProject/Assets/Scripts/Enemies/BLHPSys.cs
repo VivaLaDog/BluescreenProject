@@ -40,6 +40,11 @@ public class BLHPSys : MonoBehaviour
                 timeToDeath -= Time.deltaTime;
                 if(timeToDeath <= 0)
                 {
+                    Animator cameraAnimator = blCam.GetComponent<Animator>();
+                    cameraAnimator.SetBool("Dead", false);
+                    blIsKill = false;
+                    timeToDeath = 2f;
+                    chicanery = true;
                     DataPersistenceManager.Instance.LoadGame();
                 }
             }
@@ -93,11 +98,11 @@ public class BLHPSys : MonoBehaviour
         else //show a damage overlay
         {
             //the lower the health, the more chromatic abberation + desaturation?
-            int a = (health-amount)/2 - 1;
+            int a = Mathf.Abs((health-amount)/2 - 1);
             Color change = bloodImages[a].color;
                 change.a = 1;
             bloodImages[a].color = change;
+            health -= amount;
         }
-        health -= amount;
     }
 }
