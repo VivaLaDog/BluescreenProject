@@ -141,6 +141,7 @@ public class GameManager : MonoBehaviour, IDataPersistence
             
             else if(g.GetComponent<Interactable>() != null)
             {
+                bl.PlayInteractSound();
                 g.GetComponent<Interactable>().Interact();
             }
         }

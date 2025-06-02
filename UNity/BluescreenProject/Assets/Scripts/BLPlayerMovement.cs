@@ -13,6 +13,8 @@ public class BLPlayerMovement : MonoBehaviour
 
     [SerializeField]
     AudioSource walkingSfx;
+    [SerializeField]
+    AudioSource interactSfx;
     public bool IsMoving()
     {
         return reading;
@@ -94,5 +96,10 @@ public class BLPlayerMovement : MonoBehaviour
         cameraRotation.x = Mathf.Clamp(cameraRotation.x, -58, 70);
 
         cameraHolder.localRotation = Quaternion.Euler(cameraRotation);
+    }
+
+    public void PlayInteractSound()
+    {
+        interactSfx.Play();
     }
 }

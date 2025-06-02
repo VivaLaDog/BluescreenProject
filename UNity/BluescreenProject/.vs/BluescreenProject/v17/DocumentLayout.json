@@ -3,28 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\tomas\\BluescreenProject\\BluescreenProject\\UNity\\BluescreenProject\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{64DD004A-066A-46D1-D70C-52CCD1A5696E}|Assembly-CSharp.csproj|C:\\Users\\tomas\\BluescreenProject\\BluescreenProject\\UNity\\BluescreenProject\\assets\\models\\hornet\\haudioanims.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{64DD004A-066A-46D1-D70C-52CCD1A5696E}|Assembly-CSharp.csproj|solutionrelative:assets\\models\\hornet\\haudioanims.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{64DD004A-066A-46D1-D70C-52CCD1A5696E}|Assembly-CSharp.csproj|C:\\Users\\tomas\\BluescreenProject\\BluescreenProject\\UNity\\BluescreenProject\\assets\\models\\hornet\\hanimscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{64DD004A-066A-46D1-D70C-52CCD1A5696E}|Assembly-CSharp.csproj|solutionrelative:assets\\models\\hornet\\hanimscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{64DD004A-066A-46D1-D70C-52CCD1A5696E}|Assembly-CSharp.csproj|c:\\users\\tomas\\bluescreenproject\\bluescreenproject\\unity\\bluescreenproject\\assets\\models\\hornet\\ontrigerr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{64DD004A-066A-46D1-D70C-52CCD1A5696E}|Assembly-CSharp.csproj|solutionrelative:assets\\models\\hornet\\ontrigerr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{64DD004A-066A-46D1-D70C-52CCD1A5696E}|Assembly-CSharp.csproj|C:\\Users\\tomas\\BluescreenProject\\BluescreenProject\\UNity\\BluescreenProject\\assets\\scripts\\blplayermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{64DD004A-066A-46D1-D70C-52CCD1A5696E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\blplayermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{64DD004A-066A-46D1-D70C-52CCD1A5696E}|Assembly-CSharp.csproj|C:\\Users\\tomas\\BluescreenProject\\BluescreenProject\\UNity\\BluescreenProject\\assets\\scripts\\bigdoortrigger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{64DD004A-066A-46D1-D70C-52CCD1A5696E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\bigdoortrigger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\tomas\\BluescreenProject\\BluescreenProject\\UNity\\BluescreenProject\\Assets\\Scenes\\Cha3\\EndGameTrigger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scenes\\Cha3\\EndGameTrigger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{64DD004A-066A-46D1-D70C-52CCD1A5696E}|Assembly-CSharp.csproj|c:\\users\\tomas\\bluescreenproject\\bluescreenproject\\unity\\bluescreenproject\\assets\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64DD004A-066A-46D1-D70C-52CCD1A5696E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,78 +26,29 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Ontrigerr.cs",
-              "DocumentMoniker": "C:\\Users\\tomas\\BluescreenProject\\BluescreenProject\\UNity\\BluescreenProject\\Assets\\Models\\Hornet\\Ontrigerr.cs",
-              "RelativeDocumentMoniker": "Assets\\Models\\Hornet\\Ontrigerr.cs",
-              "ToolTip": "C:\\Users\\tomas\\BluescreenProject\\BluescreenProject\\UNity\\BluescreenProject\\Assets\\Models\\Hornet\\Ontrigerr.cs",
-              "RelativeToolTip": "Assets\\Models\\Hornet\\Ontrigerr.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "GameManager.cs",
+              "DocumentMoniker": "C:\\Users\\tomas\\BluescreenProject\\BluescreenProject\\UNity\\BluescreenProject\\Assets\\Scripts\\GameManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\GameManager.cs",
+              "ToolTip": "C:\\Users\\tomas\\BluescreenProject\\BluescreenProject\\UNity\\BluescreenProject\\Assets\\Scripts\\GameManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\GameManager.cs",
+              "ViewState": "AgIAAIIAAAAAAAAAAADwv48AAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-01T21:28:14.408Z",
+              "WhenOpened": "2025-06-02T10:40:16.411Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "HAudioAnims.cs",
-              "DocumentMoniker": "C:\\Users\\tomas\\BluescreenProject\\BluescreenProject\\UNity\\BluescreenProject\\Assets\\Models\\Hornet\\HAudioAnims.cs",
-              "RelativeDocumentMoniker": "Assets\\Models\\Hornet\\HAudioAnims.cs",
-              "ToolTip": "C:\\Users\\tomas\\BluescreenProject\\BluescreenProject\\UNity\\BluescreenProject\\Assets\\Models\\Hornet\\HAudioAnims.cs",
-              "RelativeToolTip": "Assets\\Models\\Hornet\\HAudioAnims.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAAACEAAAA3AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-01T19:33:41.595Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "HAnimScript.cs",
-              "DocumentMoniker": "C:\\Users\\tomas\\BluescreenProject\\BluescreenProject\\UNity\\BluescreenProject\\Assets\\Models\\Hornet\\HAnimScript.cs",
-              "RelativeDocumentMoniker": "Assets\\Models\\Hornet\\HAnimScript.cs",
-              "ToolTip": "C:\\Users\\tomas\\BluescreenProject\\BluescreenProject\\UNity\\BluescreenProject\\Assets\\Models\\Hornet\\HAnimScript.cs",
-              "RelativeToolTip": "Assets\\Models\\Hornet\\HAnimScript.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-01T19:12:12.486Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
               "Title": "BLPlayerMovement.cs",
               "DocumentMoniker": "C:\\Users\\tomas\\BluescreenProject\\BluescreenProject\\UNity\\BluescreenProject\\Assets\\Scripts\\BLPlayerMovement.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\BLPlayerMovement.cs",
               "ToolTip": "C:\\Users\\tomas\\BluescreenProject\\BluescreenProject\\UNity\\BluescreenProject\\Assets\\Scripts\\BLPlayerMovement.cs",
               "RelativeToolTip": "Assets\\Scripts\\BLPlayerMovement.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAQwBoAAAAfAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAIwBAAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-01T18:07:54.925Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "BigDoorTrigger.cs",
-              "DocumentMoniker": "C:\\Users\\tomas\\BluescreenProject\\BluescreenProject\\UNity\\BluescreenProject\\Assets\\Scripts\\BigDoorTrigger.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\BigDoorTrigger.cs",
-              "ToolTip": "C:\\Users\\tomas\\BluescreenProject\\BluescreenProject\\UNity\\BluescreenProject\\Assets\\Scripts\\BigDoorTrigger.cs",
-              "RelativeToolTip": "Assets\\Scripts\\BigDoorTrigger.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAA3AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-27T08:59:51.763Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "EndGameTrigger.cs",
-              "DocumentMoniker": "C:\\Users\\tomas\\BluescreenProject\\BluescreenProject\\UNity\\BluescreenProject\\Assets\\Scenes\\Cha3\\EndGameTrigger.cs",
-              "RelativeDocumentMoniker": "Assets\\Scenes\\Cha3\\EndGameTrigger.cs",
-              "ToolTip": "C:\\Users\\tomas\\BluescreenProject\\BluescreenProject\\UNity\\BluescreenProject\\Assets\\Scenes\\Cha3\\EndGameTrigger.cs",
-              "RelativeToolTip": "Assets\\Scenes\\Cha3\\EndGameTrigger.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-27T08:58:40.892Z"
+              "WhenOpened": "2025-06-01T18:07:54.925Z",
+              "EditorCaption": ""
             }
           ]
         }
