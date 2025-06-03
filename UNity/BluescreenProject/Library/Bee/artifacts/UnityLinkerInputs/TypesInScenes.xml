@@ -10,6 +10,8 @@
 		<type fullname="ForwardCheck" preserve="nothing"/>
 		<type fullname="GameManager" preserve="nothing"/>
 		<type fullname="GuideHand" preserve="nothing"/>
+		<type fullname="HAnimScript" preserve="nothing"/>
+		<type fullname="HAudioAnims" preserve="nothing"/>
 		<type fullname="InteractableHighlights" preserve="nothing"/>
 		<type fullname="Items" preserve="nothing"/>
 		<type fullname="LeverPull" preserve="nothing"/>
@@ -62,8 +64,11 @@
 		<type fullname="UnityEngine.AI.NavMeshData" preserve="nothing"/>
 		<type fullname="UnityEngine.AnimationClip" preserve="nothing"/>
 		<type fullname="UnityEngine.Animator" preserve="nothing"/>
+		<type fullname="UnityEngine.Audio.AudioResource" preserve="nothing"/>
 		<type fullname="UnityEngine.AudioBehaviour" preserve="nothing"/>
+		<type fullname="UnityEngine.AudioClip" preserve="nothing"/>
 		<type fullname="UnityEngine.AudioListener" preserve="nothing"/>
+		<type fullname="UnityEngine.AudioSource" preserve="nothing"/>
 		<type fullname="UnityEngine.Avatar" preserve="nothing"/>
 		<type fullname="UnityEngine.Behaviour" preserve="nothing"/>
 		<type fullname="UnityEngine.BoxCollider" preserve="nothing"/>

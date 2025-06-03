@@ -13,7 +13,8 @@ public class BLHPSys : MonoBehaviour
     private int health;
     private int maxHealth = 5;
     bool blIsKill = false;
-    // Start is called before the first frame update
+    [SerializeField]
+    AudioSource deathSfx;
     void Start()
     {
         health = maxHealth;
@@ -31,8 +32,7 @@ public class BLHPSys : MonoBehaviour
             {
                 Animator cameraAnimator = blCam.GetComponent<Animator>();
                 cameraAnimator.SetBool("Dead", true);
-
-                //play camera animation
+                deathSfx.Play();
                 chicanery = false;
             }
             else

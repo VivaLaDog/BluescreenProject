@@ -8,6 +8,7 @@ public class Blob : Enemy
     [SerializeField] Transform target;
     [SerializeField] float maxViewDistance;
     [SerializeField] float attackDistance;
+    [SerializeField] AudioSource attackSfx;
     int health = 10;
     bool x = false;
 
@@ -50,7 +51,7 @@ public class Blob : Enemy
                 {
                     agent.isStopped = true;
                     x = true;
-                    //BEGIN the ATTACK!
+                    attackSfx.Play();
                     target.GetComponentInParent<BLHPSys>().Damage(2);
                     timer = 1f;
                 }
@@ -58,6 +59,8 @@ public class Blob : Enemy
             }
             else
             {
+                if(timer < 1)
+                    timer = 1f;
                 x = false;
                 agent.isStopped = false;
             }

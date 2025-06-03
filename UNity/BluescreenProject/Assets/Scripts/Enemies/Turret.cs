@@ -5,6 +5,8 @@ public class Turret : Enemy
     [SerializeField] Transform target;
     [SerializeField] float maxViewDistance;
     [SerializeField] float attackDistance;
+    [SerializeField] AudioSource warmupSfx;
+    [SerializeField] AudioSource fireSfx;
 
     int health = 999;
     float time = 3f;
@@ -28,7 +30,6 @@ public class Turret : Enemy
     {
         Damage();
     }
-    bool firstTimeForSound = true;
     // Update is called once per frame
     void Update()
     {
@@ -37,26 +38,27 @@ public class Turret : Enemy
         if (c < maxViewDistance && Physics.Raycast(transform.position, target.position))
         {
             transform.LookAt(target);
-            //Debug.Log(transform.name + " sees you!");
+            warmupSfx.Play();
 
             if (c < attackDistance)
             {
-                if (firstTimeForSound)
-                {
-                    firstTimeForSound = false;
-                    //play sound of locking on
-                }
                 //BEGIN the ATTACK!
                 //count to 3, shoot (take health from player) repeat
                 time -= Time.deltaTime;
                 if(time <= 0)
                 {
-                    //sound of shooting
+                    fireSfx.Play();
                     time = 3f;
-                    firstTimeForSound = true;
                     target.GetComponentInParent<BLHPSys>().Damage(4);
                 }
             }
+        }
+        else
+        {
+            if (warmupSfx.isPlaying)
+                warmupSfx.Stop();
+            if(time < 3f)
+            time = 3f;
         }
     }
 }
