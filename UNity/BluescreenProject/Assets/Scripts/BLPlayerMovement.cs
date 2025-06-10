@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class BLPlayerMovement : MonoBehaviour
@@ -67,12 +68,6 @@ public class BLPlayerMovement : MonoBehaviour
 
         var dir = new Vector3(xM, 0, zM);
         var transformedDir = Quaternion.Euler(0, transform.rotation.eulerAngles.y, 0) * dir;
-
-            if (Input.GetKeyDown("left shift"))
-                speed = speed * 2;
-            else if (Input.GetKeyUp("left shift"))
-                speed = speed / 2;
-
         rb.linearVelocity = new Vector3(transformedDir.x * speed, yM, transformedDir.z * speed);  
         rb.MoveRotation(Quaternion.Euler(rb.rotation.eulerAngles.x, rb.rotation.eulerAngles.y + (xM * (float)1.38), rb.rotation.eulerAngles.z));
     }
@@ -101,5 +96,21 @@ public class BLPlayerMovement : MonoBehaviour
     public void PlayInteractSound()
     {
         interactSfx.Play();
+    }
+    private AudioSource mainWalkingSfx;
+    internal void SwapWalkSFX(AudioSource aud)
+    {
+        if(mainWalkingSfx == null)
+        mainWalkingSfx = walkingSfx;
+        walkingSfx.Pause();
+        walkingSfx = aud;
+        walkingSfx.UnPause();
+    }
+
+    internal void ResetWalkSFX()
+    {
+        walkingSfx.Pause();
+        walkingSfx = mainWalkingSfx;
+        walkingSfx.UnPause();
     }
 }

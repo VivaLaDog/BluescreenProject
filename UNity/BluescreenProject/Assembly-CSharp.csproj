@@ -87,6 +87,7 @@
     <Compile Include="Assets\Scripts\BigDoorTrigger.cs" />
     <Compile Include="Assets\Models\Hornet\HAnimScript.cs" />
     <Compile Include="Assets\Scripts\Interactables\Items.cs" />
+    <Compile Include="Assets\Scenes\Cha2\ChangeWalkingSfx.cs" />
     <Compile Include="Assets\Scripts\Portal\PortalTraveller.cs" />
     <Compile Include="Assets\Scenes\Cha3\Spotlight.cs" />
     <Compile Include="Assets\Scripts\Interactables\PhotoChecker.cs" />

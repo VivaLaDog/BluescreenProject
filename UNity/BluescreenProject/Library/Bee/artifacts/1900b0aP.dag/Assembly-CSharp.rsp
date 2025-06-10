@@ -327,6 +327,7 @@
 "Assets/Models/Hornet/HAnimScript.cs"
 "Assets/Models/Hornet/HAudioAnims.cs"
 "Assets/Models/Hornet/Ontrigerr.cs"
+"Assets/Scenes/Cha2/ChangeWalkingSfx.cs"
 "Assets/Scenes/Cha3/Spotlight.cs"
 "Assets/Scenes/MM/MainMenuButtons.cs"
 "Assets/Scenes/MM/MouseParallax.cs"

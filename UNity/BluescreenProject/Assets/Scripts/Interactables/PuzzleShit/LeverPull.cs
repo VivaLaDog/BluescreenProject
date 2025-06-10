@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class LeverPull : Interactable
@@ -8,6 +9,7 @@ public class LeverPull : Interactable
     [SerializeField] Camera camera1;
     [SerializeField] string parameter;
     [SerializeField] Doors doorToOpen;
+    [SerializeField] List<AudioSource> audioToPlay;
 
     Animator animator;
     bool cameraSwapped = false;
@@ -35,6 +37,10 @@ public class LeverPull : Interactable
         {
             doorToOpen.UnlockDoor();
         }
+        if(audioToPlay != null)
+            foreach (AudioSource audioSource in audioToPlay)
+                { audioSource.Play(); }
+
         gm.AddToInteractedList(this.GetComponent<Interactable>());
         DeactivateCanvas();
     }

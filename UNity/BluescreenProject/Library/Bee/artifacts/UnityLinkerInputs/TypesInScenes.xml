@@ -4,6 +4,7 @@
 		<type fullname="BLHPSys" preserve="nothing"/>
 		<type fullname="Blob" preserve="nothing"/>
 		<type fullname="BLPlayerMovement" preserve="nothing"/>
+		<type fullname="ChangeWalkingSfx" preserve="nothing"/>
 		<type fullname="DataPersistenceManager" preserve="nothing"/>
 		<type fullname="Doors" preserve="nothing"/>
 		<type fullname="FacButton" preserve="nothing"/>

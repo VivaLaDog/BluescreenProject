@@ -5,6 +5,7 @@ ScriptsOnlyBuild:
     - BLPlayerMovement
     - BigDoorTrigger
     - Blob
+    - ChangeWalkingSfx
     - DataPersistenceManager
     - Doors
     - FacButton
@@ -57,8 +58,10 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -477,6 +480,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 15338}
     - Class: 114
       Script: {instanceID: 15360}
+    - Class: 114
+      Script: {instanceID: 84492}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -680,7 +685,7 @@ ScriptsOnlyBuild:
     className: NumButtPress
   - hash:
       serializedVersion: 2
-      Hash: 688a0c1efb55be454b3d6d7e52ec8e8f
+      Hash: dee551ad907d216579cfb4f7d4920ed7
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: MainMenuButtons
@@ -1166,7 +1171,7 @@ ScriptsOnlyBuild:
     className: EventTrigger
   - hash:
       serializedVersion: 2
-      Hash: 2d911f0ba9e5c6ddbfaaa8114f6db2b4
+      Hash: 02b084104a246f2bd916a4ecf746c7ec
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: LeverPull
@@ -1734,6 +1739,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: Blob
+  - hash:
+      serializedVersion: 2
+      Hash: 7815a513ebd9dac607bec9551d8fbaa0
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: ChangeWalkingSfx
   platform: 19
   scenePathNames:
   - Assets/Scenes/MM/MainMenu.unity

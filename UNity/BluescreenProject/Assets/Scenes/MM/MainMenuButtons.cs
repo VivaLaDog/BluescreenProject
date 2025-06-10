@@ -7,6 +7,7 @@ public class MainMenuButtons : MonoBehaviour
     [SerializeField] Button butt1;
     [SerializeField] Button butt2;
     [SerializeField] Button butt3;
+    [SerializeField] Button butt4;
     public void StartNewGame() 
     {
         DisableButtons();
@@ -18,6 +19,7 @@ public class MainMenuButtons : MonoBehaviour
         if (!DataPersistenceManager.Instance.HasGameData())
         {
             butt1.GetComponent<Image>().gameObject.SetActive(false);
+            butt4.GetComponent<Image>().gameObject.SetActive(false);
         }
     }
     public void ContinueGame()
@@ -31,7 +33,11 @@ public class MainMenuButtons : MonoBehaviour
         DisableButtons();
         Application.Quit();
     }
-
+    public void DeleteSaveFiles()
+    {
+        DataPersistenceManager.Instance.ClearGameData();
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
     private void DisableButtons()
     {
         butt1.interactable = false;

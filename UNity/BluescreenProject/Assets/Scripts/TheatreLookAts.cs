@@ -2,13 +2,10 @@ using UnityEngine;
 
 public class TheatreLookAts : MonoBehaviour
 {
+    [SerializeField]
     Transform targ;
     Vector3 targetPos;
     Vector3 oldPos;
-    private void Start()
-    {
-        targ = GameObject.FindGameObjectWithTag("Player").transform;
-    }
     void Update()
     {
         targetPos = new Vector3(targ.position.x, transform.position.y, targ.position.z);
