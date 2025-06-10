@@ -831,7 +831,7 @@ MonoBehaviour:
   animToPlay: 2
   CollToTurnOff: {fileID: 1521862207}
   AudioSource: {fileID: 1301765690}
-  voiceLineLength: 5
+  voiceLineLength: 6
 --- !u!65 &337276251
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3275,7 +3275,7 @@ MonoBehaviour:
   animToPlay: 3
   CollToTurnOff: {fileID: 862126711}
   AudioSource: {fileID: 1301765690}
-  voiceLineLength: 3
+  voiceLineLength: 7
 --- !u!65 &1275513209
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3355,8 +3355,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 9c33b150564ea544c8e8db631f6fc435, type: 3}
-  m_Resource: {fileID: 8300000, guid: 9c33b150564ea544c8e8db631f6fc435, type: 3}
+  m_audioClip: {fileID: 8300000, guid: c44f932f6a147da4e990ed4b031901e0, type: 3}
+  m_Resource: {fileID: 8300000, guid: c44f932f6a147da4e990ed4b031901e0, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.05
   m_Pitch: 1
@@ -4723,7 +4723,7 @@ MonoBehaviour:
   animToPlay: 1
   CollToTurnOff: {fileID: 1204581546}
   AudioSource: {fileID: 1301765690}
-  voiceLineLength: 5
+  voiceLineLength: 8
 --- !u!65 &1887099509
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5405,7 +5405,7 @@ MonoBehaviour:
   animToPlay: 4
   CollToTurnOff: {fileID: 1899525086}
   AudioSource: {fileID: 1301765690}
-  voiceLineLength: 7
+  voiceLineLength: 8
 --- !u!65 &2029168602
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -16,6 +16,8 @@ public class MainMenuButtons : MonoBehaviour
     }
     private void Start()
     {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
         if (!DataPersistenceManager.Instance.HasGameData())
         {
             butt1.GetComponent<Image>().gameObject.SetActive(false);

@@ -18,15 +18,15 @@ public class HAnimScript : MonoBehaviour
     public void PlayAnim2()
     {
         Hanim.SetBool("Cond1", true);
-        Hanim2.SetBool("Cond1", true);
     }
     public void PlayAnim3()
     {
         Hanim.SetBool("Cond2", true);
-        Hanim2.SetBool("Cond1", false);
+        Hanim2.SetBool("Cond1", true);
     }
     public void PlayAnim4()
     {
         Hanim.SetBool("Cond3", true);
+        Hanim2.SetBool("Cond1", false);
     }
 }
